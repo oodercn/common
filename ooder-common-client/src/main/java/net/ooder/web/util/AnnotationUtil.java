@@ -747,7 +747,13 @@ public class AnnotationUtil {
     public static Map getAnnotationMap(Object obj) {
 
         Class enumType = AnnotationUtil.getClassAnnotation(obj.getClass(), AnnotationType.class).clazz();
-        BeanMap beanMap = BeanMap.create(obj);
+        BeanMap beanMap = null;
+        try {
+            beanMap = BeanMap.create(obj);
+        } catch (Throwable e) {
+            beanMap = BeanMap.create(obj);
+        }
+
         Map valueMap = new HashMap<>();
 
         for (int k = 0; k < enumType.getDeclaredMethods().length; k++) {
@@ -801,7 +807,7 @@ public class AnnotationUtil {
                         if (defaultValue == null) {
                             valueMap.put(method.getName(), value);
                         } else if (!value.equals(defaultValue)) {
-                            if (defaultValue.toString().equals("auto") || defaultValue.toString().endsWith("em") || defaultValue.toString().endsWith("px")) {
+                            if (defaultValue.toString().equals("auto") || defaultValue.toString().endsWith("em") || defaultValue.toString().endsWith("%") || defaultValue.toString().endsWith("px")) {
                                 if (!value.toString().equals("")) {
                                     valueMap.put(method.getName(), value);
                                 }

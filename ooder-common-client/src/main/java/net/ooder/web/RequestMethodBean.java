@@ -14,6 +14,7 @@
  */
 package net.ooder.web;
 
+import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.annotation.JSONField;
 import com.alibaba.fastjson.util.TypeUtils;
 import javassist.CtMethod;
@@ -499,27 +500,41 @@ public class RequestMethodBean {
             onglContext = JDSActionContext.getActionContext().getOgnlContext();
         }
         Object service = getService(onglContext, allParamsMap);
+
         Map<String, String> paramsMap = this.getParamsMap();
         Set<RequestParamBean> keySet = this.getParamSet();
         Object[] objects = new Object[paramsMap.size()];
         Class[] objectTyps = new Class[paramsMap.size()];
-        int k = 0;
-        for (RequestParamBean paramBean : keySet) {
-            String key = paramBean.getParamName();
-            Class ctClass = ClassUtility.loadClass(paramsMap.get(paramBean.getParamName()));
-            String iClassName = ctClass.getName();
-            Class iClass = ClassUtility.loadClass(iClassName);
-            Object value = null;
-            if (allParamsMap.get(key) != null) {
-                value = TypeUtils.castToJavaBean(allParamsMap.get(key), iClass);
-                Map<String, Object> contextMap = JDSActionContext.getActionContext().getContext();
-                contextMap.put(key, value);
+        if (!this.getRequestType().equals(RequestType.JSON)) {
+            int k = 0;
+            for (RequestParamBean paramBean : keySet) {
+                String key = paramBean.getParamName();
+                Class ctClass = ClassUtility.loadClass(paramsMap.get(paramBean.getParamName()));
+                String iClassName = ctClass.getName();
 
+
+                Class iClass = ClassUtility.loadClass(iClassName);
+                Object value = null;
+                Map<String, Object> contextMap = JDSActionContext.getActionContext().getContext();
+                if (allParamsMap.get(key) != null) {
+                    if (paramBean.getJsonData()) {
+                        value = JSONObject.parseObject(JSONObject.toJSONString(allParamsMap.get(key)), paramBean.getParamClass());
+                    } else {
+                        value = TypeUtils.castToJavaBean(allParamsMap.get(key), iClass);
+                    }
+                    contextMap.put(key, value);
+                }
+                objectTyps[k] = iClass;
+                objects[k] = value;
+                k = k + 1;
             }
-            objectTyps[k] = iClass;
-            objects[k] = value;
-            k = k + 1;
+        } else {
+            RequestParamBean requestParamBean = keySet.iterator().next();
+            JSONObject jsonObject = new JSONObject(allParamsMap);
+            JSONObject.toJavaObject(jsonObject, requestParamBean.getParamClass());
+            objects[0] = TypeUtils.castToJavaBean(allParamsMap, requestParamBean.getParamClass());
         }
+
 
         if (service != null) {
             object = OgnlRuntime.callMethod(onglContext, service, this.getMethodName(), objects);

@@ -45,10 +45,10 @@ public class NLPAgent {
         timeout = 3000, value = ""
     )
     public String classifyText(
-        @AgentParam(name = "text", description = "待分类文本", required = true)
+        @AggregationType.AgentParam(name = "text", description = "待分类文本", required = true)
         String text,
         
-        @AgentParam(name = "categories", description = "分类类别列表", required = true, validationRule = "notEmpty")
+        @AggregationType.AgentParam(name = "categories", description = "分类类别列表", required = true, validationRule = "notEmpty")
         List<String> categories
     ) {
         // 实际项目中这里会调用AI模型进行文本分类
@@ -65,7 +65,7 @@ public class NLPAgent {
         timeout = 5000, value = ""
     )
     public List<String> recognizeEntities(
-        @AgentParam(name = "text", description = "待处理文本", required = true, validationRule = "notEmpty")
+        @AggregationType.AgentParam(name = "text", description = "待处理文本", required = true, validationRule = "notEmpty")
         String text
     ) {
         // 实际项目中这里会调用实体识别模型

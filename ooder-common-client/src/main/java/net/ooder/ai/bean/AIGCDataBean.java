@@ -21,7 +21,7 @@ import net.ooder.web.util.AnnotationUtil;
 /**
  * AIGCData注解对应的Bean类
  */
-@AnnotationType(clazz = AIGCData.class)
+@AnnotationType(clazz = AIGCModel.AIGCData.class)
 public class AIGCDataBean implements CustomBean {
 private DataType type;
     private ProcessingType processing;

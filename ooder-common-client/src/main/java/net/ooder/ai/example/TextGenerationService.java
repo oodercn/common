@@ -44,7 +44,7 @@ public class TextGenerationService {
                 template = "请根据以下主题生成一篇{length}字的文章：{topic}",
                 templateType = TemplateType.TEXT
             ) String prompt,
-            @AIGCData(type = DataType.JSON) String parameters) {
+            @AIGCModel.AIGCData(type = DataType.JSON) String parameters) {
         // 实现逻辑
         return "generated text";
     }

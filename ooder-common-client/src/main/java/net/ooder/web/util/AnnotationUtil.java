@@ -536,7 +536,9 @@ public class AnnotationUtil {
         } else if (obj instanceof Annotation) {
             toAnnotationStr(buffer, (Annotation) obj);
         } else if (obj instanceof Class) {
-            buffer.append(((Class) obj).getSimpleName() + ".class");
+            //统一采用全路径控制绑定类
+            buffer.append(((Class) obj).getName() + ".class");
+            // buffer.append(((Class) obj).getSimpleName() + ".class");
         } else {
             buffer.append(obj);
         }

@@ -4,7 +4,7 @@ import  net.ooder.annotation.EventEnums;
 
 public enum FileEventEnums implements EventEnums {
 
-    beforUpLoad("开始上传文件", "beforUpLoad"),
+    beforeUpLoad("开始上传文件", "beforeUpLoad"),
 
     upLoading("上传中", "upLoading"),
 
@@ -15,21 +15,21 @@ public enum FileEventEnums implements EventEnums {
 
     create("文件创建", "create"),
 
-    beforCopy("文件开始复制", "beforCopy"),
+    beforeCopy("文件开始复制", "beforeCopy"),
 
     copyEnd("文件复制完成", "copyEnd"),
 
     save("文件保存", "save"),
 
-    beforUpdate("文件开始开始", "beforUpdate"),
+    beforeUpdate("文件开始开始", "beforeUpdate"),
 
     updateEnd("文件更新完成", "updateEnd"),
 
-    beforMove("文件开始移动", "beforMove"),
+    beforeMove("文件开始移动", "beforeMove"),
 
     moveEnd("文件移动", "moveEnd"),
 
-    beforDelete("文件开始删除", "beforDelete"),
+    beforeDelete("文件开始删除", "beforeDelete"),
 
     deleteEnd("文件删除完毕", "deleteEnd"),
 
@@ -41,7 +41,7 @@ public enum FileEventEnums implements EventEnums {
 
     share("文件分享", "share"),
 
-    beforDownLoad("文件下载", "beforDownLoad"),
+    beforeDownLoad("文件下载", "beforeDownLoad"),
 
     downLoading("文件下载中", "downLoading"),
 

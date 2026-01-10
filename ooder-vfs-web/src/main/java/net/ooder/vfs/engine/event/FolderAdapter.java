@@ -32,7 +32,7 @@ public class FolderAdapter implements FolderListener {
 	}
 
 	@Override
-	public void beforReName(FolderEvent event) throws VFSException {
+	public void beforeReName(FolderEvent event) throws VFSException {
 
 	}
 
@@ -42,7 +42,7 @@ public class FolderAdapter implements FolderListener {
 	}
 
 	@Override
-	public void beforDelete(FolderEvent event) throws VFSException {
+	public void beforeDelete(FolderEvent event) throws VFSException {
 
 	}
 
@@ -62,7 +62,7 @@ public class FolderAdapter implements FolderListener {
 	}
 
 	@Override
-	public void beforCopy(FolderEvent event) throws VFSException {
+	public void beforeCopy(FolderEvent event) throws VFSException {
 
 	}
 
@@ -77,7 +77,7 @@ public class FolderAdapter implements FolderListener {
 	}
 
 	@Override
-	public void beforMove(FolderEvent event) throws VFSException {
+	public void beforeMove(FolderEvent event) throws VFSException {
 
 	}
 
@@ -92,7 +92,7 @@ public class FolderAdapter implements FolderListener {
 	}
 
 	@Override
-	public void beforClean(FolderEvent event) throws VFSException {
+	public void beforeClean(FolderEvent event) throws VFSException {
 
 	}
 
@@ -102,7 +102,7 @@ public class FolderAdapter implements FolderListener {
 	}
 
 	@Override
-	public void restore(FolderEvent event) throws VFSException {
+	public void reStore(FolderEvent event) throws VFSException {
 
 	}
 

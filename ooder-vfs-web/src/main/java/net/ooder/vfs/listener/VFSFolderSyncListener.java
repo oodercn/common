@@ -67,7 +67,7 @@ public class VFSFolderSyncListener implements FolderListener {
     }
 
     @Override
-    public void beforReName(FolderEvent event) throws VFSException {
+    public void beforeReName(FolderEvent event) throws VFSException {
         log.info("start beforReName " + event.getFolderPath());
         String path = event.getFolderPath();
         try {
@@ -85,7 +85,7 @@ public class VFSFolderSyncListener implements FolderListener {
     }
 
     @Override
-    public void beforDelete(FolderEvent event) throws VFSException {
+    public void beforeDelete(FolderEvent event) throws VFSException {
         log.info("start beforDelete " + event.getFolderPath());
         String path = event.getFolderPath();
         try {
@@ -117,7 +117,7 @@ public class VFSFolderSyncListener implements FolderListener {
     }
 
     @Override
-    public void beforCopy(FolderEvent event) throws VFSException {
+    public void beforeCopy(FolderEvent event) throws VFSException {
 
     }
 
@@ -138,7 +138,7 @@ public class VFSFolderSyncListener implements FolderListener {
     }
 
     @Override
-    public void beforMove(FolderEvent event) throws VFSException {
+    public void beforeMove(FolderEvent event) throws VFSException {
         log.info("start beforMove " + event.getFolderPath());
         String path = event.getFolderPath();
         try {
@@ -165,7 +165,7 @@ public class VFSFolderSyncListener implements FolderListener {
     }
 
     @Override
-    public void beforClean(FolderEvent event) throws VFSException {
+    public void beforeClean(FolderEvent event) throws VFSException {
         log.info("start beforClean " + event.getFolderPath());
         String path = event.getFolderPath();
         try {
@@ -181,7 +181,7 @@ public class VFSFolderSyncListener implements FolderListener {
     }
 
     @Override
-    public void restore(FolderEvent event) throws VFSException {
+    public void reStore(FolderEvent event) throws VFSException {
         log.info("start restore " + event.getFolderPath());
         String path = event.getFolderPath();
         try {

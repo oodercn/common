@@ -42,7 +42,7 @@ import net.ooder.common.util.Constants;
 /**
  * <p>Title: 常用代码打包</p>
  * <p>Description: </p>
- * <p>这个类作为进行数据库操作的代理，它能进行的数据库操作有select、update、insert和delete�?
+ * <p>这个类作为进行数据库操作的代理，它能进行的数据库操作有select、update、insert和delete
  * 具体操作步骤如下�?br>
  * 1.实例化一个DBAgent<br>
  * &nbsp;&nbsp;&nbsp;&nbsp;DBAgent dba = new DBAgent();<br>

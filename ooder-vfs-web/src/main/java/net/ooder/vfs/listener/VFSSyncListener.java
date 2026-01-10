@@ -41,7 +41,7 @@ public class VFSSyncListener implements FileListener {
 
 
     @Override
-    public void beforCopy(FileEvent event) throws VFSException {
+    public void beforeCopy(FileEvent event) throws VFSException {
 
     }
 
@@ -71,12 +71,12 @@ public class VFSSyncListener implements FileListener {
     }
 
     @Override
-    public void beforUpLoad(FileEvent event) throws VFSException {
+    public void beforeUpLoad(FileEvent event) throws VFSException {
 
     }
 
     @Override
-    public void beforDownLoad(FileEvent event) throws VFSException {
+    public void beforeDownLoad(FileEvent event) throws VFSException {
 
     }
 
@@ -137,7 +137,7 @@ public class VFSSyncListener implements FileListener {
     }
 
     @Override
-    public void beforDelete(FileEvent event) throws VFSException {
+    public void beforeDelete(FileEvent event) throws VFSException {
 
     }
 
@@ -149,7 +149,7 @@ public class VFSSyncListener implements FileListener {
     }
 
     @Override
-    public void beforMove(FileEvent event) throws VFSException {
+    public void beforeMove(FileEvent event) throws VFSException {
 
     }
 
@@ -161,7 +161,7 @@ public class VFSSyncListener implements FileListener {
     }
 
     @Override
-    public void beforUpdate(FileEvent event) throws VFSException {
+    public void beforeUpdate(FileEvent event) throws VFSException {
 
     }
 

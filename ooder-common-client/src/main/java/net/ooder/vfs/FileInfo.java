@@ -47,10 +47,10 @@ public interface FileInfo extends Cacheable {
     @MethodChinaName(cname = "文件创建时间")
     public Long getCreateTime();
 //
-//    @MethodChinaName(cname = "取得拥有该文件权限的所有角�?)
+//    @MethodChinaName(cname = "取得拥有该文件权限的所有")
 //    public List<String> getRoleIdList(RoleType type);
 //
-//    @MethodChinaName(cname = "取得拥有该文件权限的所有角�?)
+//    @MethodChinaName(cname = "取得拥有该文件权限的所有角")
 //    public List<Role> getRoleList(RoleType type);
 
     @MethodChinaName(cname = "取得文件所有版本信息")
@@ -71,7 +71,7 @@ public interface FileInfo extends Cacheable {
     public List<FileLink> getLinks();
 
     @MethodChinaName(cname = "文件描述")
-    public String getDescrition();
+    public String getDescription();
 
     public String getOldFolderId();
 

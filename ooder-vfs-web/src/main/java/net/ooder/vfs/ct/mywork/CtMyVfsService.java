@@ -67,18 +67,18 @@ public interface CtMyVfsService extends JDSClientService {
     /**
      * @param fileInfo
      * @param name
-     * @param descrition
+     * @param description
      * @throws JDSException
      */
-    public void updateFileInfo(FileInfo fileInfo, String name, String descrition) throws JDSException;
+    public void updateFileInfo(FileInfo fileInfo, String name, String description) throws JDSException;
 
     /**
      * @param folder
      * @param name
-     * @param descrition
+     * @param description
      * @throws JDSException
      */
-    public void updateFolderInfo(Folder folder, String name, String descrition) throws JDSException;
+    public void updateFolderInfo(Folder folder, String name, String description) throws JDSException;
 
     /**
      * @param fileVersionId
@@ -162,11 +162,11 @@ public interface CtMyVfsService extends JDSClientService {
 
     /**
      * @param path
-     * @param descrition
+     * @param description
      * @return
      * @throws JDSException
      */
-    public Folder mkDir(String path, String descrition) throws JDSException;
+    public Folder mkDir(String path, String description) throws JDSException;
 
     /**
      * @param fileByPath
@@ -198,11 +198,11 @@ public interface CtMyVfsService extends JDSClientService {
     /**
      * @param path
      * @param name
-     * @param descrition
+     * @param description
      * @return
      * @throws JDSException
      */
-    public FileInfo createFile(String path, String name, String descrition) throws JDSException;
+    public FileInfo createFile(String path, String name, String description) throws JDSException;
 
 
     /**

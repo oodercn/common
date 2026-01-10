@@ -8,11 +8,11 @@ public enum FolderEventEnums implements EventEnums {
 
     lock("文件夹锁定", "lock"),
 
-    beforReName("名称开始修改", "beforReName"),
+    beforeReName("名称开始修改", "beforeReName"),
 
     reNameEnd("名称开始修改", "reNameEnd"),
 
-    beforDelete("开始删除", "beforDelete"),
+    beforeDelete("开始删除", "beforeDelete"),
 
     deleteing("删除进行中", "deleteing"),
 
@@ -20,23 +20,23 @@ public enum FolderEventEnums implements EventEnums {
 
     save("保存完成", "save"),
 
-    beforCopy("Copy开始", "beforCopy"),
+    beforeCopy("Copy开始", "beforeCopy"),
 
     copying("正在COPY", "copying"),
 
     copyEnd("Copy完成", "copyEnd"),
 
-    beforMove("Move开始", "beforMove"),
+    beforeMove("Move开始", "beforeMove"),
 
     moving("正在Move", "moving"),
 
     moveEnd("Move完成", "moveEnd"),
 
-    beforClean("开始清空", "beforClean"),
+    beforeClean("开始清空", "beforeClean"),
 
     cleanEnd("清空完成", "cleanEnd"),
 
-    restore("还原完成", "restore");
+    reStore("还原完成", "reStore");
 
     private String name;
 

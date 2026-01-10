@@ -697,9 +697,9 @@ public class CtCacheManager implements Serializable {
 
     }
 
-    public FileInfo updateFileInfo(String path, String name, String descrition) throws JDSException {
+    public FileInfo updateFileInfo(String path, String name, String description) throws JDSException {
         FileInfo fileInfo = this.getFileByPath(path);
-        Boolean isSuccess = getVFSDiskService().updateFileInfo(path, CnToSpell.getFullSpell(name), descrition).getData();
+        Boolean isSuccess = getVFSDiskService().updateFileInfo(path, CnToSpell.getFullSpell(name), description).getData();
         if (isSuccess == null || !isSuccess) {
             throw new JDSException("updateFileInfo error");
         }
@@ -709,10 +709,10 @@ public class CtCacheManager implements Serializable {
         return this.getFileById(fileInfo.getID());
     }
 
-    public Folder updateFolderInfo(String path, String name, String descrition, FolderType type) throws JDSException {
+    public Folder updateFolderInfo(String path, String name, String description, FolderType type) throws JDSException {
         Folder folder = this.getFolderByPath(path);
         String parentPath = folder.getParent().getPath();
-        Boolean isSuccess = getVFSDiskService().updateFolderInfo(path, name, descrition, type).getData();
+        Boolean isSuccess = getVFSDiskService().updateFolderInfo(path, name, description, type).getData();
         if (isSuccess == null || !isSuccess) {
             throw new JDSException("uplaod error");
         }
@@ -1550,14 +1550,14 @@ public class CtCacheManager implements Serializable {
         }
 
         if (newFile == null) {
-            newFile = tfolder.createFile(fileName, tempFile.getDescrition(), tfolder.getPersonId());
+            newFile = tfolder.createFile(fileName, tempFile.getDescription(), tfolder.getPersonId());
         } else {
             if (fileName.indexOf(".") > -1) {
                 String[] fileNames = StringUtility.split(tempFile.getName(), ".");
-                String[] descritions = StringUtility.split(tempFile.getDescrition(), ".");
-                newFile = tfolder.createFile(fileNames[0] + "1." + fileNames[1], descritions[0] + "1." + descritions[1], tfolder.getPersonId());
+                String[] descriptions = StringUtility.split(tempFile.getDescription(), ".");
+                newFile = tfolder.createFile(fileNames[0] + "1." + fileNames[1], descriptions[0] + "1." + descriptions[1], tfolder.getPersonId());
             } else {
-                newFile = tfolder.createFile(fileName + "1", tempFile.getDescrition() + "1", tfolder.getPersonId());
+                newFile = tfolder.createFile(fileName + "1", tempFile.getDescription() + "1", tfolder.getPersonId());
             }
         }
         upload(newFile.getPath(), tempFile.getCurrentVersonInputStream(), tfolder.getPersonId());
@@ -1909,7 +1909,7 @@ public class CtCacheManager implements Serializable {
 
     }
 
-    public FileInfo createFile(String path, String name, String descrition) throws JDSException {
+    public FileInfo createFile(String path, String name, String description) throws JDSException {
 
 //        FileInfo file = this.getFileByPath(path);
 //        //已存在则返回
@@ -1923,24 +1923,24 @@ public class CtCacheManager implements Serializable {
         }
 
         List<FileInfo> childlist = folder.getFileList();
-        if (descrition == null) {
-            descrition = name;
+        if (description == null) {
+            description = name;
         }
 
         for (FileInfo cfileInfo : childlist) {
-            if (cfileInfo.getName().equals(name) && cfileInfo.getDescrition().equals(descrition)) {
+            if (cfileInfo.getName().equals(name) && cfileInfo.getDescription().equals(description)) {
                 return cfileInfo;
             }
         }
 
 
-        FileInfo fileInfo = getVFSDiskService().createFile2(path, name, descrition).getData();
+        FileInfo fileInfo = getVFSDiskService().createFile2(path, name, description).getData();
 
         int k = 0;
 
         while (fileInfo == null && k < 5) {
             k = k + 1;
-            fileInfo = getVFSDiskService().createFile2(path, name, descrition).getData();
+            fileInfo = getVFSDiskService().createFile2(path, name, description).getData();
         }
 
         if (cacheEnabled) {
@@ -1960,7 +1960,7 @@ public class CtCacheManager implements Serializable {
         return new CtFile(fileInfo);
     }
 
-    public Folder mkDir(String path, String descrition, FolderType type) throws JDSException {
+    public Folder mkDir(String path, String description, FolderType type) throws JDSException {
         Folder folder = null;
         String folderId = null;
         if (!path.endsWith("/")) {
@@ -1974,9 +1974,9 @@ public class CtCacheManager implements Serializable {
             Folder rfolder = getVFSDiskService().getFolderByPath(path).getData();
             if (rfolder == null
                     || (type != null && !rfolder.getFolderType().equals(type))
-                    || (descrition != null && !rfolder.getDescrition().equals(descrition)
+                    || (description != null && !rfolder.getDescription().equals(description)
             )) {
-                rfolder = getVFSDiskService().mkDir2(path, descrition, type).getData();
+                rfolder = getVFSDiskService().mkDir2(path, description, type).getData();
             }
 
             if (rfolder != null) {
@@ -2002,8 +2002,8 @@ public class CtCacheManager implements Serializable {
         } else {
             folder = this.getFolderById(folderId);
             //修改显示名称
-            if (folder.getPath().equals(path) && descrition != null && !folder.getDescrition().equals(descrition)) {
-                this.updateFolderInfo(path, folder.getName(), descrition, type);
+            if (folder.getPath().equals(path) && description != null && !folder.getDescription().equals(description)) {
+                this.updateFolderInfo(path, folder.getName(), description, type);
             }
         }
         return folder;

@@ -208,8 +208,8 @@ public class CtVfsServiceImpl implements CtVfsService {
 
 
     @Override
-    public FileInfo createFile(String path, String name, String descrition) throws JDSException {
-        return CtCacheManager.getInstance().createFile(path, name, descrition);
+    public FileInfo createFile(String path, String name, String description) throws JDSException {
+        return CtCacheManager.getInstance().createFile(path, name, description);
     }
 
     @Override
@@ -223,18 +223,18 @@ public class CtVfsServiceImpl implements CtVfsService {
     }
 
     @Override
-    public FileInfo updateFileInfo(FileInfo fileInfo, String name, String descrition) throws JDSException {
-        return CtCacheManager.getInstance().updateFileInfo(fileInfo.getPath(), name, descrition);
+    public FileInfo updateFileInfo(FileInfo fileInfo, String name, String description) throws JDSException {
+        return CtCacheManager.getInstance().updateFileInfo(fileInfo.getPath(), name, description);
     }
 
     @Override
-    public Folder updateFolderInfo(Folder folder, String name, String descrition, FolderType type) throws JDSException {
-        return CtCacheManager.getInstance().updateFolderInfo(folder.getPath(), name, descrition, type);
+    public Folder updateFolderInfo(Folder folder, String name, String description, FolderType type) throws JDSException {
+        return CtCacheManager.getInstance().updateFolderInfo(folder.getPath(), name, description, type);
     }
 
     @Override
-    public Folder updateFolderInfo(Folder folder, String name, String descrition) throws JDSException {
-        return CtCacheManager.getInstance().updateFolderInfo(folder.getPath(), name, descrition, folder.getFolderType());
+    public Folder updateFolderInfo(Folder folder, String name, String description) throws JDSException {
+        return CtCacheManager.getInstance().updateFolderInfo(folder.getPath(), name, description, folder.getFolderType());
     }
 
     @Override
@@ -317,13 +317,13 @@ public class CtVfsServiceImpl implements CtVfsService {
     }
 
     @Override
-    public Folder mkDir(String path, String descrition, FolderType type) throws JDSException {
-        return CtCacheManager.getInstance().mkDir(path, descrition, type);
+    public Folder mkDir(String path, String description, FolderType type) throws JDSException {
+        return CtCacheManager.getInstance().mkDir(path, description, type);
     }
 
     @Override
-    public Folder mkDir(String path, String descrition) throws JDSException {
-        return CtCacheManager.getInstance().mkDir(path, descrition, FolderType.folder);
+    public Folder mkDir(String path, String description) throws JDSException {
+        return CtCacheManager.getInstance().mkDir(path, description, FolderType.folder);
     }
 
     @Override

@@ -35,10 +35,10 @@ public interface VFSDiskService {
     public ResultModel<Boolean> copyFile(String path, String path2);
 
     @MethodChinaName(cname = "COPY文件信息并重命名")
-    public ResultModel<FileInfo> createFile2(String path, String name, String descrition);
+    public ResultModel<FileInfo> createFile2(String path, String name, String description);
 
     @MethodChinaName(cname = "创建文件夹")
-    ResultModel<Folder> mkDir2(String path, String descrition, FolderType type);
+    ResultModel<Folder> mkDir2(String path, String description, FolderType type);
 
     @MethodChinaName(cname = "创建指定HASH版本")
     ResultModel<FileVersion> createFileVersion(String path, String filehash);
@@ -48,10 +48,10 @@ public interface VFSDiskService {
 
 
     @MethodChinaName(cname = "更新文件信息")
-    public ResultModel<Boolean> updateFileInfo(String path, String name, String descrition);
+    public ResultModel<Boolean> updateFileInfo(String path, String name, String description);
 
     @MethodChinaName(cname = "更新文件夹信息")
-    public ResultModel<Boolean> updateFolderInfo(String path, String name, String descrition, FolderType type);
+    public ResultModel<Boolean> updateFolderInfo(String path, String name, String description, FolderType type);
 
     @MethodChinaName(cname = "更新文件夹状态")
     public ResultModel<Boolean> updateFolderState(String path, FolderState state);

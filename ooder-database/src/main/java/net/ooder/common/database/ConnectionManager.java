@@ -45,7 +45,7 @@ import java.util.List;
  * Title: 常用代码打包
  * </p>
  * <p>
- * Description: Central manager of database connections. All methods are static so that they can be easily accessed
+ * description: Central manager of database connections. All methods are static so that they can be easily accessed
  * throughout the classes in the database package.
  * <p>
  * <p>

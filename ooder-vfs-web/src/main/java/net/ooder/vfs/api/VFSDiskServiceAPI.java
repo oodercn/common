@@ -79,16 +79,16 @@ public class VFSDiskServiceAPI implements VFSDiskService {
     @RequestMapping(method = RequestMethod.POST, value = "UpdateFileInfo")
     @MethodChinaName(cname = "更新文件信息")
     public @ResponseBody
-    ResultModel<Boolean> updateFileInfo(String path, String name, String descrition) {
-        return getVfsService().updateFileInfo(path, name, descrition);
+    ResultModel<Boolean> updateFileInfo(String path, String name, String description) {
+        return getVfsService().updateFileInfo(path, name, description);
     }
 
     @Override
     @RequestMapping(method = RequestMethod.POST, value = "updateFolderInfo")
     @MethodChinaName(cname = "更新文件夹信息")
     public @ResponseBody
-    ResultModel<Boolean> updateFolderInfo(String path, String name, String descrition, FolderType type) {
-        return getVfsService().updateFolderInfo(path, name, descrition, type);
+    ResultModel<Boolean> updateFolderInfo(String path, String name, String description, FolderType type) {
+        return getVfsService().updateFolderInfo(path, name, description, type);
     }
 
     @Override
@@ -111,16 +111,16 @@ public class VFSDiskServiceAPI implements VFSDiskService {
     @RequestMapping(method = RequestMethod.POST, value = "CreateFile2")
     @MethodChinaName(cname = "COPY文件信息并重命名")
     public @ResponseBody
-    ResultModel<FileInfo> createFile2(String path, String name, String descrition) {
-        return getVfsService().createFile2(path, name, descrition);
+    ResultModel<FileInfo> createFile2(String path, String name, String description) {
+        return getVfsService().createFile2(path, name, description);
     }
 
     @Override
     @RequestMapping(method = RequestMethod.POST, value = "MkDir2")
     @MethodChinaName(cname = "创建文件夹")
     public @ResponseBody
-    ResultModel<Folder> mkDir2(String path, String descrition, FolderType type) {
-        return getVfsService().mkDir2(path, descrition, type);
+    ResultModel<Folder> mkDir2(String path, String description, FolderType type) {
+        return getVfsService().mkDir2(path, description, type);
     }
 
     @Override

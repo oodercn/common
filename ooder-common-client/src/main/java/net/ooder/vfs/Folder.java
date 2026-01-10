@@ -132,18 +132,18 @@ public interface Folder extends Cacheable {
     public FileInfo createFile(String name, String createPersonId);
 
     @MethodChinaName(cname = "增加子文件")
-    public FileInfo createFile(String name, String descrition, String createPersonId);
+    public FileInfo createFile(String name, String description, String createPersonId);
 
     @MethodChinaName(cname = "增加子文件夹")
     public Folder createChildFolder(String name, String createPersonId);
 
     @MethodChinaName(cname = "增加子文件夹")
-    public Folder createChildFolder(String name, String descrition, String createPersonId);
+    public Folder createChildFolder(String name, String description, String createPersonId);
 
     @MethodChinaName(cname = "描述")
-    public String getDescrition();
+    public String getDescription();
 
-    public void setDescrition(String descrition);
+    public void setDescription(String description);
 
     public String getSystemCode();
 

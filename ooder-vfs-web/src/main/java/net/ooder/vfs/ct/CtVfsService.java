@@ -167,10 +167,10 @@ public interface CtVfsService extends JDSClientService {
     /**
      * @param fileInfo
      * @param name
-     * @param descrition
+     * @param description
      * @throws JDSException
      */
-    public FileInfo updateFileInfo(FileInfo fileInfo, String name, String descrition) throws JDSException;
+    public FileInfo updateFileInfo(FileInfo fileInfo, String name, String description) throws JDSException;
 
 
     /**
@@ -179,7 +179,7 @@ public interface CtVfsService extends JDSClientService {
      * @param descrition
      * @throws JDSException
      */
-    public Folder updateFolderInfo(Folder folder, String name, String descrition) throws JDSException;
+    public Folder updateFolderInfo(Folder folder, String name, String description) throws JDSException;
 
     /**
      * @param folder
@@ -192,10 +192,10 @@ public interface CtVfsService extends JDSClientService {
     /**
      * @param folder
      * @param name
-     * @param descrition
+     * @param description
      * @throws JDSException
      */
-    public Folder updateFolderInfo(Folder folder, String name, String descrition, FolderType type) throws JDSException;
+    public Folder updateFolderInfo(Folder folder, String name, String description, FolderType type) throws JDSException;
 
 
     /**
@@ -327,9 +327,9 @@ public interface CtVfsService extends JDSClientService {
      */
     public Folder mkDir(String path) throws JDSException;
 
-    public Folder mkDir(String path, String descrition) throws JDSException;
+    public Folder mkDir(String path, String description) throws JDSException;
 
-    public Folder mkDir(String path, String descrition, FolderType type) throws JDSException;
+    public Folder mkDir(String path, String description, FolderType type) throws JDSException;
 
     /**
      * @param fileByPath
@@ -355,7 +355,7 @@ public interface CtVfsService extends JDSClientService {
     public FileInfo createFile(String filePath) throws JDSException;
 
 
-    public FileInfo createFile(String path, String name, String descrition) throws JDSException;
+    public FileInfo createFile(String path, String name, String description) throws JDSException;
 
 
     public FileInfo saveFileAsContent(String path, String content, String encoding) throws JDSException;

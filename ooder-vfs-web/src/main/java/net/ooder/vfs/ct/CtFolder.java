@@ -34,7 +34,7 @@ public class CtFolder implements Folder {
 
     private String systemCode;
 
-    private String descrition;
+    private String description;
 
     private Long createTime;
 
@@ -66,7 +66,7 @@ public class CtFolder implements Folder {
         this.folderType = folder.getFolderType();
         this.orderNum = folder.getOrderNum();
         this.state = folder.getState();
-        this.descrition = folder.getDescrition();
+        this.description = folder.getDescription();
         this.createTime = folder.getCreateTime();
         this.index = folder.getIndex();
         this.updateTime = folder.getUpdateTime();
@@ -170,13 +170,13 @@ public class CtFolder implements Folder {
     }
 
     @Override
-    public String getDescrition() {
-        return this.descrition == null ? this.name : this.descrition;
+    public String getDescription() {
+        return this.description == null ? this.name : this.description;
     }
 
     @Override
-    public void setDescrition(String descrition) {
-        this.descrition = descrition;
+    public void setDescription(String description) {
+        this.description = description;
 
     }
 
@@ -376,10 +376,10 @@ public class CtFolder implements Folder {
     @Override
 
     @JSONField(serialize = false)
-    public FileInfo createFile(String name, String descrition, String createPersonId) {
+    public FileInfo createFile(String name, String description, String createPersonId) {
         FileInfo fileInfo = null;
         try {
-            fileInfo = CtVfsFactory.getCtVfsService().createFile(this.getPath(), name, descrition);
+            fileInfo = CtVfsFactory.getCtVfsService().createFile(this.getPath(), name, description);
             this.fileIdList.add(fileInfo.getID());
         } catch (JDSException e) {
 
@@ -398,7 +398,7 @@ public class CtFolder implements Folder {
     @Override
 
     @JSONField(serialize = false)
-    public Folder createChildFolder(String name, String descrition, String createPersonId) {
+    public Folder createChildFolder(String name, String description, String createPersonId) {
         Folder folder = null;
         name = CnToSpell.getFullSpell(name);
         try {
@@ -417,7 +417,7 @@ public class CtFolder implements Folder {
 //            }
 
 
-            folder = CtVfsFactory.getCtVfsService().mkDir(this.getPath() + name, descrition, FolderType.folder);
+            folder = CtVfsFactory.getCtVfsService().mkDir(this.getPath() + name, description, FolderType.folder);
             this.childIdList.add(folder.getID());
 
 

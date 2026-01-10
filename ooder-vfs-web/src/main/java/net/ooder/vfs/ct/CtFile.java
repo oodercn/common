@@ -15,7 +15,7 @@ public class CtFile implements FileInfo {
     private Integer fileType;
     private String personId;
     private Long createTime;
-    private String descrition;
+    private String description;
     private String folderId;
 
     private String right;
@@ -38,7 +38,7 @@ public class CtFile implements FileInfo {
         this.createTime = file.getCreateTime();
         this.name = file.getName();
         this.fileType = file.getFileType();
-        this.descrition = file.getDescrition();
+        this.description = file.getDescription();
         this.folderId = file.getFolderId();
         this.personId = file.getPersonId();
         this.fileIdLinkList = file.getLinkIds();
@@ -98,9 +98,9 @@ public class CtFile implements FileInfo {
     }
 
     @Override
-    public String getDescrition() {
+    public String getDescription() {
 
-        return this.descrition == null ? this.name : this.descrition;
+        return this.description == null ? this.name : this.description;
     }
 
     @Override

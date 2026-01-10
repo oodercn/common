@@ -162,18 +162,18 @@ public interface CtVfsAdminService extends JDSClientService {
     /**
      * @param fileInfo
      * @param name
-     * @param descrition
+     * @param description
      * @throws JDSException
      */
-    public void updateFileInfo(FileInfo fileInfo, String name, String descrition) throws JDSException;
+    public void updateFileInfo(FileInfo fileInfo, String name, String description) throws JDSException;
 
     /**
      * @param folder
      * @param name
-     * @param descrition
+     * @param description
      * @throws JDSException
      */
-    public void updateFolderInfo(Folder folder, String name, String descrition) throws JDSException;
+    public void updateFolderInfo(Folder folder, String name, String description) throws JDSException;
 
 
     /**
@@ -305,7 +305,7 @@ public interface CtVfsAdminService extends JDSClientService {
      */
     public Folder mkDir(String path) throws JDSException;
 
-    public Folder mkDir(String path, String descrition, FolderType type) throws JDSException;
+    public Folder mkDir(String path, String description, FolderType type) throws JDSException;
 
     /**
      * @param fileByPath
@@ -328,7 +328,7 @@ public interface CtVfsAdminService extends JDSClientService {
     public FileInfo createFile(String path, String name) throws JDSException;
 
 
-    public FileInfo createFile(String path, String name, String descrition) throws JDSException;
+    public FileInfo createFile(String path, String name, String description) throws JDSException;
 
 
     public void saveFileAsContent(String path, String content, String encoding) throws JDSException;

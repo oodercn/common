@@ -493,8 +493,8 @@ public class VFSEventControl implements JDSEventDispatcher {
     private static void dispatchFileEvent(final FileEvent event, final FileListener listener) {
         try {
             switch (event.getID()) {
-                case beforDownLoad:
-                    listener.beforDownLoad(event);
+                case beforeDownLoad:
+                    listener.beforeDownLoad(event);
                     break;
                 case downLoading:
                     listener.downLoading(event);
@@ -508,14 +508,14 @@ public class VFSEventControl implements JDSEventDispatcher {
                 case reStore:
                     listener.reStore(event);
                     break;
-                case beforMove:
-                    listener.beforMove(event);
+                case beforeMove:
+                    listener.beforeMove(event);
                     break;
                 case moveEnd:
                     listener.moveEnd(event);
                     break;
-                case beforDelete:
-                    listener.beforDelete(event);
+                case beforeDelete:
+                    listener.beforeDelete(event);
                     break;
                 case deleteEnd:
                     listener.deleteEnd(event);
@@ -532,8 +532,8 @@ public class VFSEventControl implements JDSEventDispatcher {
                 case share:
                     listener.share(event);
                     break;
-                case beforUpLoad:
-                    listener.beforUpLoad(event);
+                case beforeUpLoad:
+                    listener.beforeUpLoad(event);
                     break;
                 case upLoading:
                     listener.upLoading(event);
@@ -547,8 +547,8 @@ public class VFSEventControl implements JDSEventDispatcher {
                 case create:
                     listener.create(event);
                     break;
-                case beforCopy:
-                    listener.beforCopy(event);
+                case beforeCopy:
+                    listener.beforeCopy(event);
                     break;
                 case copyEnd:
                     listener.copyEnd(event);
@@ -556,8 +556,8 @@ public class VFSEventControl implements JDSEventDispatcher {
                 case save:
                     listener.save(event);
                     break;
-                case beforUpdate:
-                    listener.beforUpdate(event);
+                case beforeUpdate:
+                    listener.beforeUpdate(event);
                     break;
                 case updateEnd:
                     listener.updateEnd(event);
@@ -577,8 +577,8 @@ public class VFSEventControl implements JDSEventDispatcher {
     private static void dispatchEIFileEvent(final FileEvent event, final EIFileListener listener) {
         try {
             switch (event.getID()) {
-                case beforDownLoad:
-                    listener.beforDownLoad(event);
+                case beforeDownLoad:
+                    listener.beforeDownLoad(event);
                     break;
                 case downLoading:
                     listener.downLoading(event);
@@ -592,13 +592,13 @@ public class VFSEventControl implements JDSEventDispatcher {
                 case reStore:
                     listener.reStore(event);
                     break;
-                case beforMove:
-                    listener.beforMove(event);
+                case beforeMove:
+                    listener.beforeMove(event);
                     break;
                 case moveEnd:
                     listener.moveEnd(event);
                     break;
-                case beforDelete:
+                case beforeDelete:
                     listener.beforDelete(event);
                     break;
                 case deleteEnd:
@@ -616,8 +616,8 @@ public class VFSEventControl implements JDSEventDispatcher {
                 case share:
                     listener.share(event);
                     break;
-                case beforUpLoad:
-                    listener.beforUpLoad(event);
+                case beforeUpLoad:
+                    listener.beforeUpLoad(event);
                     break;
                 case upLoading:
                     listener.upLoading(event);
@@ -631,8 +631,8 @@ public class VFSEventControl implements JDSEventDispatcher {
                 case create:
                     listener.create(event);
                     break;
-                case beforCopy:
-                    listener.beforCopy(event);
+                case beforeCopy:
+                    listener.beforeCopy(event);
                     break;
                 case copyEnd:
                     listener.copyEnd(event);
@@ -640,7 +640,7 @@ public class VFSEventControl implements JDSEventDispatcher {
                 case save:
                     listener.save(event);
                     break;
-                case beforUpdate:
+                case beforeUpdate:
                     listener.beforUpdate(event);
                     break;
                 case updateEnd:
@@ -668,14 +668,14 @@ public class VFSEventControl implements JDSEventDispatcher {
                 case lock:
                     listener.lock(event);
                     break;
-                case beforReName:
-                    listener.beforReName(event);
+                case beforeReName:
+                    listener.beforeReName(event);
                     break;
                 case reNameEnd:
                     listener.reNameEnd(event);
                     break;
-                case beforMove:
-                    listener.beforMove(event);
+                case beforeMove:
+                    listener.beforeMove(event);
                     break;
                 case moving:
                     listener.moving(event);
@@ -683,18 +683,18 @@ public class VFSEventControl implements JDSEventDispatcher {
                 case moveEnd:
                     listener.moveEnd(event);
                     break;
-                case beforClean:
-                    listener.beforClean(event);
+                case beforeClean:
+                    listener.beforeClean(event);
                     break;
                 case cleanEnd:
                     listener.cleanEnd(event);
                     break;
-                case restore:
-                    listener.restore(event);
+                case reStore:
+                    listener.reStore(event);
                     break;
 
-                case beforDelete:
-                    listener.beforDelete(event);
+                case beforeDelete:
+                    listener.beforeDelete(event);
                     break;
                 case deleteing:
                     listener.deleteing(event);
@@ -706,8 +706,8 @@ public class VFSEventControl implements JDSEventDispatcher {
                     listener.save(event);
                     break;
 
-                case beforCopy:
-                    listener.beforCopy(event);
+                case beforeCopy:
+                    listener.beforeCopy(event);
                     break;
                 case copying:
                     listener.copying(event);
@@ -734,14 +734,14 @@ public class VFSEventControl implements JDSEventDispatcher {
                 case lock:
                     listener.lock(event);
                     break;
-                case beforReName:
-                    listener.beforReName(event);
+                case beforeReName:
+                    listener.beforeReName(event);
                     break;
                 case reNameEnd:
                     listener.reNameEnd(event);
                     break;
-                case beforMove:
-                    listener.beforMove(event);
+                case beforeMove:
+                    listener.beforeMove(event);
                     break;
                 case moving:
                     listener.moving(event);
@@ -749,18 +749,18 @@ public class VFSEventControl implements JDSEventDispatcher {
                 case moveEnd:
                     listener.moveEnd(event);
                     break;
-                case beforClean:
-                    listener.beforClean(event);
+                case beforeClean:
+                    listener.beforeClean(event);
                     break;
                 case cleanEnd:
                     listener.cleanEnd(event);
                     break;
-                case restore:
-                    listener.restore(event);
+                case reStore:
+                    listener.reStore(event);
                     break;
 
-                case beforDelete:
-                    listener.beforDelete(event);
+                case beforeDelete:
+                    listener.beforeDelete(event);
                     break;
                 case deleteing:
                     listener.deleteing(event);
@@ -772,8 +772,8 @@ public class VFSEventControl implements JDSEventDispatcher {
                     listener.save(event);
                     break;
 
-                case beforCopy:
-                    listener.beforCopy(event);
+                case beforeCopy:
+                    listener.beforeCopy(event);
                     break;
                 case copying:
                     listener.copying(event);

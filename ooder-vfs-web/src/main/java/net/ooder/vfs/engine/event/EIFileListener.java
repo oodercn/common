@@ -26,7 +26,7 @@ public interface EIFileListener extends java.util.EventListener {
 	 * @param event
 	 * @throws VFSException
 	 */
-	public void beforCopy(FileEvent event) throws VFSException;
+	public void beforeCopy(FileEvent event) throws VFSException;
 
 	/**
 	 *
@@ -61,14 +61,14 @@ public interface EIFileListener extends java.util.EventListener {
 	 * @param event
 	 * @throws VFSException
 	 */
-	public void beforUpLoad(FileEvent event) throws VFSException;
+	public void beforeUpLoad(FileEvent event) throws VFSException;
 
 	/**
 	 *
 	 * @param event
 	 * @throws VFSException
 	 */
-	public void beforDownLoad(FileEvent event) throws VFSException;
+	public void beforeDownLoad(FileEvent event) throws VFSException;
 
 	/**
 	 *
@@ -161,7 +161,7 @@ public interface EIFileListener extends java.util.EventListener {
 	 * @param event
 	 * @throws VFSException
 	 */
-	public void beforMove(FileEvent event) throws VFSException;
+	public void beforeMove(FileEvent event) throws VFSException;
 
 	/**
 	 *

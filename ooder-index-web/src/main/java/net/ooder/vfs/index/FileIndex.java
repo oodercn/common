@@ -64,7 +64,7 @@ public class FileIndex implements VFSIndex {
         this.docpath = fileInfo.getPath();
         this.createtime = fileInfo.getCreateTime();
         this.right = fileInfo.getRight();
-        this.desc = fileInfo.getDescrition();
+        this.desc = fileInfo.getDescription();
 
 
     }

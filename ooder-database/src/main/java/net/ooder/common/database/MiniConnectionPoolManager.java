@@ -338,3 +338,4 @@ public synchronized int getInactiveConnections() {
    return recycledConnections.size(); }
 
 } // end class MiniConnectionPoolManager
+

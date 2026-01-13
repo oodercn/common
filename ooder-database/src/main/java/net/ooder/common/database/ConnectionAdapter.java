@@ -307,3 +307,4 @@ public class ConnectionAdapter implements Connection {
 
 
 }
+

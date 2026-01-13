@@ -318,3 +318,5 @@ public class AlarmMsgIndex implements JLuceneIndex,LogMsg {
         this.status = status;
     }
 }
+
+

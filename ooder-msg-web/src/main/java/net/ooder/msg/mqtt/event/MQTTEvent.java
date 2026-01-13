@@ -67,7 +67,7 @@ public abstract class MQTTEvent<T> extends JDSEvent<T> {
 	}
 
 	/**
-	 * 设置发生事件时的JDSClientService对象�?
+	 * 设置发生事件时的JDSClientService对象。
 	 * 
 	 * @param client
 	 */
@@ -76,7 +76,7 @@ public abstract class MQTTEvent<T> extends JDSEvent<T> {
 	}
 
 	/**
-	 * 取得发生事件时的BSSClientService对象�?
+	 * 取得发生事件时的BSSClientService对象。
 	 * 
 	 * @return
 	 */
@@ -90,3 +90,5 @@ public abstract class MQTTEvent<T> extends JDSEvent<T> {
 	
 	
 }
+
+

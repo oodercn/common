@@ -23,18 +23,22 @@ import net.ooder.engine.JDSSessionHandle;
 import net.ooder.msg.mqtt.command.filter.CommandFilter;
 import net.ooder.server.JDSClientService;
 import net.ooder.server.JDSServer;
+import net.ooder.common.logging.Log;
+import net.ooder.common.logging.LogFactory;
+import net.ooder.msg.mqtt.MqttConstants;
 
 /**
  * @author wenzhang
  */
 public class LocalCommandFilterImpl implements CommandFilter {
+    private Log logger = LogFactory.getLog(MqttConstants.CONFIG_ENGINE_KEY, LocalCommandFilterImpl.class);
 
     public LocalCommandFilterImpl() {
 
     }
 
     /**
-     * 应用应该实现的过滤方法�?
+     * 应用应该实现的过滤方法。
      * <p>
      * 需要过滤的对象
      *
@@ -76,3 +80,5 @@ public class LocalCommandFilterImpl implements CommandFilter {
     }
 
 }
+
+

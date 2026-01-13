@@ -16,7 +16,7 @@ package net.ooder.msg;
 
 /**
  * <p>
- * Title: ooder组织机构中间�?
+ * Title: ooder组织机构中间件
  * </p>
  * <p>
  * Description:
@@ -40,3 +40,4 @@ public interface RMsg extends PasswordCommandMsg, LogMsg, AlarmMsg, TopicMsg {
     public void setLasterSystemCode(String systemCode);
 
 }
+

@@ -530,7 +530,7 @@ public abstract class DbObjectList<T> extends AbstractList implements Cloneable,
 	}
 
 	/**
-	 * 准备读取相应的数据，子类可以预先从数据中读取后面的数�?br>
+	 * 准备读取相应的数据，子类可以预先从数据中读取后面的数据<br>
 	 * 默认实现不做任何工作!
 	 * 
 	 * @param index
@@ -548,3 +548,5 @@ public abstract class DbObjectList<T> extends AbstractList implements Cloneable,
 	protected abstract T getObject(Object obj);
 
 }
+
+

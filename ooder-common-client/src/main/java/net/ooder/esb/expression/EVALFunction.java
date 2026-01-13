@@ -27,7 +27,7 @@ public  class EVALFunction extends AbstractFunction {
 
 	}
 	public Object perform() {
-//		ExpressionParser parser = BPMExpressionParserManager.getExpressionParser(null);
+//		ExpressionParser parser = WorkflowExpressionParserManager.getExpressionParser(null);
 //        parser.parseExpression(expressionStr);
 //		Object obj=parser.getValueAsObject();
 

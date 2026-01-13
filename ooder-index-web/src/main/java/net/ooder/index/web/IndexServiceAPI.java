@@ -32,7 +32,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.List;
 @Controller
 @RequestMapping("/api/fts/index")
-@MethodChinaName(cname = "索引服务")
+@MethodChinaName("索引服务")
 //@EsbBeanAnnotation(id = "IndexService")
 public class IndexServiceAPI implements IndexService {
 
@@ -40,26 +40,28 @@ public class IndexServiceAPI implements IndexService {
         IndexService service = EsbUtil.parExpression(IndexService.class);
         return service;
     }
-    @MethodChinaName(cname = "添加索引")
+    @MethodChinaName("添加索引")
     @RequestMapping(method = RequestMethod.POST, value = "/addIndex")
     public @ResponseBody ResultModel<JLucene> addIndex(@RequestBody JLucene luceneBean) {
         return getService().addIndex(luceneBean);
     }
 
-    @MethodChinaName(cname = "删除索引")
+    @MethodChinaName("删除索引")
     @RequestMapping(method = RequestMethod.POST, value = "/deleteIndex")
     public@ResponseBody
     ResultModel<Boolean> deleteIndex(@RequestBody JLucene luceneBean) {
         return getService().deleteIndex(luceneBean);
     }
-    @MethodChinaName(cname = "批量删除索引")
+    @MethodChinaName("批量删除索引")
     @RequestMapping(method = RequestMethod.POST, value = "/deleteAllIndex")
     public @ResponseBody  <V extends JLuceneIndex, T extends ConditionKey> ResultModel<Boolean> deleteAllIndex(@RequestBody Condition<T, V> condition) {
         return getService().deleteAllIndex(condition);
     }
-    @MethodChinaName(cname = "条件查询")
+    @MethodChinaName("条件查询")
     @RequestMapping(method = RequestMethod.POST, value = "/search")
     public @ResponseBody <V extends JLuceneIndex, T extends ConditionKey> ListResultModel<List<V>> search(@RequestBody Condition<T, V> condition) {
         return getService().search(condition);
     }
 }
+
+

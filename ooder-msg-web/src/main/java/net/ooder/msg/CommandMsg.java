@@ -30,3 +30,5 @@ public interface CommandMsg extends  SensorMsg{
 
     public void setResultCode(CommandEventEnums resultCode);
 }
+
+

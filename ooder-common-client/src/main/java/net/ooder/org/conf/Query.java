@@ -1,17 +1,3 @@
-/**
- * $RCSfile: Query.java,v $
- * $Revision: 1.0 $
- * $Date: 2025/08/25 $
- * <p>
- * Copyright (c) 2025 ooder.net
- * </p>
- * <p>
- * Company: ooder.net
- * </p>
- * <p>
- * License: MIT License
- * </p>
- */
 package net.ooder.org.conf;
 
 import net.ooder.common.cache.CacheSizes;
@@ -21,15 +7,9 @@ import java.io.Serializable;
 import java.util.Map;
 
 /**
- * <p>Title: ooder组织机构中间�?/p>
- * <p>Description:  </p>
- * <p></p>
- * <p>Copyright: Copyright (c) 2003-2008</p>
- * <p>Company: raddev.cn</p>
- * @author  ooder
- * @version 2.0
+ * Query 类用于表示查询信息，实现了 Cacheable 和 Serializable 接口。
  */
-public class Query implements Cacheable,Serializable {
+public class Query implements Cacheable, Serializable {
 	private String type;
 	private Map sqlClauses;
 
@@ -170,11 +150,11 @@ public class Query implements Cacheable,Serializable {
 		
 	}
 
-	//字段映射�?
+	//字段映射类
 	public class ColumnMapping implements Cacheable,Serializable{
-		//属性，与Org, Person等类的属性对�?
+		//属性，与Org, Person等类的属性
 		private String property;
-		//字段的别名，用于ResultSet的getString()方法取数据时用�?
+		//字段的别名，用于ResultSet的getString()方法取数据时
 		private String columnAlias;
 		//字段名称，用于拼Where语句时用
 		private String column;

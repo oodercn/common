@@ -51,7 +51,7 @@ public class ClearSessionCheckTask implements Runnable {
             if (JDSServer.getInstance().started()) {
                 List<JDSSessionHandle> invalidSessionList = new ArrayList<JDSSessionHandle>();
                 long currentTime = System.currentTimeMillis();
-                // 验证Session是否有需要进行过期处�?
+                // 验证Session是否有需要进行
                 Cache<String, JDSSessionHandle> cache = JDSServer.getInstance().getSessionHandleCache();
                 Set<String> ites = cache.keySet();
                 Integer size = ites.size();
@@ -71,8 +71,8 @@ public class ClearSessionCheckTask implements Runnable {
                 }
                 JDSServer.getInstance().invalidateSession(invalidSessionList);
             }
-        } catch (Exception bpme) {
-            logger.error("checkSession instance failed.", bpme);
+        } catch (Exception workflowee) {
+            logger.error("checkSession instance failed.", workflowee);
         }
 
     }

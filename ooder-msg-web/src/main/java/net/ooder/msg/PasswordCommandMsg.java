@@ -25,3 +25,5 @@ public interface PasswordCommandMsg  extends CommandMsg {
 
     public void setPassId(String passId);
 }
+
+

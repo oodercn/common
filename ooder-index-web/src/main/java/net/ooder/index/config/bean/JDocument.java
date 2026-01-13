@@ -34,3 +34,5 @@ public interface JDocument extends JIndexBean {
     public boolean isIndexValid();
 
 }
+
+

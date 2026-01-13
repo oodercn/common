@@ -20,6 +20,7 @@ import net.ooder.common.Condition;
 import net.ooder.config.ListResultModel;
 import net.ooder.config.ResultModel;
 import net.ooder.index.config.JLucene;
+import net.ooder.annotation.MethodChinaName;
 
 import java.util.List;
 
@@ -29,18 +30,21 @@ public interface IndexService {
      * 添加索引
      * @return
      */
+    @MethodChinaName("添加索引")
     public  <T extends  JLucene> ResultModel<T> addIndex(T luceneBean);
 
     /**
      * 根据主键删除索引
      * @return
      */
+    @MethodChinaName("根据主键删除索引")
     public  ResultModel<Boolean>  deleteIndex(JLucene luceneBean) ;
 
     /**
      * 删除索引
      * @return
      */
+    @MethodChinaName("删除所有索引")
     public  <V extends JLuceneIndex,T extends ConditionKey>  ResultModel<Boolean>  deleteAllIndex(Condition<T, V> condition) ;
 
 
@@ -49,5 +53,8 @@ public interface IndexService {
      * @param condition
      * @return
      */
+    @MethodChinaName("根据条件查询")
     public <V extends JLuceneIndex,T extends ConditionKey> ListResultModel<List<V>> search(Condition<T, V> condition);
 }
+
+

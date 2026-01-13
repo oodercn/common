@@ -315,3 +315,5 @@ public class EventIndex implements JLuceneIndex,LogMsg {
         this.status = status;
     }
 }
+
+

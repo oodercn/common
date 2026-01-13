@@ -23,6 +23,8 @@ public interface JPath extends JIndexBean {
 
     String getPath();
 
-    // 索引属�?
+    // 索引属性
     PathElementType getType();
 }
+
+

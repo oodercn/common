@@ -49,7 +49,7 @@ public abstract  class ESBBeanDefFilter extends AbstractFilter {
 	/**
 	 * 抽象方法，继承类必须实现此方法来过滤活动定义。
 	 * 
-	 * @see net.ooder.bpm.engine.query.Filter#filterObject(Object)
+	 * @see net.ooder.workflow.engine.query.Filter#filterObject(Object)
 	 */
 	public abstract boolean filterESBBeanDef(ExpressionTempBean obj);
 

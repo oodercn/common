@@ -36,11 +36,11 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/api/msg/webService")
-@MethodChinaName(cname = "消息服务")
+@MethodChinaName("消息服务")
 @EsbBeanAnnotation(dataType = ContextType.Server, tokenType = TokenType.admin)
 public class MsgWebServiceAPI implements MsgWebService {
 
-    @MethodChinaName(cname = "批量装载消息")
+    @MethodChinaName("批量装载消息")
     @Override
     @RequestMapping(method = {RequestMethod.POST}, value = {"/loadMsgIds"})
     @ResponseBody
@@ -48,7 +48,7 @@ public class MsgWebServiceAPI implements MsgWebService {
         return getService().loadMsgs(msgId);
     }
 
-    @MethodChinaName(cname = "获取消息")
+    @MethodChinaName("获取消息")
     @Override
     @RequestMapping(method = {RequestMethod.POST}, value = {"/getMsgById"})
     @ResponseBody
@@ -56,7 +56,7 @@ public class MsgWebServiceAPI implements MsgWebService {
         return getService().getMsgById(msgId);
     }
 
-    @MethodChinaName(cname = "查询消息")
+    @MethodChinaName("查询消息")
     @Override
     @RequestMapping(method = {RequestMethod.POST}, value = {"/findMsgIds"})
     @ResponseBody
@@ -64,7 +64,7 @@ public class MsgWebServiceAPI implements MsgWebService {
         return getService().findMsgIds(condition);
     }
 
-    @MethodChinaName(cname = "更新消息")
+    @MethodChinaName("更新消息")
     @Override
     @RequestMapping(method = {RequestMethod.POST}, value = {"/updateMsg"})
     @ResponseBody
@@ -72,7 +72,7 @@ public class MsgWebServiceAPI implements MsgWebService {
         return getService().updateMsg(msg);
     }
 
-    @MethodChinaName(cname = "删除消息")
+    @MethodChinaName("删除消息")
     @Override
     @RequestMapping(method = {RequestMethod.POST}, value = {"/deleteMsg"})
     @ResponseBody
@@ -80,7 +80,7 @@ public class MsgWebServiceAPI implements MsgWebService {
         return getService().deleteMsg(msgId);
     }
 
-    @MethodChinaName(cname = "批量删除")
+    @MethodChinaName("批量删除")
     @Override
     @RequestMapping(method = {RequestMethod.POST}, value = {"/deleteMsgs"})
     @ResponseBody
@@ -92,3 +92,5 @@ public class MsgWebServiceAPI implements MsgWebService {
         return (MsgWebService) EsbUtil.parExpression(MsgWebService.class);
     }
 }
+
+

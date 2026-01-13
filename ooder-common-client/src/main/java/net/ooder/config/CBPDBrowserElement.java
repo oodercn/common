@@ -39,7 +39,7 @@ import java.util.Map;
  * Copyright: Copyright (c) 2005
  * </p>
  * <p>
- * Company: BPM
+ * Company: odder
  * </p>
  *
  * @author  ooder

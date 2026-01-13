@@ -38,3 +38,5 @@ public interface JField extends JIndexBean {
 
     public void setHighlighter(Boolean highlighter);
 }
+
+

@@ -33,7 +33,7 @@ import net.ooder.msg.mqtt.enums.MQTTCommandEnums;
 public class CommandFilterImpl implements MsgFilter {
 
     /**
-     * 应用应该实现的过滤方法�?
+     * 应用应该实现的过滤方法。
      *
      * @param msg 需要过滤的对象
      * @return
@@ -68,3 +68,5 @@ public class CommandFilterImpl implements MsgFilter {
     }
 
 }
+
+

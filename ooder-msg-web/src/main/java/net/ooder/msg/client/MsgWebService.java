@@ -38,3 +38,5 @@ public interface MsgWebService {
 
     public ResultModel<Boolean>  deleteMsgs(String[] msgIds);
 }
+
+

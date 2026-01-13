@@ -1,15 +1,5 @@
 /**
  * $RCSfile: DBBeanBase.java,v $
- * $Revision: 1.1 $
- * $Date: 2025/07/08 00:25:49 $
- * <p>
- * Copyright (C) 2003 spk, Inc. All rights reserved.
- * <p>
- * This software is the proprietary information of spk, Inc.
- * Use is subject to license terms.
- */
-/**
- * $RCSfile: DBBeanBase.java,v $
  * $Revision: 1.0 $
  * $Date: 2025/08/25 $
  * <p>
@@ -39,10 +29,11 @@ import javax.sql.DataSource;
 import net.ooder.common.logging.Log;
 import net.ooder.common.logging.LogFactory;
 import net.ooder.common.util.Constants;
+import net.ooder.annotation.MethodChinaName;
 
 /**
  * 数据库访问
- * 通过JNDI从Appliction Server连接池中取得数据库
+ * 通过JNDI从Appliction Server连接池中取得数据
  * Creation date: (2002-6-24 14:15:23)
  * @author: JinDun
  *
@@ -199,6 +190,7 @@ public class DBBeanBase {
      * 3 - user define
      * ....
      */
+    @MethodChinaName("执行查询")
     public int executeQuery(String strSql) {
         int result = 0;
         try {
@@ -215,7 +207,7 @@ public class DBBeanBase {
         } catch (SQLException e) {
 //            if(e.getErrorCode() == 1013)//query timeout
 //            {
-//                throw new QueryTimeoutException("查询超时�?);
+//                throw new QueryTimeoutException("查询超时");
 //            }
             result = -1;
             log.error("Catch DataException in executeQuery of " +
@@ -234,6 +226,7 @@ public class DBBeanBase {
      * >=0 - affected rows
      * ....
      */
+    @MethodChinaName("执行更新")
     public int executeUpdate(String strSql) {
         int result = 1;
         try {
@@ -287,12 +280,14 @@ public class DBBeanBase {
     }
 
 
+    @MethodChinaName("获取查询结果")
     public DBResult getSelectDBResult() {
 
         return dbResult;
 
     }
 
+    @MethodChinaName("设置查询结果")
     public void setSelectDBResult(DBResult rs) {
 
         this.dbResult = rs;
@@ -344,6 +339,7 @@ public class DBBeanBase {
     /**
      * Close the result set and release resources
      */
+    @MethodChinaName("关闭连接")
     public void close() {
 
         try {
@@ -396,6 +392,7 @@ public class DBBeanBase {
      * Creation date: (01-9-25 15:13:54)
      * @return boolean
      */
+    @MethodChinaName("提交事务")
     public boolean commit() {
         boolean success = true;
         try {
@@ -414,6 +411,7 @@ public class DBBeanBase {
      * Creation date: (01-9-25 15:16:23)
      * @return boolean
      */
+    @MethodChinaName("回滚事务")
     public boolean rollback() {
         boolean success = true;
         try {
@@ -432,6 +430,7 @@ public class DBBeanBase {
     /**
      * 准备SQL
      */
+    @MethodChinaName("准备SQL语句")
     public boolean prepareSql(String strPreSql) {
         try {
             if (prestatm != null) {
@@ -476,6 +475,7 @@ public class DBBeanBase {
     /**
      * 执行准备好的SQL
      */
+    @MethodChinaName("执行预编译查询")
     public int executePreparedQuery() {
         if (prestatm == null) {
             return -1;
@@ -507,6 +507,7 @@ public class DBBeanBase {
     /**
      * 执行准备好的SQL
      */
+    @MethodChinaName("执行预编译更新")
     public int executePreparedUpdate() {
         if (prestatm == null) {
             return -1;
@@ -531,6 +532,7 @@ public class DBBeanBase {
         return result;
     }
 
+    @MethodChinaName("设置整型参数")
     public void setInt(int index, int value) {
         try {
             prestatm.setInt(index, value);
@@ -541,6 +543,7 @@ public class DBBeanBase {
         }
     }
 
+    @MethodChinaName("设置字符串参数")
     public void setString(int index, String value) {
         try {
             prestatm.setString(index, value);
@@ -551,6 +554,7 @@ public class DBBeanBase {
         }
     }
 
+    @MethodChinaName("设置日期参数")
     public void setDate(int index, java.sql.Date value) {
         try {
             prestatm.setDate(index, value);
@@ -561,6 +565,7 @@ public class DBBeanBase {
         }
     }
 
+    @MethodChinaName("设置浮点型参数")
     public void setFloat(int index, float value) {
         try {
             prestatm.setFloat(index, value);
@@ -571,6 +576,7 @@ public class DBBeanBase {
         }
     }
 
+    @MethodChinaName("设置时间戳参数")
     public void setTime(int index, java.sql.Timestamp value) {
         try {
             prestatm.setTimestamp(index, value);
@@ -581,6 +587,7 @@ public class DBBeanBase {
         }
     }
 
+    @MethodChinaName("设置长整型参数")
     public void setLong(int index, long value) {
         try {
             prestatm.setLong(index, value);
@@ -591,6 +598,7 @@ public class DBBeanBase {
         }
     }
 
+    @MethodChinaName("设置空值参数")
     public void setNull(int index, int sqlType) {
         try {
             prestatm.setNull(index, sqlType);
@@ -601,6 +609,7 @@ public class DBBeanBase {
         }
     }
 
+    @MethodChinaName("设置字符流参数")
     public void setCharacterStream(int parameterIndex,
                                    Reader reader,
                                    int length) {
@@ -613,6 +622,7 @@ public class DBBeanBase {
         }
     }
 
+    @MethodChinaName("检查连接是否关闭")
     public boolean isClosed() {
         try {
             if (con == null) {
@@ -633,8 +643,11 @@ public class DBBeanBase {
      * 取得DBBean内的连接，可能是null
      * @return
      */
+    @MethodChinaName("获取数据库连接")
     public Connection getConn() {
         return con;
     }
 
 }
+
+

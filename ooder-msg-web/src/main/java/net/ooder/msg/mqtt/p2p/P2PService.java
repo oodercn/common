@@ -22,16 +22,18 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 public interface P2PService {
 
-    @MethodChinaName(cname = "私信")
+    @MethodChinaName("私信")
     @ResponseBody
     public ResultModel<Msg> sendMsg2Person(String account, String body);
 
-    @MethodChinaName(cname = "广播消息")
+    @MethodChinaName("广播消息")
     @ResponseBody
     public ResultModel<TopicMsg> sendTopic(String sessionId, String topic, String msg);
 
-    @MethodChinaName(cname = "指定客户消息")
+    @MethodChinaName("指定客户消息")
     @ResponseBody
     public ResultModel<Msg> sendMsg2Client(String sessionId, String body);
 
 }
+
+

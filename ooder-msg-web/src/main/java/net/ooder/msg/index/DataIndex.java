@@ -145,3 +145,5 @@ public class DataIndex implements JLuceneIndex {
 	return path;
     }
 }
+
+

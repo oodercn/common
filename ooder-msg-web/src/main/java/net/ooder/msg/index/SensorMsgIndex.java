@@ -318,3 +318,5 @@ public class SensorMsgIndex implements JLuceneIndex,LogMsg {
         this.status = status;
     }
 }
+
+

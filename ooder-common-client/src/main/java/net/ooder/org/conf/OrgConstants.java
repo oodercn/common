@@ -52,7 +52,7 @@ public class OrgConstants {
     public static final String ORGMANAGERIMPLCLASSNAMEWITHNOCONFIGKEY_KEY = "OrgManager.implClassName";
 
     public static final String DEFAULTCTORGCLASS = "net.ooder.common.org.CtOrgManager";
-    // 获取组织机构管理器工厂实现类名的�?
+    // 获取组织机构管理器工厂实现类名
 
 
     public static final String CMAILROOTPATH = "/cmailroot/";

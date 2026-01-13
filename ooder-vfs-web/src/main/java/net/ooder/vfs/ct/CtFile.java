@@ -7,32 +7,33 @@ import  net.ooder.vfs.*;
 
 import java.util.*;
 
+/**
+ * CtFile 实现了 FileInfo 接口，用于表示文件信息。
+ */
 public class CtFile implements FileInfo {
     private String ID;
     private String name;
     private String path = "";
-
     private Integer fileType;
     private String personId;
     private Long createTime;
     private String description;
     private String folderId;
-
     private String right;
     private String oldFolderId;
     private String currentVersonId;
-
     private String currentVersonFileHash;
-
     private Set<String> fileIdVersionList;
     private Set<String> fileIdLinkList;
     private Set<String> currViewIdList;
     private Set<String> roleIds;
-
-
     public Long updateTime;
     boolean isModified = false;
 
+    /**
+     * 构造函数，从 FileInfo 对象创建 CtFile。
+     * @param file 原始文件信息对象
+     */
     public CtFile(FileInfo file) {
         this.ID = file.getID();
         this.createTime = file.getCreateTime();
@@ -50,7 +51,6 @@ public class CtFile implements FileInfo {
         if (path == null) {
             path = getFolder().getPath() + name;
         }
-
     }
 
     public Long getUpdateTime() {
@@ -207,7 +207,6 @@ public class CtFile implements FileInfo {
         try {
             return CtVfsFactory.getCtVfsService().getFolderById(this.getFolderId());
         } catch (JDSException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return null;
@@ -216,11 +215,9 @@ public class CtFile implements FileInfo {
     @Override
     @JSONField(serialize = false)
     public MD5InputStream getCurrentVersonInputStream() {
-
         try {
             return CtVfsFactory.getCtVfsService().downLoad(this.getPath());
         } catch (JDSException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return null;
@@ -259,7 +256,4 @@ public class CtFile implements FileInfo {
     public String toString() {
         return path;
     }
-
-    ;
-
 }

@@ -52,9 +52,9 @@ import java.util.concurrent.ExecutorService;
  * Title: im系统管理系统
  * </p>
  * <p>
- * Description: 系统事件控制核心，所有引擎事件都在这里中转处�?
+ * Description: 系统事件控制核心，所有引擎事件都在这里中转处理
  * </p>
- * 支持分布式事件分�?
+ * 支持分布式事件分发
  * <p>
  * Copyright: Copyright (c) 2020
  * </p>
@@ -554,3 +554,5 @@ public class MQTTEventControl implements JDSEventDispatcher {
     }
 
 }
+
+

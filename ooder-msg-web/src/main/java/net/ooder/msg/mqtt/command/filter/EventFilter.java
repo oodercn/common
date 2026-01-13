@@ -25,7 +25,7 @@ import net.ooder.common.logging.LogFactory;
  * Title: JDS系统管理系统
  * </p>
  * <p>
- * Description: 结果过滤器接�?
+ * Description: 结果过滤器接口
  * </p>
  * <p>
  * Copyright: Copyright (c) 2017
@@ -41,7 +41,7 @@ public interface EventFilter {
     public static final Log logger = LogFactory.getLog(JDSConstants.CONFIG_KEY, EventFilter.class);
 
     /**
-     * 应用应该实现的过滤方法�?
+     * 应用应该实现的过滤方法
      * 
      * @param obj
      *            需要过滤的对象
@@ -49,3 +49,5 @@ public interface EventFilter {
      */
     public abstract boolean filterObject(JDSEvent event);
 }
+
+

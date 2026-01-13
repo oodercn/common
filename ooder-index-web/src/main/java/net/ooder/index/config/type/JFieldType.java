@@ -45,3 +45,5 @@ public @interface JFieldType {
     Store store() default Store.NO;
 
 }
+
+

@@ -27,7 +27,7 @@ import net.ooder.msg.Msg;
  * Title: JDS系统管理系统
  * </p>
  * <p>
- * Description: 结果过滤器接�?
+ * Description: 结果过滤器接口
  * </p>
  * <p>
  * Copyright: Copyright (c) 2017
@@ -45,10 +45,12 @@ public interface MsgFilter{
 
 
 	/**
-	 * 应用应该实现的过滤方法�?
-	 *
-	 *            需要过滤的对象
-	 * @return
-	 */
+ * 应用应该实现的过滤方法
+ * @param msg 需要过滤的消息对象
+ * @param handle 会话句柄
+ * @return 是否通过过滤
+ */
 	public   boolean filterObject(Msg msg, JDSSessionHandle handle);
 }
+
+

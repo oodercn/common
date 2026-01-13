@@ -12,375 +12,526 @@ import java.io.File;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * CtVfsService 接口定义了VFS服务的核心功能。
+ */
 public interface CtVfsService extends JDSClientService {
 
     /**
-     * @param folderId
-     * @return
+     * 根据文件夹ID获取文件夹信息。
+     * @param folderId 文件夹ID
+     * @return Folder 文件夹对象
+     * @throws JDSException JDS异常
      */
-    public Folder getFolderById(String folderId) throws JDSException;
-
+    Folder getFolderById(String folderId) throws JDSException;
 
     /**
-     * @param path
-     * @return
+     * 清理指定路径的缓存。
+     * @param path 路径
+     * @throws JDSException JDS异常
      */
-    public void clearCache(String path) throws JDSException;
-
-    public void removeCache(String path) throws JDSException ;
+    void clearCache(String path) throws JDSException;
 
     /**
-     * @param path
-     * @return
+     * 移除指定路径的缓存。
+     * @param path 路径
+     * @throws JDSException JDS异常
      */
-    public void clearFileCache(String path) throws JDSException;
-
+    void removeCache(String path) throws JDSException;
 
     /**
-     * @param hash
-     * @return
+     * 清理指定路径的文件缓存。
+     * @param path 路径
+     * @throws JDSException JDS异常
      */
-    public void clearFileObjectCache(String hash) throws JDSException;
+    void clearFileCache(String path) throws JDSException;
 
     /**
-     * @param viewIds
-     * @return
-     * @throws JDSException
+     * 清理指定哈希值的文件对象缓存。
+     * @param hash 文件哈希值
+     * @throws JDSException JDS异常
      */
-    public List<FileView> loadViews(Set<String> viewIds) throws JDSException;
+    void clearFileObjectCache(String hash) throws JDSException;
 
     /**
-     * @param path
-     * @return
+     * 加载多个视图信息。
+     * @param viewIds 视图ID集合
+     * @return List<FileView> 视图列表
+     * @throws JDSException JDS异常
      */
-    public void clearFileVersionCache(String path) throws JDSException;
-
+    List<FileView> loadViews(Set<String> viewIds) throws JDSException;
 
     /**
-     * @param folderIds
-     * @return
-     * @throws JDSException
+     * 清理指定路径的文件版本缓存。
+     * @param path 路径
+     * @throws JDSException JDS异常
      */
-    public List<Folder> loadFolers(Set<String> folderIds) throws JDSException;
+    void clearFileVersionCache(String path) throws JDSException;
 
     /**
-     * @param fileObjectId
-     * @return
+     * 加载多个文件夹信息。
+     * @param folderIds 文件夹ID集合
+     * @return List<Folder> 文件夹列表
+     * @throws JDSException JDS异常
      */
-    public FileObject getFileObjectById(String fileObjectId) throws JDSException;
+    List<Folder> loadFolers(Set<String> folderIds) throws JDSException;
 
+    /**
+     * 根据文件对象ID获取文件对象。
+     * @param fileObjectId 文件对象ID
+     * @return FileObject 文件对象
+     * @throws JDSException JDS异常
+     */
+    FileObject getFileObjectById(String fileObjectId) throws JDSException;
+
+    /**
+     * 加载多个文件对象。
+     * @param objectIds 文件对象ID集合
+     * @return List<FileObject> 文件对象列表
+     * @throws JDSException JDS异常
+     */
     List<FileObject> loadObjects(Set<String> objectIds) throws JDSException;
 
     /**
-     * @param path
-     * @return
+     * 根据路径获取文件夹信息。
+     * @param path 路径
+     * @return Folder 文件夹对象
+     * @throws JDSException JDS异常
      */
-    public Folder getFolderByPath(String path) throws JDSException;
+    Folder getFolderByPath(String path) throws JDSException;
 
     /**
-     * @return
+     * 根据文件ID获取文件信息。
+     * @param fileId 文件ID
+     * @return FileInfo 文件信息
+     * @throws JDSException JDS异常
      */
-    public FileInfo getFileById(String fileId) throws JDSException;
-
+    FileInfo getFileById(String fileId) throws JDSException;
 
     /**
-     * @param fileIds
-     * @return
-     * @throws JDSException
+     * 加载多个文件信息。
+     * @param fileIds 文件ID集合
+     * @return List<FileInfo> 文件信息列表
+     * @throws JDSException JDS异常
      */
-    public List<FileInfo> loadFiles(Set<String> fileIds) throws JDSException;
+    List<FileInfo> loadFiles(Set<String> fileIds) throws JDSException;
 
     /**
-     * @return
+     * 根据路径获取文件信息。
+     * @param path 路径
+     * @return FileInfo 文件信息
+     * @throws JDSException JDS异常
      */
-    public FileInfo getFileByPath(String path) throws JDSException;
+    FileInfo getFileByPath(String path) throws JDSException;
 
     /**
-     * @param versionId
-     * @return
+     * 根据版本ID获取文件版本。
+     * @param versionId 版本ID
+     * @return FileVersion 文件版本
+     * @throws JDSException JDS异常
      */
-    public FileVersion getFileVersionById(String versionId) throws JDSException;
-
+    FileVersion getFileVersionById(String versionId) throws JDSException;
 
     /**
-     * @param path
-     * @return
+     * 根据路径获取文件版本。
+     * @param path 路径
+     * @return FileVersion 文件版本
+     * @throws JDSException JDS异常
      */
-    public FileVersion getFileVersionByPath(String path) throws JDSException;
-
+    FileVersion getFileVersionByPath(String path) throws JDSException;
 
     /**
-     * @param path
-     * @return
+     * 根据哈希值获取文件版本列表。
+     * @param path 路径
+     * @return List<FileVersion> 文件版本列表
+     * @throws JDSException JDS异常
      */
-    public List<FileVersion> getFileVersionsByHash(String path) throws JDSException;
-
+    List<FileVersion> getFileVersionsByHash(String path) throws JDSException;
 
     /**
-     * @param versionIds
-     * @return
+     * 加载多个文件版本。
+     * @param versionIds 版本ID集合
+     * @return List<FileVersion> 文件版本列表
+     * @throws JDSException JDS异常
      */
-    public List<FileVersion> loadVersionByIds(Set<String> versionIds) throws JDSException;
+    List<FileVersion> loadVersionByIds(Set<String> versionIds) throws JDSException;
 
     /**
-     * @param viewId
-     * @return
-     * @throws JDSException
+     * 根据视图ID获取视图信息。
+     * @param viewId 视图ID
+     * @return FileView 视图信息
+     * @throws JDSException JDS异常
      */
-    public FileView getFileViewById(String viewId) throws JDSException;
+    FileView getFileViewById(String viewId) throws JDSException;
 
     /**
-     * @param objectId
-     * @param str
-     * @return
-     * @throws JDSException
+     * 向文件对象写入一行内容。
+     * @param objectId 文件对象ID
+     * @param str 要写入的字符串
+     * @return Integer 写入结果
+     * @throws JDSException JDS异常
      */
-    public Integer writeLine(String objectId, String str) throws JDSException;
+    Integer writeLine(String objectId, String str) throws JDSException;
 
     /**
-     * @param objectId
-     * @param lineNums
-     * @return
-     * @throws JDSException
+     * 读取文件对象的指定行。
+     * @param objectId 文件对象ID
+     * @param lineNums 行号列表
+     * @return List<String> 读取的行内容列表
+     * @throws JDSException JDS异常
      */
-    public List<String> readLine(String objectId, List<Integer> lineNums) throws JDSException;
+    List<String> readLine(String objectId, List<Integer> lineNums) throws JDSException;
 
     /**
-     * @param folderId
-     * @throws JDSException
+     * 删除文件夹。
+     * @param folderId 文件夹ID
+     * @throws JDSException JDS异常
      */
-    public void deleteFolder(String folderId) throws JDSException;
+    void deleteFolder(String folderId) throws JDSException;
 
     /**
-     * @param fileInfoId
-     * @throws JDSException
+     * 删除文件。
+     * @param fileInfoId 文件信息ID
+     * @throws JDSException JDS异常
      */
-    public void deleteFile(String fileInfoId) throws JDSException;
+    void deleteFile(String fileInfoId) throws JDSException;
 
     /**
-     * @param versionId
-     * @throws JDSException
+     * 删除文件版本。
+     * @param versionId 版本ID
+     * @throws JDSException JDS异常
      */
-    public void deleteFileVersion(String versionId) throws JDSException;
-
+    void deleteFileVersion(String versionId) throws JDSException;
 
     /**
-     * @param fileInfo
-     * @param name
-     * @param description
-     * @throws JDSException
+     * 更新文件信息。
+     * @param fileInfo 文件信息
+     * @param name 文件名
+     * @param description 文件描述
+     * @return FileInfo 更新后的文件信息
+     * @throws JDSException JDS异常
      */
-    public FileInfo updateFileInfo(FileInfo fileInfo, String name, String description) throws JDSException;
-
+    FileInfo updateFileInfo(FileInfo fileInfo, String name, String description) throws JDSException;
 
     /**
-     * @param folder
-     * @param name
-     * @param descrition
-     * @throws JDSException
+     * 更新文件夹信息。
+     * @param folder 文件夹对象
+     * @param name 文件夹名
+     * @param description 文件夹描述
+     * @return Folder 更新后的文件夹对象
+     * @throws JDSException JDS异常
      */
-    public Folder updateFolderInfo(Folder folder, String name, String description) throws JDSException;
+    Folder updateFolderInfo(Folder folder, String name, String description) throws JDSException;
 
     /**
-     * @param folder
-     * @param state
-     * @throws JDSException
+     * 更新文件夹状态。
+     * @param folder 文件夹对象
+     * @param state 文件夹状态
+     * @return Folder 更新后的文件夹对象
+     * @throws JDSException JDS异常
      */
-    public Folder updateFolderState(Folder folder, FolderState state) throws JDSException;
-
+    Folder updateFolderState(Folder folder, FolderState state) throws JDSException;
 
     /**
-     * @param folder
-     * @param name
-     * @param description
-     * @throws JDSException
+     * 更新文件夹信息，包括类型。
+     * @param folder 文件夹对象
+     * @param name 文件夹名
+     * @param description 文件夹描述
+     * @param type 文件夹类型
+     * @return Folder 更新后的文件夹对象
+     * @throws JDSException JDS异常
      */
-    public Folder updateFolderInfo(Folder folder, String name, String description, FolderType type) throws JDSException;
-
+    Folder updateFolderInfo(Folder folder, String name, String description, FolderType type) throws JDSException;
 
     /**
-     * @param fileVersionId
-     * @param hash
-     * @throws JDSException
+     * 更新文件版本信息。
+     * @param fileVersionId 文件版本ID
+     * @param hash 文件哈希值
+     * @throws JDSException JDS异常
      */
-    public void updateFileVersionInfo(String fileVersionId, String hash) throws JDSException;
-
+    void updateFileVersionInfo(String fileVersionId, String hash) throws JDSException;
 
     /**
-     * @param path
-     * @param filehash
-     * @throws JDSException
+     * 创建文件版本。
+     * @param path 路径
+     * @param filehash 文件哈希值
+     * @return FileVersion 创建的文件版本
+     * @throws JDSException JDS异常
      */
-    public FileVersion createFileVersion(String path, String filehash) throws JDSException;
-
+    FileVersion createFileVersion(String path, String filehash) throws JDSException;
 
     /**
-     * @param view
-     * @throws JDSException
+     * 更新文件视图信息。
+     * @param view 文件视图
+     * @throws JDSException JDS异常
      */
-    public void updateFileViewInfo(FileView view) throws JDSException;
-
+    void updateFileViewInfo(FileView view) throws JDSException;
 
     /**
-     * @param path
-     * @param inputstream
-     * @param personId
-     * @throws JDSException
+     * 上传文件。
+     * @param path 路径
+     * @param inputstream MD5输入流
+     * @param personId 用户ID
+     * @return FileVersion 创建的文件版本
+     * @throws JDSException JDS异常
      */
-    public FileVersion upload(String path, MD5InputStream inputstream, String personId) throws JDSException;
-
+    FileVersion upload(String path, MD5InputStream inputstream, String personId) throws JDSException;
 
     /**
-     * @param inputstream
-     * @throws JDSException
+     * 从MD5输入流创建文件对象。
+     * @param inputstream MD5输入流
+     * @return FileObject 创建的文件对象
+     * @throws JDSException JDS异常
      */
-    public FileObject createFileObject(MD5InputStream inputstream) throws JDSException;
-
+    FileObject createFileObject(MD5InputStream inputstream) throws JDSException;
 
     /**
-     * @param file
-     * @throws JDSException
+     * 从本地文件创建文件对象。
+     * @param file 本地文件
+     * @return FileObject 创建的文件对象
+     * @throws JDSException JDS异常
      */
-    public FileObject createFileObject(File file) throws JDSException;
-
+    FileObject createFileObject(File file) throws JDSException;
 
     /**
-     * @param path
-     * @param inputstream
-     * @param personId
-     * @throws JDSException
+     * 同步上传文件。
+     * @param path 路径
+     * @param inputstream MD5输入流
+     * @param personId 用户ID
+     * @throws JDSException JDS异常
      */
-    public void syncUpload(String path, MD5InputStream inputstream, String personId) throws JDSException;
-
+    void syncUpload(String path, MD5InputStream inputstream, String personId) throws JDSException;
 
     /**
-     * @param path
-     * @param inputstream
-     * @param personId
-     * @param callback
-     * @throws JDSException
+     * 同步上传文件，带回调。
+     * @param path 路径
+     * @param inputstream MD5输入流
+     * @param personId 用户ID
+     * @param callback 回调函数
+     * @throws JDSException JDS异常
      */
-    public void syncUpload(String path, MD5InputStream inputstream, String personId, FutureCallback callback) throws JDSException;
-
+    void syncUpload(String path, MD5InputStream inputstream, String personId, FutureCallback callback) throws JDSException;
 
     /**
-     * @param path
-     * @param file
-     * @param personId
-     * @throws JDSException
+     * 上传本地文件。
+     * @param path 路径
+     * @param file 本地文件
+     * @param personId 用户ID
+     * @return FileVersion 创建的文件版本
+     * @throws JDSException JDS异常
      */
-    public FileVersion upload(String path, File file, String personId) throws JDSException;
-
+    FileVersion upload(String path, File file, String personId) throws JDSException;
 
     /**
-     * @param path
-     * @param file
-     * @param personId
-     * @throws JDSException
+     * 同步上传本地文件。
+     * @param path 路径
+     * @param file 本地文件
+     * @param personId 用户ID
+     * @throws JDSException JDS异常
      */
-    public void syncUpload(String path, File file, String personId) throws JDSException;
-
+    void syncUpload(String path, File file, String personId) throws JDSException;
 
     /**
-     * @param fileVersionId
-     * @param fileObjectId
-     * @param fileIndex
-     * @return
-     * @throws JDSException
+     * 创建文件视图。
+     * @param fileVersionId 文件版本ID
+     * @param fileObjectId 文件对象ID
+     * @param fileIndex 文件索引
+     * @return FileView 创建的文件视图
+     * @throws JDSException JDS异常
      */
-    public FileView createView(String fileVersionId, String fileObjectId, Integer fileIndex) throws JDSException;
+    FileView createView(String fileVersionId, String fileObjectId, Integer fileIndex) throws JDSException;
 
     /**
-     * @param fileVersionId
-     * @return
-     * @throws JDSException
+     * 根据版本ID获取输入流。
+     * @param fileVersionId 文件版本ID
+     * @return MD5InputStream MD5输入流
+     * @throws JDSException JDS异常
      */
-    public MD5InputStream getInputStreamByVersionid(String fileVersionId) throws JDSException;
+    MD5InputStream getInputStreamByVersionid(String fileVersionId) throws JDSException;
 
     /**
-     * @param linkId
-     * @return
-     * @throws JDSException
+     * 根据链接ID获取文件链接。
+     * @param linkId 链接ID
+     * @return FileLink 文件链接
+     * @throws JDSException JDS异常
      */
-    public FileLink getFileLinkById(String linkId) throws JDSException;
+    FileLink getFileLinkById(String linkId) throws JDSException;
 
     /**
-     * @param spath
-     * @param tPath
-     * @throws JDSException
+     * 复制文件夹。
+     * @param spath 源路径
+     * @param tPath 目标路径
+     * @throws JDSException JDS异常
      */
-    public void copyFolder(String spath, String tPath) throws JDSException;
-
+    void copyFolder(String spath, String tPath) throws JDSException;
 
     /**
-     * @param spath
-     * @param tPath
-     * @throws JDSException
+     * 克隆文件夹。
+     * @param spath 源路径
+     * @param tPath 目标路径
+     * @throws JDSException JDS异常
      */
-    public void cloneFolder(String spath, String tPath) throws JDSException;
-
+    void cloneFolder(String spath, String tPath) throws JDSException;
 
     /**
-     * @param path
-     * @return
-     * @throws JDSException
+     * 创建文件夹。
+     * @param path 路径
+     * @return Folder 创建的文件夹
+     * @throws JDSException JDS异常
      */
-    public Folder mkDir(String path) throws JDSException;
-
-    public Folder mkDir(String path, String description) throws JDSException;
-
-    public Folder mkDir(String path, String description, FolderType type) throws JDSException;
+    Folder mkDir(String path) throws JDSException;
 
     /**
-     * @param fileByPath
-     * @param tFolder
-     * @throws JDSException
+     * 创建带描述的文件夹。
+     * @param path 路径
+     * @param description 描述
+     * @return Folder 创建的文件夹
+     * @throws JDSException JDS异常
      */
-    public FileInfo copyFile(FileInfo fileByPath, Folder tFolder) throws JDSException;
-
-
-    public void pull(String vfspath, String localPath) throws JDSException;
-
-    public void push(String vfspath, String localPath) throws JDSException;
+    Folder mkDir(String path, String description) throws JDSException;
 
     /**
-     * @param path
-     * @param name
-     * @return
-     * @throws JDSException
+     * 创建带描述和类型的文件夹。
+     * @param path 路径
+     * @param description 描述
+     * @param type 类型
+     * @return Folder 创建的文件夹
+     * @throws JDSException JDS异常
      */
-    public FileInfo createFile(String path, String name) throws JDSException;
+    Folder mkDir(String path, String description, FolderType type) throws JDSException;
 
+    /**
+     * 复制文件。
+     * @param fileByPath 源文件
+     * @param tFolder 目标文件夹
+     * @return FileInfo 复制后的文件信息
+     * @throws JDSException JDS异常
+     */
+    FileInfo copyFile(FileInfo fileByPath, Folder tFolder) throws JDSException;
 
-    public FileInfo createFile(String filePath) throws JDSException;
+    /**
+     * 从VFS拉取文件到本地。
+     * @param vfspath VFS路径
+     * @param localPath 本地路径
+     * @throws JDSException JDS异常
+     */
+    void pull(String vfspath, String localPath) throws JDSException;
 
+    /**
+     * 从本地上推文件到VFS。
+     * @param vfspath VFS路径
+     * @param localPath 本地路径
+     * @throws JDSException JDS异常
+     */
+    void push(String vfspath, String localPath) throws JDSException;
 
-    public FileInfo createFile(String path, String name, String description) throws JDSException;
+    /**
+     * 创建文件。
+     * @param path 路径
+     * @param name 文件名
+     * @return FileInfo 创建的文件信息
+     * @throws JDSException JDS异常
+     */
+    FileInfo createFile(String path, String name) throws JDSException;
 
+    /**
+     * 创建文件。
+     * @param filePath 文件路径
+     * @return FileInfo 创建的文件信息
+     * @throws JDSException JDS异常
+     */
+    FileInfo createFile(String filePath) throws JDSException;
 
-    public FileInfo saveFileAsContent(String path, String content, String encoding) throws JDSException;
+    /**
+     * 创建带描述的文件。
+     * @param path 路径
+     * @param name 文件名
+     * @param description 描述
+     * @return FileInfo 创建的文件信息
+     * @throws JDSException JDS异常
+     */
+    FileInfo createFile(String path, String name, String description) throws JDSException;
 
+    /**
+     * 将内容保存为文件。
+     * @param path 路径
+     * @param content 内容
+     * @param encoding 编码
+     * @return FileInfo 创建的文件信息
+     * @throws JDSException JDS异常
+     */
+    FileInfo saveFileAsContent(String path, String content, String encoding) throws JDSException;
 
-    public StringBuffer readFileAsString(String path, String encoding) throws JDSException;
+    /**
+     * 读取文件内容为字符串。
+     * @param path 路径
+     * @param encoding 编码
+     * @return StringBuffer 文件内容
+     * @throws JDSException JDS异常
+     */
+    StringBuffer readFileAsString(String path, String encoding) throws JDSException;
 
+    /**
+     * 下载文件。
+     * @param path 路径
+     * @return MD5InputStream MD5输入流
+     * @throws JDSException JDS异常
+     */
+    MD5InputStream downLoad(String path) throws JDSException;
 
-    public MD5InputStream downLoad(String path) throws JDSException;
+    /**
+     * 根据哈希值下载文件。
+     * @param hash 文件哈希值
+     * @return MD5InputStream MD5输入流
+     * @throws JDSException JDS异常
+     */
+    MD5InputStream downLoadByHash(String hash) throws JDSException;
 
+    /**
+     * 根据文件对象ID下载文件。
+     * @param objectId 文件对象ID
+     * @return MD5InputStream MD5输入流
+     * @throws JDSException JDS异常
+     */
+    MD5InputStream downLoadByObjectId(String objectId) throws JDSException;
 
-    public MD5InputStream downLoadByHash(String hash) throws JDSException;
+    /**
+     * 下载文件版本。
+     * @param versionId 版本ID
+     * @return MD5InputStream MD5输入流
+     * @throws JDSException JDS异常
+     */
+    MD5InputStream downLoadVersion(String versionId) throws JDSException;
 
+    /**
+     * 根据哈希值获取文件对象。
+     * @param hash 文件哈希值
+     * @return FileObject 文件对象
+     */
+    FileObject getFileObjectByHash(String hash);
 
-    public MD5InputStream downLoadByObjectId(String objectId) throws JDSException;
+    /**
+     * 更新文件对象。
+     * @param object 文件对象
+     */
+    void updateFileObject(FileObject object);
 
-    public MD5InputStream downLoadVersion(String versionId) throws JDSException;
+    /**
+     * 删除文件对象。
+     * @param ID 文件对象ID
+     */
+    void deleteFileObject(String ID);
 
-    public FileObject getFileObjectByHash(String hash);
+    /**
+     * 创建空文件对象。
+     * @return FileObject 创建的文件对象
+     */
+    FileObject createFileObject();
 
-    public void updateFileObject(FileObject object);
-
-    public void deleteFileObject(String ID);
-
-    public FileObject createFileObject();
-
-    public FileObject createFileObjectAsContent(String content);
+    /**
+     * 根据内容创建文件对象。
+     * @param content 文件内容
+     * @return FileObject 创建的文件对象
+     */
+    FileObject createFileObjectAsContent(String content);
 }

@@ -216,3 +216,5 @@ public class TableInfo implements Cacheable, Serializable {
         return size;
     }
 }
+
+

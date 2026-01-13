@@ -184,7 +184,7 @@ public class HttpInvocationHandler implements InvocationHandler {
                 }
             }
 
-            // 是否包含多文件操�?
+            // 是否包含多文件
             if (isMulti) {
                 MultipartEntityBuilder reqEntitybuild = MultipartEntityBuilder.create().setMode(HttpMultipartMode.BROWSER_COMPATIBLE).setCharset(CharsetUtils.get("UTF-8"));
                 for (int i = 0; i < paramNames.length; i++) {

@@ -919,7 +919,7 @@ public class MetadataFactory {
     }
 
     /**
-     * 取表的注�?
+     * 取表的注释
      *
      * @param conn
      * @param tableName
@@ -1133,7 +1133,7 @@ public class MetadataFactory {
     }
 
     /**
-     * 返回sql中列的数据类型对应的字符�?
+     * 返回sql中列的数据类型对应的字符串
      *
      * @param c
      * @return
@@ -1153,7 +1153,7 @@ public class MetadataFactory {
             if (len > 0 && !"int".equalsIgnoreCase(type) && !"date".equalsIgnoreCase(type)) {
                 rtn += "(" + len + ")";
             } else if (type.toLowerCase().startsWith("varchar")) {
-                throw new RuntimeException(type + "类型的长度必须大�?");
+                throw new RuntimeException(type + "类型的长度必须大于0");
             }
         }
 
@@ -1285,7 +1285,7 @@ public class MetadataFactory {
     }
 
     /**
-     * 创建缓存�?
+     * 创建缓存
      *
      * @param tableInfo
      * @throws SQLException
@@ -1374,3 +1374,5 @@ public class MetadataFactory {
     }
 
 }
+
+

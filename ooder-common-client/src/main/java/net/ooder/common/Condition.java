@@ -44,7 +44,7 @@ import java.util.List;
  * <code>Condition c1 = new Condition(ConditionKey.ACTIVITYINST_STATE, ActivityInst.STATE_RUNNING, Condition.EQUALS);</code>
  * <p>
  * 调用<code>c1.makeConditionString()</code>将返回查询条件
- * <code>BPM_ACTIVITYINSTANCE.ACTIVITYINST_STATE = 'running'</code>
+ * <code>WORKFLOW_ACTIVITYINSTANCE.ACTIVITYINST_STATE = 'running'</code>
  * <p>
  * 如果继续进行如下调用：
  * <p>
@@ -57,7 +57,7 @@ import java.util.List;
  * </code>
  * <p>
  * 此时调用<code>c1.makeConditionString()</code>将返回查询条件
- * <code>BPM_ACTIVITYINSTANCE.ACTIVITYINST_STATE = 'running' AND (BPM_ACTIVITYINSTANCE.ARRIVEDTIME < '2003-12-25' OR BPM_ACTIVITYINSTANCE.STARTTIME > '2003-12-25')</code>
+ * <code>WORKFLOW_ACTIVITYINSTANCE.ACTIVITYINST_STATE = 'running' AND (WORKFLOW_ACTIVITYINSTANCE.ARRIVEDTIME < '2003-12-25' OR WORKFLOW_ACTIVITYINSTANCE.STARTTIME > '2003-12-25')</code>
  * <p>
  * 如果需要对结果集进行排序，可以进行如下操作：
  * <p>
@@ -67,7 +67,7 @@ import java.util.List;
  * </code>
  * <p>
  * 此时调用<code>c1.makeConditionString()</code>将返回查询条件
- * <code>BPM_ACTIVITYINSTANCE.ACTIVITYINST_STATE = 'running' AND (BPM_ACTIVITYINSTANCE.ARRIVEDTIME < '2003-12-25' OR BPM_ACTIVITYINSTANCE.STARTTIME > '2003-12-25') ORDER BY BPM_ACTIVITYINSTANCE.ACTIVITYINST_STATE ASC,BPM_ACTIVITYINSTANCE.ARRIVEDTIME DESC</code>
+ * <code>WORKFLOW_ACTIVITYINSTANCE.ACTIVITYINST_STATE = 'running' AND (WORKFLOW_ACTIVITYINSTANCE.ARRIVEDTIME < '2003-12-25' OR WORKFLOW_ACTIVITYINSTANCE.STARTTIME > '2003-12-25') ORDER BY WORKFLOW_ACTIVITYINSTANCE.ACTIVITYINST_STATE ASC,WORKFLOW_ACTIVITYINSTANCE.ARRIVEDTIME DESC</code>
  * <p>
  * <p>
  * Copyright: Copyright (c) 2006

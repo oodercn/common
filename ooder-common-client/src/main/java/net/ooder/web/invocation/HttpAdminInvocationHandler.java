@@ -1,17 +1,3 @@
-/**
- * $RCSfile: HttpAdminInvocationHandler.java,v $
- * $Revision: 1.0 $
- * $Date: 2025/08/25 $
- * <p>
- * Copyright (c) 2025 ooder.net
- * </p>
- * <p>
- * Company: ooder.net
- * </p>
- * <p>
- * License: MIT License
- * </p>
- */
 package net.ooder.web.invocation;
 
 import com.alibaba.fastjson.JSONObject;
@@ -56,6 +42,9 @@ import java.util.Map;
 import java.util.TreeMap;
 import java.util.UUID;
 
+/**
+ * HttpAdminInvocationHandler 用于处理管理端 HTTP 调用。
+ */
 public class HttpAdminInvocationHandler implements InvocationHandler {
     private static final Log logger = LogFactory.getLog(JDSConstants.CONFIG_KEY, HttpAdminInvocationHandler.class);
 
@@ -173,7 +162,7 @@ public class HttpAdminInvocationHandler implements InvocationHandler {
                 }
             }
 
-            // 是否包含多文件操�?
+            // 是否包含多文件
             if (isMulti) {
                 MultipartEntityBuilder reqEntitybuild = MultipartEntityBuilder.create().setMode(HttpMultipartMode.BROWSER_COMPATIBLE).setCharset(CharsetUtils.get("UTF-8"));
                 for (int i = 0; i < paramNames.length; i++) {

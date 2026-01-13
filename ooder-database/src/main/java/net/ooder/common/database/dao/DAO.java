@@ -38,10 +38,10 @@ public class DAO<T> implements Serializable {
 
     protected Log logger = LogFactory.getLog(DAO.class.getName());
 
-    //实例化标�?
+    //实例化标记
     private boolean _isInDB = false;
 
-    //表管理，简化版中不做实�?
+    //表管理，简化版中不做实现
     ArrayList<String> _relations = new ArrayList<String>();
 
 
@@ -223,3 +223,5 @@ public class DAO<T> implements Serializable {
 
 
 }
+
+

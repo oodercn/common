@@ -315,7 +315,7 @@ public class ConnectionPool implements Runnable {
                                         log.warn("Connection has been held open for too long: ", wrappers[i].exception);
                                         
                                       
-                                        //add by wenzhang 如果连接超时则自动关闭连�?
+                                        //add by wenzhang 如果连接超时则自动关闭连接
                                         try{
                                         	  cons[i].close();
                                               wrappers[i] = null;
@@ -526,3 +526,4 @@ public class ConnectionPool implements Runnable {
         }
     }
 }
+

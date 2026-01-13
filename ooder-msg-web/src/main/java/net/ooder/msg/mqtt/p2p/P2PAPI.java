@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping("/api/mqtt/p2p/")
-@MethodChinaName(cname = "消息服务")
+@MethodChinaName("消息服务")
 public class P2PAPI implements P2PService {
 
     @RequestMapping(method = {RequestMethod.POST}, value = {"sendMsg2Person"})
@@ -50,3 +50,5 @@ public class P2PAPI implements P2PService {
         return (P2PService) EsbUtil.parExpression(P2PService.class);
     }
 }
+
+

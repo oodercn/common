@@ -33,7 +33,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/api/vfs/index/")
 @EsbBeanAnnotation(id = "VFSIndexService")
-@MethodChinaName(cname = "检索")
+@MethodChinaName("检查")
 public class VFSIndexServiceAPI implements VFSIndexService {
 
     public IndexService getService() {
@@ -42,7 +42,7 @@ public class VFSIndexServiceAPI implements VFSIndexService {
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "addIndex")
-    @MethodChinaName(cname = "添加索引")
+    @MethodChinaName("添加索引")
     public @ResponseBody
     ResultModel<JLucene> addIndex(@RequestBody JLucene luceneBean) {
         return getService().addIndex(luceneBean);
@@ -50,7 +50,7 @@ public class VFSIndexServiceAPI implements VFSIndexService {
 
 
     @RequestMapping(method = RequestMethod.POST, value = "deleteIndex")
-    @MethodChinaName(cname = "删除索引")
+    @MethodChinaName("删除索引")
     public @ResponseBody
     ResultModel<Boolean> deleteIndex(@RequestBody Condition<FileIndexEnmu, FileIndex> condition) {
         return getService().deleteAllIndex(condition);
@@ -58,9 +58,11 @@ public class VFSIndexServiceAPI implements VFSIndexService {
 
 
     @RequestMapping(method = RequestMethod.POST, value = "search")
-    @MethodChinaName(cname = "条件索引")
+    @MethodChinaName("条件索引")
     public @ResponseBody
     ListResultModel<List<FileIndex>> search(@RequestBody Condition<FileIndexEnmu, FileIndex> condition) {
         return getService().search(condition);
     }
 }
+
+

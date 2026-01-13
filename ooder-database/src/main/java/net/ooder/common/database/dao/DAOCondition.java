@@ -1,31 +1,10 @@
 /**
- * $RCSfile: Condition.java,v $
- * $Revision: 1.1 $
- * $Date: 2025/07/08 00:26:08 $
- * <p>
- * Copyright (C) 2003 ooder, Inc. All rights reserved.
- * <p>
- * This software is the proprietary information of ooder, Inc.
- * Use is subject to license terms.
- */
-/**
- * $RCSfile: DAOCondition.java,v $
- * $Revision: 1.0 $
- * $Date: 2025/08/25 $
- * <p>
- * Copyright (c) 2025 ooder.net
- * </p>
- * <p>
- * Company: ooder.net
- * </p>
- * <p>
- * License: MIT License
- * </p>
- */
+ * $RCSfile: DAOCondition.java,v $ * $Revision: 1.0 $ * $Date: 2025/08/25 $ * <p> * Copyright (c) 2025 ooder.net * </p> * <p> * Company: ooder.net * </p> * <p> * License: MIT License * </p> */
 package net.ooder.common.database.dao;
 
 import net.ooder.common.Filter;
 import net.ooder.annotation.JoinOperator;
+import net.ooder.annotation.MethodChinaName;
 import net.ooder.annotation.Operator;
 import net.ooder.annotation.Order;
 import net.ooder.common.Page;
@@ -40,79 +19,39 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * <p>
- * Title: JDS系统管理系统
- * </p>
- * <p>
- * Description: 用于封装对引擎内部数据进行查询的条件以及对结果集的排序，�?在引擎内部将其作为SQL查询WHERE子句的一部分。也就是说它最�?
- * 将被转换成SQL查询条件，例如：
- * <p>
- * <code>Condition c1 = new Condition(ConditionKey.ACTIVITYINST_STATE, ActivityInst.STATE_RUNNING, Condition.EQUALS);</code>
- * <p>
- * 调用<code>c1.makeConditionString()</code>将返回查询条�?
- * <code>BPM_ACTIVITYINSTANCE.ACTIVITYINST_STATE = 'running'</code>
- * <p>
- * 如果继续进行如下调用�?
- * <p>
- * <code>
- * java.sql.Date date = new java.sql.Date(System.currentTimeMillis());
- * Condition c2 = new Condition(ConditionKey.ACTIVITYINST_ARRIVEDTIME, date , Condition.LESS_THAN);
- * c1.addCondition(c2, Condition.JOIN_AND);
- * Condition c3 = new Condition(ConditionKey.ACTIVITYINST_STARTTIME, date , Condition.GREATER_THAN);
- * c1.addCondition(c3, Condition.JOIN_OR);
- * </code>
- * <p>
- * 此时调用<code>c1.makeConditionString()</code>将返回查询条�?
- * <code>BPM_ACTIVITYINSTANCE.ACTIVITYINST_STATE = 'running' AND (BPM_ACTIVITYINSTANCE.ARRIVEDTIME < '2003-12-25' OR BPM_ACTIVITYINSTANCE.STARTTIME > '2003-12-25')</code>
- * <p>
- * 如果需要对结果集进行排序，可以进行如下操作�?
- * <p>
- * <code>
- * c1.addOrderBy(new Order(ConditionKey.ACTIVITYINST_STATE, true));
- * c1.addOrderBy(new Order(ConditionKey.ACTIVITYINST_ARRIVEDTIME, false));
- * </code>
- * <p>
- * 此时调用<code>c1.makeConditionString()</code>将返回查询条�?
- * <code>BPM_ACTIVITYINSTANCE.ACTIVITYINST_STATE = 'running' AND (BPM_ACTIVITYINSTANCE.ARRIVEDTIME < '2003-12-25' OR BPM_ACTIVITYINSTANCE.STARTTIME > '2003-12-25') ORDER BY BPM_ACTIVITYINSTANCE.ACTIVITYINST_STATE ASC,BPM_ACTIVITYINSTANCE.ARRIVEDTIME DESC</code>
- * <p>
- * <p>
- * Copyright: Copyright (c) 2020
- * </p>
- * <p>
- * Company: raddev.cn
- * </p>
- *
- * @author wenzhang li
- * @version 1.0
+ * DAOCondition类用于封装对数据库进行查询的条件以及对结果集的排序，
+ * 并在内部将其作为SQL查询WHERE子句的一部分，最终转换为SQL查询条件。
  */
 public class DAOCondition implements Serializable, Filter {
 
+    /**
+     * 条件类型包括：活动状态、活动开始时间、结束时间
+     */
+    private String conditionKey;
 
     /**
-     * 条件类型包括：活动状态、活动开始时间、结束时�?
+     * 条件所需的取值，如果Comparator取值为BETWEEN和INCLUDE，该值为java.util.List对象
      */
-    protected String conditionKey;
+    private Object value;
+
+    private Operator operator;
+
+    private TableInfo tableInfo;
+
+    private boolean isMysql = true;
+
+    private Page page;
+
+    private List<DAOCondition> childConditionList;
+
+    private List<JoinOperator> childJoinTypeList;
+
+    private List<Order> orderByList;
 
     /**
-     * 条件所需的取值，如果Comparator取值为BETWEEN和INCLUDE，该值为java.util.List对象�?
+     * 带表信息的构造函数
+     * @param tableInfo 表信息对象
      */
-    protected Object value;
-
-    protected Operator operator;
-
-    protected TableInfo tableInfo;
-
-    protected boolean isMysql = true;
-
-    public Page page;
-
-
-    protected List<DAOCondition> childConditionList;
-
-    protected List<JoinOperator> childJoinTypeList;
-
-    protected List<Order> orderByList;
-
     DAOCondition(TableInfo tableInfo) {
         this.tableInfo = tableInfo;
         if (tableInfo.getUrl() != null) {
@@ -125,33 +64,62 @@ public class DAOCondition implements Serializable, Filter {
     }
 
 
+    /**
+     * 获取分页对象
+     * @return 分页对象
+     */
+    @MethodChinaName("获取分页对象")
     public Page getPage() {
         return page;
     }
 
+    /**
+     * 设置分页对象
+     * @param page 分页对象
+     */
+    @MethodChinaName("设置分页对象")
     public void setPage(Page page) {
         this.page = page;
     }
 
-
+    /**
+     * 获取条件键
+     * @return 条件键
+     */
+    @MethodChinaName("获取条件键")
     public String getConditionKey() {
         return conditionKey;
     }
 
+    /**
+     * 设置条件键
+     * @param conditionKey 条件键
+     */
+    @MethodChinaName("设置条件键")
     public void setConditionKey(String conditionKey) {
         this.conditionKey = conditionKey;
     }
 
+    /**
+     * 获取表信息
+     * @return 表信息对象
+     */
+    @MethodChinaName("获取表信息")
     public TableInfo getTableInfo() {
         return tableInfo;
     }
 
+    /**
+     * 设置表信息
+     * @param tableInfo 表信息对象
+     */
+    @MethodChinaName("设置表信息")
     public void setTableInfo(TableInfo tableInfo) {
         this.tableInfo = tableInfo;
     }
 
     /**
-     * 条件构造函数，该方法主要用于对条件主键和某个值进行指�?操作符比较的操作。支持此种操作的操作符有�?
+     * 条件构造函数，该方法主要用于对条件主键和某个值进行指定操作符比较的操作。支持此种操作的操作符有：
      *
      * <code>
      * <li>EQUALS
@@ -167,8 +135,8 @@ public class DAOCondition implements Serializable, Filter {
      * </code>
      *
      * @param conditionKey 条件主键
-     * @param value        取�?
-     * @param operator     条件主键与取值的比较操作符类�?
+     * @param value        取值
+     * @param operator     条件主键与取值的比较操作符类型
      */
 //    DAOCondition(String conditionKey, Operator operator, Object value) {
 //        // this(tableInfo);
@@ -180,7 +148,7 @@ public class DAOCondition implements Serializable, Filter {
 //    }
 
 //    /**
-//     * 条件构造函数，该方法主要用于对条件主键进行是否可空的条件操作�?支持此种操作的操作符有：
+//     * 条件构造函数，该方法主要用于对条件主键进行是否可空的条件操作支持此种操作的操作符有：
 //     *
 //     * <code>
 //     * <li>NULL
@@ -195,6 +163,14 @@ public class DAOCondition implements Serializable, Filter {
 //    }
 
 
+    /**
+     * 创建子条件
+     * @param conditionKey 条件键
+     * @param operator 操作符
+     * @param value 值
+     * @return DAOCondition对象
+     */
+    @MethodChinaName("创建子条件")
     DAOCondition createChildCondition(String conditionKey, Operator operator, Object value) {
         DAOCondition condition = new DAOCondition(this.tableInfo);
         condition.setConditionKey(conditionKey);
@@ -203,51 +179,101 @@ public class DAOCondition implements Serializable, Filter {
         return condition;
     }
 
+    /**
+     * 获取值
+     * @return 值
+     */
+    @MethodChinaName("获取值")
     public Object getValue() {
         return value;
     }
 
+    /**
+     * 设置值
+     * @param value 值
+     */
+    @MethodChinaName("设置值")
     public void setValue(Object value) {
         this.value = value;
     }
 
+    /**
+     * 获取操作符
+     * @return 操作符
+     */
+    @MethodChinaName("获取操作符")
     public Operator getOperator() {
         return operator;
     }
 
+    /**
+     * 设置操作符
+     * @param operator 操作符
+     */
+    @MethodChinaName("设置操作符")
     public void setOperator(Operator operator) {
         this.operator = operator;
     }
 
+    /**
+     * 获取子条件列表
+     * @return 子条件列表
+     */
+    @MethodChinaName("获取子条件列表")
     public List<DAOCondition> getChildConditionList() {
         return childConditionList;
     }
 
+    /**
+     * 设置子条件列表
+     * @param childConditionList 子条件列表
+     */
+    @MethodChinaName("设置子条件列表")
     public void setChildConditionList(List<DAOCondition> childConditionList) {
         this.childConditionList = childConditionList;
     }
 
+    /**
+     * 获取子连接类型列表
+     * @return 子连接类型列表
+     */
+    @MethodChinaName("获取子连接类型列表")
     public List<JoinOperator> getChildJoinTypeList() {
         return childJoinTypeList;
     }
 
+    /**
+     * 设置子连接类型列表
+     * @param childJoinTypeList 子连接类型列表
+     */
+    @MethodChinaName("设置子连接类型列表")
     public void setChildJoinTypeList(List<JoinOperator> childJoinTypeList) {
         this.childJoinTypeList = childJoinTypeList;
     }
 
+    /**
+     * 获取排序列表
+     * @return 排序列表
+     */
+    @MethodChinaName("获取排序列表")
     public List<Order> getOrderByList() {
         return orderByList;
     }
 
+    /**
+     * 设置排序列表
+     * @param orderByList 排序列表
+     */
+    @MethodChinaName("设置排序列表")
     public void setOrderByList(List<Order> orderByList) {
         this.orderByList = orderByList;
     }
 
     /**
-     * 产生查询Sql,引擎内部使用
-     *
-     * @return 返回引擎查询用的sql
+     * 产生查询SQL,引擎内部使用
+     * @return 返回引擎查询用的SQL
      */
+    @MethodChinaName("产生查询SQL")
     public String makeConditionString() {
 
         String whereStr = "";
@@ -390,28 +416,36 @@ public class DAOCondition implements Serializable, Filter {
     }
 
     /**
-     * 添加一个排序条件，将向Sql语句中添加一个Order By子句<br>
-     * 注意：只有最上级的Condition主查询可以添加Order，子查询上是不能添加�?
-     *
-     * @param order 一个Order对象�?
+     * 添加一个排序条件，将向SQL语句中添加一个Order By子句<br>
+     * 注意：只有最上级的Condition主查询可以添加Order，子查询上是不能添加的
+     * @param order 一个Order对象
      */
+    @MethodChinaName("添加排序条件")
     public void addOrderBy(Order order) {
         orderByList.add(order);
     }
 
     /**
-     * 在当前条件中添加一个子条件，将使用joinType中定义的方法连接到主查询�?br>
+     * 在当前条件中添加一个子条件，将使用joinType中定义的方法连接到主查询<br>
      *
-     * @param condition 子查询条�?
+     * @param condition 子查询条件
      * @param joinType  连接方法
-     *                  <li>JOIN_AND - 将使用AND连接子查�?
-     *                  <li>JOIN_OR - 将使用OR连接子查�?
+     *                  <li>JOIN_AND - 将使用AND连接子查询
+     *                  <li>JOIN_OR - 将使用OR连接子查询
      */
 
 
+    /**
+     * 在当前条件中添加一个子条件，将使用joinType中定义的方法连接到主查询
+     * @param condition 子查询条件
+     * @param joinType 连接方法
+     * <li>JOIN_AND - 将使用AND连接子查询
+     * <li>JOIN_OR - 将使用OR连接子查询
+     */
+    @MethodChinaName("添加子条件")
     public void addCondition(DAOCondition condition, JoinOperator joinType) {
         if (condition != null) {
-            if (joinType.equals(JoinOperator.JOIN_AND) && joinType.equals(JoinOperator.JOIN_OR)) {
+            if (!(joinType.equals(JoinOperator.JOIN_AND) || joinType.equals(JoinOperator.JOIN_OR))) {
                 throw new IllegalArgumentException(
                         "Parameter joinType must be JOIN_AND or JOIN_OR.");
             }
@@ -473,6 +507,12 @@ public class DAOCondition implements Serializable, Filter {
         return buf.toString();
     }
 
+    /**
+     * 提取值，将对象转换为SQL字符串表示
+     * @param value 值对象
+     * @return SQL字符串表示
+     */
+    @MethodChinaName("提取值")
     public String extractValue(Object value) {
 
         if (value instanceof Enum) {
@@ -497,14 +537,31 @@ public class DAOCondition implements Serializable, Filter {
     }
 
 
+    /**
+     * 过滤对象
+     * @param obj 对象
+     * @param systemCode 系统代码
+     * @return 是否通过过滤
+     */
+    @MethodChinaName("过滤对象")
     public boolean filterObject(Object obj, String systemCode) {
         return true;
     }
 
+    /**
+     * 是否为MySQL数据库
+     * @return 是否为MySQL数据库
+     */
+    @MethodChinaName("是否为MySQL数据库")
     public boolean isMysql() {
         return isMysql;
     }
 
+    /**
+     * 设置是否为MySQL数据库
+     * @param mysql 是否为MySQL数据库
+     */
+    @MethodChinaName("设置是否为MySQL数据库")
     public void setMysql(boolean mysql) {
         isMysql = mysql;
     }
@@ -515,3 +572,5 @@ public class DAOCondition implements Serializable, Filter {
     }
 
 }
+
+

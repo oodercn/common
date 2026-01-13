@@ -326,3 +326,5 @@ public class CommandIndex implements JLuceneIndex,CommandMsg {
         return sensorId;
     }
 }
+
+

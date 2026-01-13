@@ -141,3 +141,5 @@ public class MsgIndex implements JLuceneIndex {
 	return path;
     }
 }
+
+

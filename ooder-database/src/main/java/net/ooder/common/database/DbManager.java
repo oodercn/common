@@ -1,15 +1,5 @@
 /**
  * $RCSfile: DbManager.java,v $
- * $Revision: 1.1 $
- * $Date: 2025/07/08 00:25:39 $
- * <p>
- * Copyright (C) 2003 ooder, Inc. All rights reserved.
- * <p>
- * This software is the proprietary information of ooder, Inc.
- * Use is subject to license terms.
- */
-/**
- * $RCSfile: DbManager.java,v $
  * $Revision: 1.0 $
  * $Date: 2025/08/25 $
  * <p>
@@ -29,6 +19,7 @@ import net.ooder.common.database.metadata.ProviderConfig;
 import net.ooder.common.logging.Log;
 import net.ooder.common.logging.LogFactory;
 import net.ooder.org.conf.OrgConstants;
+import net.ooder.annotation.MethodChinaName;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -53,6 +44,7 @@ public class DbManager {
     public static final String THREAD_LOCK = "Thread Lock";
     private final String configKey;
 
+    @MethodChinaName("获取数据库管理器实例")
     public static DbManager getInstance(String configKey) {
         DbManager manager = managerMap.get(configKey);
         if (manager == null) {
@@ -71,6 +63,7 @@ public class DbManager {
     }
 
 
+    @MethodChinaName("清空连接")
     public DbManager clear() {
         trans_conn.remove();
 
@@ -85,6 +78,7 @@ public class DbManager {
      *
      * @return an auto commit connection.
      */
+    @MethodChinaName("获取数据库连接")
     public Connection getConnection() throws SQLException {
         Connection tc = (Connection) trans_conn.get();
         if (tc != null) {
@@ -102,6 +96,7 @@ public class DbManager {
     /**
      * Release the connection. Normally you should not need this method ;-)
      */
+    @MethodChinaName("释放数据库连接")
     public synchronized void releaseConnection(Connection c) {
         Connection tc = (Connection) trans_conn.get();
         if (tc != null) {
@@ -124,6 +119,7 @@ public class DbManager {
      *
      * @return a non-auto commit connection with the default transaction isolation level.
      */
+    @MethodChinaName("开始事务")
     public Connection beginTransaction() throws SQLException {
         Connection c = getConnection();
         c.setAutoCommit(false);
@@ -136,6 +132,7 @@ public class DbManager {
      *
      * @param commit tells whether this connection should be committed: true for commit(), false for rollback()
      */
+    @MethodChinaName("结束事务")
     public void endTransaction(boolean commit) throws SQLException {
         Connection c = (Connection) trans_conn.get();
         if (c == null) {
@@ -161,6 +158,7 @@ public class DbManager {
     /**
      * Log a message using the underlying logwriter, if not null.
      */
+    @MethodChinaName("记录日志")
     public void log(String message) {
         log.trace(message);
     }
@@ -168,6 +166,7 @@ public class DbManager {
     /**
      * Close the passed Statement.
      */
+    @MethodChinaName("关闭语句")
     public void close(Statement s) {
         try {
             if (s != null)
@@ -181,6 +180,7 @@ public class DbManager {
     /**
      * Close the passed ResultSet.
      */
+    @MethodChinaName("关闭结果集")
     public void close(ResultSet rs) {
         try {
             if (rs != null)
@@ -194,9 +194,12 @@ public class DbManager {
     /**
      * Close the passed Statement and ResultSet.
      */
+    @MethodChinaName("关闭语句和结果集")
     public void close(Statement s, ResultSet rs) {
         close(rs);
         close(s);
     }
 
 }
+
+

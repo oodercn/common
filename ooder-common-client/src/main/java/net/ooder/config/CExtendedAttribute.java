@@ -28,7 +28,7 @@ import java.io.Serializable;
  * Copyright: Copyright (c) 2010
  * </p>
  * <p>
- * Company: BPM
+ * Company: ooder
  * </p>
  *
  * @author  ooder

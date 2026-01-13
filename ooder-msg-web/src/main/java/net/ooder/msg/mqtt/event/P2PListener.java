@@ -23,7 +23,7 @@ import net.ooder.msg.mqtt.JMQException;
  * Title: Msg管理系统
  * </p>
  * <p>
- * Description: 核心事件监听器接�?
+ * Description: 核心事件监听器接口
  * </p>
  * <p>
  * Copyright: Copyright (c) 2024
@@ -40,15 +40,15 @@ import net.ooder.msg.mqtt.JMQException;
 public interface P2PListener extends java.util.EventListener {
 
 
-    @MethodChinaName(cname = "指定用户")
+    @MethodChinaName("指定用户")
     public void send2Person(P2PEvent<Msg> event) throws JMQException;
 
 
-    @MethodChinaName(cname = "指定客户端消系")
+    @MethodChinaName("指定客户端消息")
     public void send2Client(P2PEvent<Msg> event) throws JMQException;
 
 
-    @MethodChinaName(cname = "指定用户群消系")
+    @MethodChinaName("指定用户群消息")
     public void send2PersonMsg(P2PEvent<Msg> event) throws JMQException;
 
 
@@ -62,3 +62,5 @@ public interface P2PListener extends java.util.EventListener {
     public String getSystemCode();
 
 }
+
+

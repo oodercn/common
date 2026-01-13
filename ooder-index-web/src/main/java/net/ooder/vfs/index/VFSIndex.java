@@ -38,3 +38,5 @@ public interface VFSIndex extends JLuceneIndex {
 
 
 }
+
+

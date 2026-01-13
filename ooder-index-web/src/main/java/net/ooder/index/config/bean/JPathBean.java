@@ -28,7 +28,7 @@ public class JPathBean implements JPath {
 
     String id;
 
-    // 索引属�?
+    // 索引属性
     PathElementType type;
 
     @Override
@@ -88,3 +88,5 @@ public class JPathBean implements JPath {
     }
 
 }
+
+

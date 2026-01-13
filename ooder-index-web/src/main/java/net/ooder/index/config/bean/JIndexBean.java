@@ -23,3 +23,5 @@ public interface JIndexBean extends Serializable{
 	public Class getClazz();
 	public void  setId(String id);
 }
+
+

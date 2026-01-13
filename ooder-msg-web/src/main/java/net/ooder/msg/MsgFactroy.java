@@ -67,7 +67,7 @@ public class MsgFactroy {
             msg.setReceiver("1111111");
             //消息内容
             msg.setBody("消息内容");
-            //发�?
+            //发送
             client.updateMsg(msg);
         } catch (JDSException e) {
             e.printStackTrace();
@@ -109,3 +109,5 @@ public class MsgFactroy {
 
 
 }
+
+

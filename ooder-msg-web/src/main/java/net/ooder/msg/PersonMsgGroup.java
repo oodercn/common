@@ -21,7 +21,7 @@ import java.util.List;
 
 /**
  * <p>
- * Title: ooder组织机构中间�?
+ * Title: ooder组织机构中间件
  * </p>
  * <p>
  * Description:
@@ -68,3 +68,4 @@ public interface PersonMsgGroup{
 	
 
 }
+

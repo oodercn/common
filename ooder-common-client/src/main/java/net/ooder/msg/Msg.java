@@ -21,7 +21,7 @@ import java.io.Serializable;
 
 /**
  * <p>
- * Title: ooder组织机构中间�?
+ * Title: ooder组织机构
  * </p>
  * <p>
  * Description:

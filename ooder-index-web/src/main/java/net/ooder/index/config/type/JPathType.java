@@ -44,3 +44,5 @@ public @interface JPathType{
 	PathElementType type() default PathElementType.ALL;	
 	
 }
+
+

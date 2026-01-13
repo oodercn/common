@@ -18,8 +18,8 @@ import java.io.PrintStream;
 import java.io.PrintWriter;
 
 /**
- * 人员工作组不存在的异常类�?
- * <p>Title: ooder组织机构中间�?/p>
+ * 人员工作组不存在的异常类
+ * <p>Title: ooder组织机构中间</p>
  * <p>Description:  </p>
  * <p></p>
  * <p>Copyright: Copyright (c) 2025-2008</p>

@@ -1,17 +1,3 @@
-/**
- * $RCSfile: JSONGenUtil.java,v $
- * $Revision: 1.0 $
- * $Date: 2025/08/25 $
- * <p>
- * Copyright (c) 2025 ooder.net
- * </p>
- * <p>
- * Company: ooder.net
- * </p>
- * <p>
- * License: MIT License
- * </p>
- */
 package net.ooder.web.util;
 
 import net.ooder.annotation.RequestType;
@@ -26,6 +12,9 @@ import net.sf.cglib.proxy.InterfaceMaker;
 import java.lang.reflect.*;
 import java.util.*;
 
+/**
+ * JSONGenUtil 用于生成和处理 JSON 相关的工具类。
+ */
 public class JSONGenUtil {
 
 
@@ -207,7 +196,7 @@ public class JSONGenUtil {
             Type type = method.getGenericReturnType();
             return getInnerType(type, classSet);
         } catch (Throwable e) {
-            //编译不通过，停止循�?
+            //编译不通过，停止
             return classSet;
         }
 

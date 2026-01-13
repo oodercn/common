@@ -37,3 +37,5 @@ public interface MqttService {
 
     public ResultModel<Boolean>  deleteMsgs(String[] msgIds);
 }
+
+

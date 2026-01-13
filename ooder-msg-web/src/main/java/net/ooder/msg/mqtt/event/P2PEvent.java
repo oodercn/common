@@ -23,7 +23,7 @@ import net.ooder.server.JDSClientService;
  * Title: HOME管理系统
  * </p>
  * <p>
- * Description: 核心网关传感器事�?
+ * Description: 核心网关传感器事件
  * </p>
  * <p>
  * Copyright: Copyright (c) 2025
@@ -78,3 +78,5 @@ public class P2PEvent<T extends Msg> extends MQTTEvent<T> {
         return RepeatMqttEvent;
     }
 }
+
+

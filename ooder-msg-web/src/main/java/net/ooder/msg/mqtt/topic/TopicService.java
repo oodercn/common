@@ -28,7 +28,7 @@ public interface TopicService {
      * @return
      * @throws JMQException
      */
-    @MethodChinaName(cname = "订阅")
+    @MethodChinaName("订阅")
     @ResponseBody
     public ResultModel<SubscriptTopicCommand> subscriptTopic(String topic);
 
@@ -38,7 +38,7 @@ public interface TopicService {
      * @return
      * @throws JMQException
      */
-    @MethodChinaName(cname = "取消订阅")
+    @MethodChinaName("取消订阅")
     @ResponseBody
     public ResultModel<UnSubscriptTopicCommand> unSubscriptTopic(String topic);
 
@@ -48,9 +48,11 @@ public interface TopicService {
      * @return
      * @throws JMQException
      */
-    @MethodChinaName(cname = "创建")
+    @MethodChinaName("创建")
     @ResponseBody
     public ResultModel<CreateTopicCommand> createTopic(String topic, Boolean retained, Integer qos);
 
 
 }
+
+

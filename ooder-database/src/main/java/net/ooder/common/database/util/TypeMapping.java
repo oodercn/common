@@ -219,3 +219,5 @@ public class TypeMapping {
         return (String) resultSetGetMethods.get(getMappedType(field));
     }
 }
+
+

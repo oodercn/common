@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping("/api/mqtt/topic/")
-@MethodChinaName(cname = "消息服务")
+@MethodChinaName("消息服务")
 public class TopicAPI implements TopicService {
 
 
@@ -55,3 +55,5 @@ public class TopicAPI implements TopicService {
     }
 
 }
+
+

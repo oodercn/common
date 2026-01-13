@@ -18,9 +18,9 @@ import java.io.PrintStream;
 import java.io.PrintWriter;
 
 /**
- * 消息不存在的异常类�?
+ * 消息不存在的异常类
  * <p>
- * Title: ooder组织机构中间�?
+ * Title: ooder组织机构中间件
  * </p>
  * <p>
  * Description:
@@ -78,3 +78,4 @@ public class PersonMsgNotFoundException extends Exception {
 	}
     }
 }
+

@@ -23,7 +23,7 @@ import java.util.Collection;
  * Title: JDS系统管理系统
  * </p>
  * <p>
- * Description: 工具类，实现java.util.List接口，储存各个对象的UUID�?当需要的时候才从数据中取得实际的数据对�?
+ * Description: 工具类，实现java.util.List接口，储存各个对象的UUID，当需要的时候才从数据中取得实际的数据对象
  * </p>
  * <p>
  * Copyright: Copyright (c) 2016
@@ -537,7 +537,7 @@ public abstract class DbObjectList<T> extends AbstractList implements Cloneable,
 	}
 
 	/**
-	 * 准备读取相应的数据，子类可以预先从数据中读取后面的数�?br>
+	 * 准备读取相应的数据，子类可以预先从数据中读取后面的数据<br>
 	 * 默认实现不做任何工作!
 	 * 
 	 * @param index
@@ -555,3 +555,5 @@ public abstract class DbObjectList<T> extends AbstractList implements Cloneable,
 	protected abstract T getObject(Object obj);
 
 }
+
+

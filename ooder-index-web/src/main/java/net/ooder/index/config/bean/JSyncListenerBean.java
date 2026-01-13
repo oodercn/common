@@ -30,7 +30,7 @@ public class JSyncListenerBean implements JSyncListener{
     // 临时文件路径
     String tempRootPath;
 
-    // 文件同步监听�?
+    // 文件同步监听器
     Class syncListener;
     
     Class clazz;
@@ -98,3 +98,5 @@ public class JSyncListenerBean implements JSyncListener{
     }
 
 }
+
+

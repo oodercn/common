@@ -284,13 +284,13 @@ public class ConnectionManager {
                                 tmpProvider = (ConnectionProvider) constructor.newInstance(providerConfig);
                             } catch (Exception e) {
                                 log.error("Warning: failed to create the connection provider specified by connection Provider.className. Using the default pool.", e);
-                                tmpProvider = new C3P0ConnectionProvider(providerConfig);
+                                tmpProvider = new HikariCPConnectionProvider(providerConfig);
                             }
                         } else {
-                            tmpProvider = new C3P0ConnectionProvider(providerConfig);
+                            tmpProvider = new HikariCPConnectionProvider(providerConfig);
                         }
                     } else {
-                        tmpProvider = new C3P0ConnectionProvider(providerConfig);
+                        tmpProvider = new HikariCPConnectionProvider(providerConfig);
                     }
                     setConnectionProvider(tmpProvider);
                 }
@@ -591,3 +591,4 @@ public class ConnectionManager {
     }
 
 }
+

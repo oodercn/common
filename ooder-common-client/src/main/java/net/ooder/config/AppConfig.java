@@ -361,7 +361,7 @@ public class AppConfig implements Serializable {
         if (listenerPXMLElement != null) {
             List listeners = listenerPXMLElement.getChildren();
             CListener defaultlistener = new CListener();
-            defaultlistener.setImplementation("net.ooder.bpm.engine.event.DefaultProcessListenerExpressionPar");
+            defaultlistener.setImplementation("net.ooder.workflow.engine.event.DefaultProcessListenerExpressionPar");
             defaultlistener.setName("表达式解析器");
             listenerList.add(defaultlistener);
             for (int i = 0; i < listeners.size(); i++) {
@@ -421,7 +421,7 @@ public class AppConfig implements Serializable {
         if (listenerAXMLElement != null) {
             List listeners = listenerAXMLElement.getChildren();
             CListener defaultlistener = new CListener();
-            defaultlistener.setImplementation("net.ooder.bpm.engine.event.DefaultActivityListenerExpressionPar");
+            defaultlistener.setImplementation("net.ooder.workflow.engine.event.DefaultActivityListenerExpressionPar");
             defaultlistener.setName("表达式解析器");
             activityListenerList.add(defaultlistener);
             for (int i = 0; i < listeners.size(); i++) {

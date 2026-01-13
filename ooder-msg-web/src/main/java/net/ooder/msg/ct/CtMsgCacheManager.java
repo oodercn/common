@@ -417,7 +417,7 @@ public class CtMsgCacheManager implements Serializable {
         BeanMap realMap = BeanMap.create(realMsg);
         Set<String> keySet = dataMap.keySet();
 
-        // 过滤空�?
+        // 过滤空值
 
         for (String key : keySet) {
             final Object value = dataMap.get(key);
@@ -438,7 +438,7 @@ public class CtMsgCacheManager implements Serializable {
         }
         realMsg.setBody(body);
 
-        //命令事件需要同步处�?
+        //命令事件需要同步处理
         if (msg.getType().equals(MsgType.COMMAND.getType())) {
 
             try {
@@ -454,7 +454,7 @@ public class CtMsgCacheManager implements Serializable {
     public void sendMassMsg(Msg msg, List<String> personIds) {
         int k = 0;
         for (String personId : personIds) {
-            //当值大�?时分裂消息�?
+            //当值大于0时分裂消息
             if (k > 0) {
                 msg.setId(UUID.randomUUID().toString());//this.cloneMsg(msg, msg.getClass());
             }
@@ -482,3 +482,5 @@ public class CtMsgCacheManager implements Serializable {
         System.out.println(JSONObject.toJSON(rmsg) + rmsg.getModeId());
     }
 }
+
+

@@ -72,7 +72,7 @@ public class RemoteCommandFilterImpl implements CommandFilter {
                                     Map commandBeanmap = BeanMap.create(command);
                                     Enumstype commandCMD = (Enumstype) commandBeanmap.get("command");
                                     Iterator<String> keyit = commandBeanmap.keySet().iterator();
-                                    // 过滤空�?
+                                    // 过滤空值
                                     Map valueMap = new HashMap();
                                     for (; keyit.hasNext(); ) {
                                         final String key = keyit.next();
@@ -145,3 +145,5 @@ public class RemoteCommandFilterImpl implements CommandFilter {
     }
 
 }
+
+

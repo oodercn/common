@@ -322,3 +322,5 @@ public class TopicMsgIndex implements JLuceneIndex, TopicMsg {
         this.status = status;
     }
 }
+
+

@@ -52,7 +52,7 @@ public class SessionCheckTask implements Runnable {
 
                     List<JDSSessionHandle> invalidSessionList = new ArrayList<JDSSessionHandle>();
                     long currentTime = System.currentTimeMillis();
-                    // 验证Session是否有需要进行过期处�?
+                    // 验证Session是否有需要进行过期
                     Cache<String, JDSSessionHandle> cache = JDSServer.getInstance().getSessionHandleCache();
                     Set<String> ites = cache.keySet();
                     Integer size = ites.size();
@@ -79,8 +79,8 @@ public class SessionCheckTask implements Runnable {
                 ;
 
             }
-        } catch (JDSException bpme) {
-            logger.error("Get JDSServer instance failed.", bpme);
+        } catch (JDSException workflowe) {
+            logger.error("Get JDSServer instance failed.", workflowe);
         }
 
     }

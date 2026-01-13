@@ -18,12 +18,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * VFSClientServiceAPI 提供分布式存储服务的REST API端点。
+ */
 @Controller
 @RequestMapping("/api/vfs/clientservice/")
 @MethodChinaName(cname = "分布式存储服务")
 @EsbBeanAnnotation(dataType = ContextType.Server, tokenType = TokenType.admin)
 public class VFSClientServiceAPI implements VFSClientService {
-
 
     @Override
     @RequestMapping(method = RequestMethod.POST, value = "GetFolderByID")
@@ -40,7 +42,6 @@ public class VFSClientServiceAPI implements VFSClientService {
     ResultModel<FileInfo> getFileInfoByID(String fileId) {
         return getVfsService().getFileInfoByID(fileId);
     }
-
 
     @Override
     @RequestMapping(method = RequestMethod.POST, value = "GetFileCopyById")
@@ -114,7 +115,6 @@ public class VFSClientServiceAPI implements VFSClientService {
         return getVfsService().getDeletedFolder(folderId);
     }
 
-
     @Override
     @RequestMapping(method = RequestMethod.POST, value = "RemoveFileInfo")
     @MethodChinaName(cname = "删除文件", display = false)
@@ -179,7 +179,6 @@ public class VFSClientServiceAPI implements VFSClientService {
         return getVfsService().loadFileList(ids);
     }
 
-
     @Override
     @RequestMapping(method = RequestMethod.POST, value = "LoadVersionList")
     @MethodChinaName(cname = "批量装载文件版本", display = false)
@@ -187,7 +186,6 @@ public class VFSClientServiceAPI implements VFSClientService {
     ListResultModel<List<FileVersion>> loadVersionList(@RequestBody String[] ids) {
         return getVfsService().loadVersionList(ids);
     }
-
 
     @Override
     @RequestMapping(method = RequestMethod.POST, value = "GetFileViewByID")
@@ -197,7 +195,6 @@ public class VFSClientServiceAPI implements VFSClientService {
         return getVfsService().getFileViewByID(fileViewId);
     }
 
-
     @Override
     @RequestMapping(method = RequestMethod.POST, value = "CreateViewByVersionId")
     @MethodChinaName(cname = "创建视图")
@@ -206,13 +203,11 @@ public class VFSClientServiceAPI implements VFSClientService {
         return getVfsService().createViewByVersionId(versionId, objectId, fileIndex);
     }
 
-
     @Override
     @RequestMapping(method = RequestMethod.POST, value = "UpdateFileVersionInfo")
     @MethodChinaName(cname = "更新版本信息")
     public @ResponseBody
     ResultModel<Boolean> updateFileVersionInfo(String fileVersionId, String hash) {
-
         return getVfsService().updateFileVersionInfo(fileVersionId, hash);
     }
 
@@ -221,10 +216,8 @@ public class VFSClientServiceAPI implements VFSClientService {
     @MethodChinaName(cname = "更新视图信息")
     public @ResponseBody
     ResultModel<Boolean> updateFileViewInfo(@RequestBody FileView view) {
-
         return getVfsService().updateFileViewInfo(view);
     }
-
 
     @Override
     @RequestMapping(method = RequestMethod.POST, value = "loadFileViewList")
@@ -234,8 +227,6 @@ public class VFSClientServiceAPI implements VFSClientService {
         return getVfsService().loadFileViewList(ids);
     }
 
-
-    //
     @Override
     @RequestMapping(method = RequestMethod.POST, value = "GetVersionByHash")
     @MethodChinaName(cname = "根据HASH查询版本", display = false)
@@ -244,7 +235,10 @@ public class VFSClientServiceAPI implements VFSClientService {
         return getVfsService().getVersionByHash(hash);
     }
 
-
+    /**
+     * 获取VFS服务实例。
+     * @return VFSClientService实例
+     */
     public VFSClientService getVfsService() {
         return (VFSClientService) EsbUtil.parExpression(VFSClientService.class);
     }

@@ -19,6 +19,7 @@ import net.ooder.common.Condition;
 import net.ooder.common.JDSException;
 import net.ooder.config.ListResultModel;
 import net.ooder.org.query.MsgConditionKey;
+import net.ooder.annotation.MethodChinaName;
 
 import java.util.List;
 
@@ -26,23 +27,26 @@ public interface MsgClient<V extends Msg> {
 
 
 
+    @MethodChinaName("根据ID获取消息")
     public   V  getMsgById(String msgId);
 
     /**
-     * 获取所有消息（包含已发送及接受�?
+     * 获取所有消息（包含已发送及接受的）
      *
      * @return
      * @throws JDSException
      */
+    @MethodChinaName("获取所有发送消息")
     public  <T extends List<V>> ListResultModel<T> getAllSendMsg() throws JDSException;
 
     /**
-     * 获取指定参与者信息列�?
+     * 获取指定参与者信息列表
      *
      * @param personId
      * @return
      * @throws JDSException
      */
+    @MethodChinaName("根据发送者获取消息")
     public  <T extends List<V>> ListResultModel<T> getSendMsgByPerson(String personId) throws JDSException;
 
     /**
@@ -51,15 +55,17 @@ public interface MsgClient<V extends Msg> {
      * @return
      * @throws JDSException
      */
+    @MethodChinaName("获取所有接收消息")
     public  <T extends List<V>> ListResultModel<T> getAllReceiveMsg() throws JDSException;
 
     /**
-     * 获取指定接收对象的消息集�?
+     * 获取指定接收对象的消息集合
      *
      * @param fromPersonId
      * @return
      * @throws JDSException
      */
+    @MethodChinaName("根据接收者获取消息")
     public <T extends List<V>> ListResultModel<T> getReceiveMsgByPerson(String fromPersonId) throws JDSException;
 
     /**
@@ -69,6 +75,7 @@ public interface MsgClient<V extends Msg> {
      * @return
      * @throws JDSException
      */
+    @MethodChinaName("创建发送给指定用户的消息")
     public   V creatMsg2Person(String toPersonId) throws JDSException;
 
     /**
@@ -77,6 +84,7 @@ public interface MsgClient<V extends Msg> {
      * @return
      * @throws JDSException
      */
+    @MethodChinaName("创建消息")
     public V creatMsg() throws JDSException;
 
     /**
@@ -86,6 +94,7 @@ public interface MsgClient<V extends Msg> {
      * @return
      * @throws JDSException
      */
+    @MethodChinaName("根据条件查询消息列表")
     public <T extends List<V>>  ListResultModel<T> getMsgList(Condition<MsgConditionKey,JLuceneIndex> condition) throws JDSException;
 
 
@@ -97,14 +106,20 @@ public interface MsgClient<V extends Msg> {
      * @param personIds
      * @throws JDSException
      */
+    @MethodChinaName("发送群发消息")
     public void sendMassMsg(V msg, List<String> personIds) throws JDSException;
 
 
+    @MethodChinaName("克隆消息")
     public   V cloneMsg(Msg msg);
 
+    @MethodChinaName("更新消息")
     public void updateMsg(V msg);
 
+    @MethodChinaName("删除消息")
     public void deleteMsg(String msgId);
 
 
 }
+
+

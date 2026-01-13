@@ -224,3 +224,5 @@ public class ColInfo implements Cacheable, Serializable,CustomBean {
         return AnnotationUtil.toAnnotationStr(this);
     }
 }
+
+

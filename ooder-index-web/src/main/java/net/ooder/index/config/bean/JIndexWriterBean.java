@@ -60,3 +60,5 @@ public class JIndexWriterBean implements JIndexWriter{
         this.analyzer = analyzer;
     }
 }
+
+

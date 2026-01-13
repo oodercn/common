@@ -12,7 +12,7 @@
  * License: MIT License
  * </p>
  */
-package net.ooder.common.database.bpm;
+package net.ooder.common.database;
 
 
 import net.ooder.annotation.ColType;
@@ -50,3 +50,5 @@ public enum DefaultColEnum {
     }
 
 }
+
+

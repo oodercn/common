@@ -29,7 +29,7 @@ import net.ooder.msg.mqtt.command.filter.command.LocalMsgFilterImpl;
 public class MsgFilterImpl implements MsgFilter {
 
 	/**
-	 * 应用应该实现的过滤方法�?
+	 * 应用应该实现的过滤方法。
 	 *
 	 *            需要过滤的对象
 	 * @return
@@ -59,3 +59,5 @@ public class MsgFilterImpl implements MsgFilter {
 
 
 }
+
+

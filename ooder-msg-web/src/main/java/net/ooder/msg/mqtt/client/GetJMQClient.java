@@ -52,3 +52,4 @@ public class GetJMQClient extends AbstractFunction {
         return client;
     }
 }
+

@@ -315,3 +315,5 @@ public class LogIndex implements JLuceneIndex,LogMsg {
         this.gatewayId = gatewayId;
     }
 }
+
+

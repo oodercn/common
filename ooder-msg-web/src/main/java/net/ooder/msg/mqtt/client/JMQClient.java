@@ -69,7 +69,7 @@ public interface JMQClient extends JDSClientService{
      *
      * @throws JDSException
      */
-    @MethodChinaName(cname = "检查是否在", returnStr = "isOnLine()")
+    @MethodChinaName("检查是否在线")
     public Boolean isOnLine() throws JMQException;
 
 
@@ -150,7 +150,7 @@ public interface JMQClient extends JDSClientService{
      *
      * @throws JMQException
      */
-    @MethodChinaName(cname = "开始事务操", returnStr = "beginTransaction()", display = false)
+    @MethodChinaName("开始事务操作")
     public void beginTransaction() throws JMQException;
 
     /**
@@ -158,7 +158,7 @@ public interface JMQClient extends JDSClientService{
      *
      * @throws JMQException
      */
-    @MethodChinaName(cname = "提交事务操作", returnStr = "commitTransaction()", display = false)
+    @MethodChinaName("提交事务操作")
     public void commitTransaction() throws JMQException;
 
     /**
@@ -166,7 +166,7 @@ public interface JMQClient extends JDSClientService{
      *
      * @throws JMQException
      */
-    @MethodChinaName(cname = "回滚事务操作", returnStr = "rollbackTransaction()", display = false)
+    @MethodChinaName("回滚事务操作")
     public void rollbackTransaction() throws JMQException;
 
     public void setSystemCode(String systemCode);
@@ -175,3 +175,5 @@ public interface JMQClient extends JDSClientService{
 
     public ConnectInfo getConnectInfo();
 }
+
+

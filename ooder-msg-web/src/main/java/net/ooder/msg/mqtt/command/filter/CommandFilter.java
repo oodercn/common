@@ -26,7 +26,7 @@ import net.ooder.engine.JDSSessionHandle;
  * Title: JDS系统管理系统
  * </p>
  * <p>
- * Description: 结果过滤器接�?
+ * Description: 结果过滤器接口
  * </p>
  * <p>
  * Copyright: Copyright (c) 2017
@@ -44,11 +44,13 @@ public interface CommandFilter {
 
 
 	/**
-	 * 应用应该实现的过滤方法�?
-	 * 
-	 * @param obj
-	 *            需要过滤的对象
-	 * @return
-	 */
+ * 应用应该实现的过滤方法
+ * 
+ * @param command 需要过滤的命令对象
+ * @param handle 会话句柄
+ * @return 是否通过过滤
+ */
 	public abstract boolean filterObject(JDSCommand command, JDSSessionHandle handle);
 }
+
+

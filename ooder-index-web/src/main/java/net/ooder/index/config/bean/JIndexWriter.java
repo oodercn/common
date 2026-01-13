@@ -29,3 +29,5 @@ public interface JIndexWriter extends JIndexBean{
 
     public void setAnalyzer(Class analyzer);
 }
+
+

@@ -23,7 +23,7 @@ import net.ooder.msg.mqtt.JMQException;
  * Title: Mqtt管理系统
  * </p>
  * <p>
- * Description: 核心事件监听器接�?
+ * Description: 核心事件监听器接口
  * </p>
  * <p>
  * Copyright: Copyright (c) 2020
@@ -70,7 +70,7 @@ public interface TopicListener extends java.util.EventListener {
     public void deleteTopic(TopicEvent<TopicMsg> event) throws JMQException;
 
 
-    @MethodChinaName(cname = "发布订阅消息")
+    @MethodChinaName("发布订阅消息")
     public void publicTopicMsg(TopicEvent<TopicMsg> event) throws JMQException;
 
 
@@ -84,3 +84,5 @@ public interface TopicListener extends java.util.EventListener {
     public String getSystemCode();
 
 }
+
+

@@ -22,7 +22,7 @@ import net.ooder.msg.mqtt.JMQException;
  * Title: HOME管理系统
  * </p>
  * <p>
- * Description: 核心事件监听器接�?
+ * Description: 核心事件监听器接口
  * </p>
  * <p>
  * Copyright: Copyright (c) 2015
@@ -41,17 +41,17 @@ public interface CommandListener extends java.util.EventListener {
 
     /**
      * 1001
-     * 命令开始发�?
+     * 命令开始发送
      *
      * @param event
      * @throws JMQException
      */
-    @MethodChinaName(cname = "命令开始发送")
+    @MethodChinaName("命令开始发送")
     public void commandSendIng(MQTTCommandEvent event) throws JMQException;
 
 
     /**
-     * 发送结�?等待服务端结�?
+     * 发送结束,等待服务端结束
      *
      * @param event
      * @throws JMQException
@@ -60,7 +60,7 @@ public interface CommandListener extends java.util.EventListener {
 
 
     /**
-     * 命令未到�?2001/
+     * 命令未到达2001/
      *
      * @param event
      * @throws JMQException
@@ -87,7 +87,7 @@ public interface CommandListener extends java.util.EventListener {
 
 
     /**
-     * 发送超�?
+     * 发送超时
      *
      * @param event
      * @throws JMQException
@@ -96,7 +96,7 @@ public interface CommandListener extends java.util.EventListener {
 
 
     /**
-     * 开始路由（引擎内部方法�?
+     * 开始路由（引擎内部方法）
      *
      * @param event
      * @throws JMQException
@@ -121,3 +121,5 @@ public interface CommandListener extends java.util.EventListener {
     public String getSystemCode();
 
 }
+
+

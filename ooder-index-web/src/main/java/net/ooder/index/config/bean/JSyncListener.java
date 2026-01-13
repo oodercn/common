@@ -39,3 +39,5 @@ public interface JSyncListener extends JIndexBean{
     public void setSyncListener(Class syncListener) ;
 
 }
+
+

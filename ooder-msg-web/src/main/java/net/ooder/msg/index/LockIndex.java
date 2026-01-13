@@ -115,3 +115,5 @@ public class LockIndex implements JLuceneIndex {
 	this.event = event;
     }
 }
+
+

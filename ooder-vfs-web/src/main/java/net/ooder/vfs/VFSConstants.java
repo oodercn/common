@@ -1,4 +1,4 @@
-package  net.ooder.vfs;
+package net.ooder.vfs;
 
 /**
  * VFSConstants 定义了VFS系统的常量。

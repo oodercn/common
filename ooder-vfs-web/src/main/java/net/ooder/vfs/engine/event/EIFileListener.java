@@ -1,4 +1,4 @@
-package  net.ooder.vfs.engine.event;
+package net.ooder.vfs.engine.event;
 
 import  net.ooder.vfs.VFSException;
 

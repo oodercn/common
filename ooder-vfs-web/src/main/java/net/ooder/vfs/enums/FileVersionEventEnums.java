@@ -1,4 +1,4 @@
-package  net.ooder.vfs.enums;
+package net.ooder.vfs.enums;
 
 import  net.ooder.annotation.EventEnums;
 

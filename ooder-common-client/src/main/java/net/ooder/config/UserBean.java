@@ -17,6 +17,8 @@ package net.ooder.config;
 import net.ooder.common.ConfigCode;
 import net.ooder.common.util.ClassUtility;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 /***
@@ -62,10 +64,20 @@ public class UserBean {
     private static final String localIp = "127.0.0.1";
     public static final String clientPath = "jdsclient_init.properties";
     public static final String springPath = "application.properties";
+    
+    // 配置属性对象
+    private static UserProperties userProperties;
 
 
     static {
         try {
+            // 使用 ConfigReader 读取配置，支持多个配置文件
+            List<String> configFiles = new ArrayList<>();
+            configFiles.add(springPath);
+            configFiles.add(clientPath);
+            userProperties = ConfigReader.readUserConfig(configFiles);
+            
+            // 加载原始 Properties 用于向后兼容
             if (ClassUtility.loadResource(springPath) != null) {
                 props.load(ClassUtility.loadResource(springPath));
             } else if (ClassUtility.loadResource(clientPath) != null) {
@@ -113,141 +125,122 @@ public class UserBean {
             url = System.getProperty("masterServerUrl");
         }
         if (url == null) {
-            url = props.getProperty("serverUrl");
+            url = userProperties.getServerUrl() != null ? userProperties.getServerUrl() : props.getProperty("serverUrl");
         }
 
         if (configName == null) {
-            configName = ConfigCode.fromType(props.getProperty("configName"));
+            String configNameStr = userProperties.getConfigName() != null ? userProperties.getConfigName() : props.getProperty("configName");
+            if (configNameStr != null) {
+                configName = ConfigCode.fromType(configNameStr);
+            }
         }
-
 
         if (systemCode == null) {
             systemCode = System.getProperty("systemCode");
         }
-
-
         if (systemCode == null) {
-            if (props.getProperty("systemCode") != null
-                    && (!props.getProperty("systemCode").equals(""))) {
-                systemCode = props.getProperty("systemCode");
-            }
+            systemCode = userProperties.getSystemCode() != null ? userProperties.getSystemCode() : 
+                        (props.getProperty("systemCode") != null && !props.getProperty("systemCode").equals("")) ? 
+                        props.getProperty("systemCode") : null;
         }
-        ;
-
 
         if (userpassword == null) {
             userpassword = System.getProperty("password");
         }
-
         if (userpassword == null) {
-            if (props.getProperty("password") != null
-                    && (!props.getProperty("password").equals(""))) {
-                userpassword = props.getProperty("password");
-            }
+            userpassword = userProperties.getPassword() != null ? userProperties.getPassword() : 
+                        (props.getProperty("password") != null && !props.getProperty("password").equals("")) ? 
+                        props.getProperty("password") : null;
         }
-        ;
-
-
         if (userpassword == null) {
-            if (props.getProperty("userpassword") != null
-                    && (!props.getProperty("userpassword").equals(""))) {
-                userpassword = props.getProperty("userpassword");
-            }
+            userpassword = userProperties.getUserpassword() != null ? userProperties.getUserpassword() : 
+                        (props.getProperty("userpassword") != null && !props.getProperty("userpassword").equals("")) ? 
+                        props.getProperty("userpassword") : null;
         }
-        ;
 
         if (username == null) {
             username = System.getProperty("username");
         }
-
         if (username == null) {
-            if (props.getProperty("username") != null
-                    && (!props.getProperty("username").equals(""))) {
-                username = props.getProperty("username");
-            }
+            username = userProperties.getUsername() != null ? userProperties.getUsername() : 
+                        (props.getProperty("username") != null && !props.getProperty("username").equals("")) ? 
+                        props.getProperty("username") : null;
         }
-        ;
-
 
         this.serverUrl = url;
 
-        if (props.getProperty("title") != null
-                && (!props.getProperty("title").equals(""))) {
-            panelDisplayName = props.getProperty("title");
-        }
-        ;
-
-        if (props.getProperty("proxyHost") != null
-                && (!props.getProperty("proxyHost").equals(""))) {
-            proxyHost = props.getProperty("proxyHost");
-        }
-        ;
-
-
-        if (props.getProperty("loginUrl") != null
-                && (!props.getProperty("loginUrl").equals(""))) {
-            loginUrl = props.getProperty("loginUrl");
-        }
-        ;
-
+        // 使用 UserProperties 初始化其他属性，保留原有优先级
+        this.panelDisplayName = userProperties.getPanelDisplayName() != null ? userProperties.getPanelDisplayName() : 
+                            (props.getProperty("title") != null && !props.getProperty("title").equals("")) ? 
+                            props.getProperty("title") : null;
+        
+        this.proxyHost = userProperties.getProxyHost() != null ? userProperties.getProxyHost() : 
+                        (props.getProperty("proxyHost") != null && !props.getProperty("proxyHost").equals("")) ? 
+                        props.getProperty("proxyHost") : "http://127.0.0.1";
+        
+        this.loginUrl = userProperties.getLoginUrl() != null ? userProperties.getLoginUrl() : 
+                        (props.getProperty("loginUrl") != null && !props.getProperty("loginUrl").equals("")) ? 
+                        props.getProperty("loginUrl") : "/api/sys/syslogin";
+        
+        // 代理端口
         if (System.getProperty("proxyPort") != null) {
             proxyPort = Integer.parseInt(System.getProperty("proxyPort"));
-        } else if (props.getProperty("proxyPort") != null
-                && (!props.getProperty("proxyPort").equals(""))) {
+        } else if (userProperties.getProxyPort() != null) {
+            proxyPort = userProperties.getProxyPort();
+            System.setProperty("proxyPort", String.valueOf(proxyPort));
+        } else if (props.getProperty("proxyPort") != null && !props.getProperty("proxyPort").equals("")) {
             proxyPort = Integer.parseInt(props.getProperty("proxyPort"));
             System.setProperty("proxyPort", props.getProperty("proxyPort"));
+        } else {
+            proxyPort = 8081;
         }
-
-        if (System.getProperty("esdServerPort") != null) {
-            esdServerPort = System.getProperty("esdServerPort");
-        } else if (props.getProperty("esdServerPort") != null
-                && (!props.getProperty("esdServerPort").equals(""))) {
-            esdServerPort = props.getProperty("esdServerPort");
-
+        
+        // ESD服务器端口
+        this.esdServerPort = System.getProperty("esdServerPort") != null ? System.getProperty("esdServerPort") : 
+                            (userProperties.getEsdServerPort() != null ? userProperties.getEsdServerPort() : 
+                            (props.getProperty("esdServerPort") != null && !props.getProperty("esdServerPort").equals("")) ? 
+                            props.getProperty("esdServerPort") : "8091");
+        
+        // Web服务器端口
+        this.webServerPort = System.getProperty("webServerPort") != null ? System.getProperty("webServerPort") : 
+                            (userProperties.getWebServerPort() != null ? userProperties.getWebServerPort() : 
+                            (props.getProperty("webServerPort") != null && !props.getProperty("webServerPort").equals("")) ? 
+                            props.getProperty("webServerPort") : "8081");
+        
+        // 其他属性
+        this.index = userProperties.getIndex() != null ? userProperties.getIndex() : 
+                    (props.getProperty("index") != null && !props.getProperty("index").equals("")) ? 
+                    props.getProperty("index") : null;
+        
+        this.filePort = userProperties.getFilePort() != null ? userProperties.getFilePort() : 
+                        (props.getProperty("filePort") != null && !props.getProperty("filePort").equals("")) ? 
+                        Integer.parseInt(props.getProperty("filePort")) : null;
+        
+        this.msgport = userProperties.getMsgport() != null ? userProperties.getMsgport() : 
+                        (props.getProperty("msgport") != null && !props.getProperty("msgport").equals("")) ? 
+                        Integer.parseInt(props.getProperty("msgport")) : 8088;
+        
+        this.udpUrl = userProperties.getUdpUrl() != null ? userProperties.getUdpUrl() : 
+                    (props.getProperty("udpUrl") != null && !props.getProperty("udpUrl").equals("")) ? 
+                    props.getProperty("udpUrl") : null;
+        
+        // 布尔属性
+        this.autoLogin = System.getProperty("autoLogin") != null ? Boolean.parseBoolean(System.getProperty("autoLogin")) : 
+                        (userProperties.isAutoLogin() || 
+                        (props.getProperty("autoLogin") != null && props.getProperty("autoLogin").equals("true")));
+        
+        this.savePassword = System.getProperty("savePassword") != null ? Boolean.parseBoolean(System.getProperty("savePassword")) : 
+                            (userProperties.isSavePassword() || 
+                            (props.getProperty("savePassword") != null && props.getProperty("savePassword").equals("true")));
+        
+        this.OffLine = userProperties.isOffLine();
+        
+        // 如果 savePassword 为 true，确保密码已设置
+        if (this.savePassword && this.userpassword == null) {
+            this.userpassword = userProperties.getPassword() != null ? userProperties.getPassword() : 
+                                (props.getProperty("password") != null ? props.getProperty("password") : null);
         }
-
-        if (System.getProperty("webServerPort") != null) {
-            webServerPort = System.getProperty("webServerPort");
-        } else if (props.getProperty("webServerPort") != null
-                && (!props.getProperty("webServerPort").equals(""))) {
-            webServerPort = props.getProperty("webServerPort");
-
-        }
-
-
-        if (props.getProperty("index") != null
-                && (!props.getProperty("index").equals(""))) {
-            index = props.getProperty("index");
-        }
-        ;
-        if (props.getProperty("filePort") != null
-                && (!props.getProperty("filePort").equals(""))) {
-            filePort = Integer.parseInt(props.getProperty("filePort"));
-        }
-
-
-        if (props.getProperty("savePassword") != null
-                && (props.getProperty("savePassword").equals("true"))) {
-            this.userpassword = props.getProperty("password");
-            this.savePassword = true;
-        }
-
-        if (props.getProperty("msgport") != null
-                && (!props.getProperty("msgport").equals(""))) {
-            this.msgport = Integer.parseInt(props.getProperty("msgport"));
-        }
-
-        if (props.getProperty("udpUrl") != null
-                && (!props.getProperty("udpUrl").equals(""))) {
-            this.udpUrl = props.getProperty("udpUrl");
-
-        }
-
-        if (props.getProperty("autoLogin") != null
-                && (props.getProperty("autoLogin").equals("true"))) {
-            this.setAutoLogin(true);
-        }
-
+        
         this.serverUrl = url;
     }
 

@@ -1,4 +1,4 @@
-package  net.ooder.vfs.query;
+package net.ooder.vfs.query;
 
 
 import  net.ooder.common.ConditionKey;

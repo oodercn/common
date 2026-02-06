@@ -1,4 +1,4 @@
-package  net.ooder.vfs.ct.mywork;
+package net.ooder.vfs.ct.mywork;
 
 import  net.ooder.common.JDSException;
 import  net.ooder.common.md5.MD5InputStream;

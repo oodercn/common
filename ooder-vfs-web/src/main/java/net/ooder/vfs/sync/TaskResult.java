@@ -1,4 +1,4 @@
-package  net.ooder.vfs.sync;
+package net.ooder.vfs.sync;
 
 public class TaskResult<T> {
         int result = 0;

@@ -48,7 +48,7 @@ public class HikariCPConnectionProvider implements ConnectionProvider {
     private final Object initLock = new Object();
 
     /**
-     * 构造函数
+     * 构造函数ConfigReader
      * @param providerConfig 连接提供者配置
      */
     public HikariCPConnectionProvider(ProviderConfig providerConfig) {

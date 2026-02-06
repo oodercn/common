@@ -1,4 +1,4 @@
-package  net.ooder.vfs.engine.event;
+package net.ooder.vfs.engine.event;
 
 public class VFSReturnType {
 	public static String FILE_PATH_ERROR= "10001";

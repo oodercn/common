@@ -1,4 +1,4 @@
-package  net.ooder.vfs.filter;
+package net.ooder.vfs.filter;
 
 import  net.ooder.cluster.ClusterMananer;
 import  net.ooder.cluster.ServerNode;

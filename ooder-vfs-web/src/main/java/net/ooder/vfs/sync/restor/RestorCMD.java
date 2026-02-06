@@ -1,4 +1,4 @@
-package  net.ooder.vfs.sync.restor;
+package net.ooder.vfs.sync.restor;
 
 import  net.ooder.common.JDSConstants;
 import  net.ooder.common.logging.Log;

@@ -1,4 +1,4 @@
-package  net.ooder.vfs.api;
+package net.ooder.vfs.api;
 
 import  net.ooder.annotation.EsbBeanAnnotation;
 import  net.ooder.annotation.MethodChinaName;

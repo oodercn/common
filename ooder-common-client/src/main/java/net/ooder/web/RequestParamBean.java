@@ -15,11 +15,11 @@
 package net.ooder.web;
 
 import com.alibaba.fastjson.annotation.JSONField;
+import net.ooder.annotation.JsonData;
 import net.ooder.common.util.ClassUtility;
 import net.ooder.annotation.FParams;
 import net.ooder.esb.config.manager.ExpressionParameter;
 import net.ooder.esb.config.manager.ExpressionTempParamBean;
-import net.ooder.web.json.JsonData;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;

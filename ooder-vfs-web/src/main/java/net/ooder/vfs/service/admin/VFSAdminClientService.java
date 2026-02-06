@@ -1,4 +1,4 @@
-package  net.ooder.vfs.service.admin;
+package net.ooder.vfs.service.admin;
 
 import  net.ooder.annotation.MethodChinaName;
 import  net.ooder.config.ListResultModel;

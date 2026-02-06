@@ -1,4 +1,4 @@
-package  net.ooder.vfs.ct;
+package net.ooder.vfs.ct;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import  net.ooder.common.JDSException;

@@ -1,4 +1,4 @@
-package  net.ooder.vfs.listener;
+package net.ooder.vfs.listener;
 
 import  net.ooder.common.JDSConstants;
 import  net.ooder.common.JDSException;

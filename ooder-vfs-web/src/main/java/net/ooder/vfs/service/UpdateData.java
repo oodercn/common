@@ -1,4 +1,4 @@
-package  net.ooder.vfs.service;
+package net.ooder.vfs.service;
 
 import  net.ooder.common.md5.MD5InputStream;
 import  net.ooder.config.ResultModel;

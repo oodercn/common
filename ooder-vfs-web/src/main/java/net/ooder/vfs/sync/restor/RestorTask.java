@@ -1,4 +1,4 @@
-package  net.ooder.vfs.sync.restor;
+package net.ooder.vfs.sync.restor;
 
 import  net.ooder.vfs.sync.TaskResult;
 

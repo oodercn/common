@@ -1,4 +1,4 @@
-package  net.ooder.vfs.listener;
+package net.ooder.vfs.listener;
 
 import  net.ooder.annotation.EsbBeanAnnotation;
 import  net.ooder.common.EsbFlowType;

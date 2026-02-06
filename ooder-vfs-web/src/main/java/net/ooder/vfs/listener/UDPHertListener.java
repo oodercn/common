@@ -1,4 +1,4 @@
-package  net.ooder.vfs.listener;
+package net.ooder.vfs.listener;
 
 import  net.ooder.cluster.udp.ClusterClient;
 import  net.ooder.annotation.EsbBeanAnnotation;

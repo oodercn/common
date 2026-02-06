@@ -1,4 +1,4 @@
-package  net.ooder.vfs.service;
+package net.ooder.vfs.service;
 
 import java.io.IOException;
 import java.nio.file.Path;

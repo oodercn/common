@@ -1,4 +1,4 @@
-package  net.ooder.vfs.ct.task;
+package net.ooder.vfs.ct.task;
 
 import  net.ooder.jds.core.esb.EsbUtil;
 import  net.ooder.vfs.FileInfo;

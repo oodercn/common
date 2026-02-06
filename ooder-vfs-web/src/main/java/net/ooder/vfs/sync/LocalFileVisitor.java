@@ -1,4 +1,4 @@
-package  net.ooder.vfs.sync;
+package net.ooder.vfs.sync;
 
 import  net.ooder.common.JDSConstants;
 import  net.ooder.common.JDSException;

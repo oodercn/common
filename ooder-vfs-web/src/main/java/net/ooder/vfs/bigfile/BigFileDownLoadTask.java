@@ -1,4 +1,4 @@
-package  net.ooder.vfs.bigfile;
+package net.ooder.vfs.bigfile;
 
 import  net.ooder.common.JDSConstants;
 import  net.ooder.common.JDSException;

@@ -8,7 +8,7 @@
  * This software is the proprietary information of ooder, Inc.
  * Use is subject to license terms.
  */
-package  net.ooder.vfs.engine.event;
+package net.ooder.vfs.engine.event;
 
 import com.alibaba.fastjson.JSON;
 import  net.ooder.cluster.udp.ClusterEvent;

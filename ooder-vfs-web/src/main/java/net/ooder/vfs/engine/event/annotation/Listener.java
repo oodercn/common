@@ -1,4 +1,4 @@
-package  net.ooder.vfs.engine.event.annotation;
+package net.ooder.vfs.engine.event.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -1,4 +1,4 @@
-package  net.ooder.vfs.bigfile;
+package net.ooder.vfs.bigfile;
 
 import com.alibaba.fastjson.JSONObject;
 import  net.ooder.common.JDSConstants;

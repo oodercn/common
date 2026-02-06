@@ -1,4 +1,4 @@
-package  net.ooder.vfs.sync;
+package net.ooder.vfs.sync;
 
 import  net.ooder.config.JDSConfig;
 import  net.ooder.thread.JDSThreadFactory;

@@ -1,4 +1,4 @@
-package  net.ooder.vfs.ct;
+package net.ooder.vfs.ct;
 
 import  net.ooder.common.JDSException;
 import  net.ooder.vfs.FileObject;

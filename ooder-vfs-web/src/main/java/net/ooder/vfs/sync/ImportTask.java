@@ -1,4 +1,4 @@
-package  net.ooder.vfs.sync;
+package net.ooder.vfs.sync;
 
 import java.io.File;
 import java.io.IOException;

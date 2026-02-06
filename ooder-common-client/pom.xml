@@ -87,6 +87,13 @@
             <artifactId>font-awesome</artifactId>
             <version>4.7.0</version>
         </dependency>
+        
+        <!-- ooder-config 模块依赖 -->
+        <dependency>
+            <groupId>net.ooder</groupId>
+            <artifactId>ooder-config</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
 
     </dependencies>
 

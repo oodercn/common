@@ -1,4 +1,4 @@
-package  net.ooder.vfs.ct.admin;
+package net.ooder.vfs.ct.admin;
 
 import  net.ooder.common.FolderType;
 import  net.ooder.common.JDSException;

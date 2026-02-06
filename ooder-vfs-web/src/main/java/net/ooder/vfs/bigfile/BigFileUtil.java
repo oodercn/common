@@ -1,4 +1,4 @@
-package  net.ooder.vfs.bigfile;
+package net.ooder.vfs.bigfile;
 
 import org.apache.http.util.TextUtils;
 

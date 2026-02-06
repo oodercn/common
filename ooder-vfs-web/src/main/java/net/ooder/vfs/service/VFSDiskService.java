@@ -1,4 +1,4 @@
-package  net.ooder.vfs.service;
+package net.ooder.vfs.service;
 
 import  net.ooder.annotation.MethodChinaName;
 import  net.ooder.common.FolderState;

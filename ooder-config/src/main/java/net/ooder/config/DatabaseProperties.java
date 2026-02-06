@@ -1,6 +1,6 @@
 package net.ooder.config;
 
-import lombok.Data;
+
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
  * 数据库配置属性类
  * 使用@ConfigurationProperties注解自动绑定配置文件中的属性
  */
-@Data
+
 @Component
 @ConfigurationProperties(prefix = "ooder.database")
 public class DatabaseProperties {
@@ -51,7 +51,7 @@ public class DatabaseProperties {
     /**
      * 连接池配置内部类
      */
-    @Data
+
     public static class Pool {
         
         /**
@@ -83,5 +83,110 @@ public class DatabaseProperties {
          * 检出超时时间（毫秒）
          */
         private Integer checkoutTimeout = 30000;
+
+
+        public Integer getMinConnections() {
+            return minConnections;
+        }
+
+        public void setMinConnections(Integer minConnections) {
+            this.minConnections = minConnections;
+        }
+
+        public Integer getMaxConnections() {
+            return maxConnections;
+        }
+
+        public void setMaxConnections(Integer maxConnections) {
+            this.maxConnections = maxConnections;
+        }
+
+        public Integer getConnectionTimeout() {
+            return connectionTimeout;
+        }
+
+        public void setConnectionTimeout(Integer connectionTimeout) {
+            this.connectionTimeout = connectionTimeout;
+        }
+
+        public Integer getMaxIdleTime() {
+            return maxIdleTime;
+        }
+
+        public void setMaxIdleTime(Integer maxIdleTime) {
+            this.maxIdleTime = maxIdleTime;
+        }
+
+        public Integer getCheckIdlePeriod() {
+            return checkIdlePeriod;
+        }
+
+        public void setCheckIdlePeriod(Integer checkIdlePeriod) {
+            this.checkIdlePeriod = checkIdlePeriod;
+        }
+
+        public Integer getCheckoutTimeout() {
+            return checkoutTimeout;
+        }
+
+        public void setCheckoutTimeout(Integer checkoutTimeout) {
+            this.checkoutTimeout = checkoutTimeout;
+        }
+    }
+
+    public String getDriver() {
+        return driver;
+    }
+
+    public void setDriver(String driver) {
+        this.driver = driver;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Boolean getMysqlUseUnicode() {
+        return mysqlUseUnicode;
+    }
+
+    public void setMysqlUseUnicode(Boolean mysqlUseUnicode) {
+        this.mysqlUseUnicode = mysqlUseUnicode;
+    }
+
+    public String getEncoding() {
+        return encoding;
+    }
+
+    public void setEncoding(String encoding) {
+        this.encoding = encoding;
+    }
+
+    public Pool getPool() {
+        return pool;
+    }
+
+    public void setPool(Pool pool) {
+        this.pool = pool;
     }
 }

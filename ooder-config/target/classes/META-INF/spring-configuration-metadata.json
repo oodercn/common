@@ -9,37 +9,37 @@
       "name": "ooder.aiserver.engine",
       "type": "net.ooder.config.AIServerProperties$Engine",
       "sourceType": "net.ooder.config.AIServerProperties",
-      "sourceMethod": "getEngine()"
+      "sourceMethod": "public net.ooder.config.AIServerProperties.Engine getEngine() "
     },
     {
       "name": "ooder.aiserver.logging",
       "type": "net.ooder.config.AIServerProperties$Logging",
       "sourceType": "net.ooder.config.AIServerProperties",
-      "sourceMethod": "getLogging()"
+      "sourceMethod": "public net.ooder.config.AIServerProperties.Logging getLogging() "
     },
     {
       "name": "ooder.aiserver.model",
       "type": "net.ooder.config.AIServerProperties$Model",
       "sourceType": "net.ooder.config.AIServerProperties",
-      "sourceMethod": "getModel()"
+      "sourceMethod": "public net.ooder.config.AIServerProperties.Model getModel() "
     },
     {
       "name": "ooder.aiserver.model.params",
       "type": "net.ooder.config.AIServerProperties$Model$ModelParams",
       "sourceType": "net.ooder.config.AIServerProperties$Model",
-      "sourceMethod": "getParams()"
+      "sourceMethod": "public net.ooder.config.AIServerProperties.Model.ModelParams getParams() "
     },
     {
       "name": "ooder.aiserver.resource",
       "type": "net.ooder.config.AIServerProperties$Resource",
       "sourceType": "net.ooder.config.AIServerProperties",
-      "sourceMethod": "getResource()"
+      "sourceMethod": "public net.ooder.config.AIServerProperties.Resource getResource() "
     },
     {
       "name": "ooder.aiserver.server",
       "type": "net.ooder.config.AIServerProperties$Server",
       "sourceType": "net.ooder.config.AIServerProperties",
-      "sourceMethod": "getServer()"
+      "sourceMethod": "public net.ooder.config.AIServerProperties.Server getServer() "
     },
     {
       "name": "ooder.database",
@@ -50,7 +50,7 @@
       "name": "ooder.database.pool",
       "type": "net.ooder.config.DatabaseProperties$Pool",
       "sourceType": "net.ooder.config.DatabaseProperties",
-      "sourceMethod": "getPool()"
+      "sourceMethod": "public net.ooder.config.DatabaseProperties.Pool getPool() "
     },
     {
       "name": "user",
@@ -63,62 +63,52 @@
       "name": "ooder.aiserver.enabled",
       "type": "java.lang.Boolean",
       "description": "AIServer 是否启用",
-      "sourceType": "net.ooder.config.AIServerProperties",
-      "defaultValue": true
+      "sourceType": "net.ooder.config.AIServerProperties"
     },
     {
       "name": "ooder.aiserver.engine.max-batch-size",
       "type": "java.lang.Integer",
-      "sourceType": "net.ooder.config.AIServerProperties$Engine",
-      "defaultValue": 32
+      "sourceType": "net.ooder.config.AIServerProperties$Engine"
     },
     {
       "name": "ooder.aiserver.engine.thread-count",
       "type": "java.lang.Integer",
-      "sourceType": "net.ooder.config.AIServerProperties$Engine",
-      "defaultValue": 4
+      "sourceType": "net.ooder.config.AIServerProperties$Engine"
     },
     {
       "name": "ooder.aiserver.engine.timeout",
       "type": "java.lang.Integer",
-      "sourceType": "net.ooder.config.AIServerProperties$Engine",
-      "defaultValue": 30000
+      "sourceType": "net.ooder.config.AIServerProperties$Engine"
     },
     {
       "name": "ooder.aiserver.engine.type",
       "type": "java.lang.String",
-      "sourceType": "net.ooder.config.AIServerProperties$Engine",
-      "defaultValue": "onnxruntime"
+      "sourceType": "net.ooder.config.AIServerProperties$Engine"
     },
     {
       "name": "ooder.aiserver.logging.format",
       "type": "java.lang.String",
-      "sourceType": "net.ooder.config.AIServerProperties$Logging",
-      "defaultValue": "json"
+      "sourceType": "net.ooder.config.AIServerProperties$Logging"
     },
     {
       "name": "ooder.aiserver.logging.level",
       "type": "java.lang.String",
-      "sourceType": "net.ooder.config.AIServerProperties$Logging",
-      "defaultValue": "info"
+      "sourceType": "net.ooder.config.AIServerProperties$Logging"
     },
     {
       "name": "ooder.aiserver.logging.path",
       "type": "java.lang.String",
-      "sourceType": "net.ooder.config.AIServerProperties$Logging",
-      "defaultValue": "\/var\/log\/ooder-aiserver"
+      "sourceType": "net.ooder.config.AIServerProperties$Logging"
     },
     {
       "name": "ooder.aiserver.model.params.batch-size",
       "type": "java.lang.Integer",
-      "sourceType": "net.ooder.config.AIServerProperties$Model$ModelParams",
-      "defaultValue": 16
+      "sourceType": "net.ooder.config.AIServerProperties$Model$ModelParams"
     },
     {
       "name": "ooder.aiserver.model.params.max-sequence-length",
       "type": "java.lang.Integer",
-      "sourceType": "net.ooder.config.AIServerProperties$Model$ModelParams",
-      "defaultValue": 512
+      "sourceType": "net.ooder.config.AIServerProperties$Model$ModelParams"
     },
     {
       "name": "ooder.aiserver.model.path",
@@ -128,76 +118,64 @@
     {
       "name": "ooder.aiserver.model.type",
       "type": "java.lang.String",
-      "sourceType": "net.ooder.config.AIServerProperties$Model",
-      "defaultValue": "pytorch"
+      "sourceType": "net.ooder.config.AIServerProperties$Model"
     },
     {
       "name": "ooder.aiserver.model.version",
       "type": "java.lang.String",
-      "sourceType": "net.ooder.config.AIServerProperties$Model",
-      "defaultValue": "latest"
+      "sourceType": "net.ooder.config.AIServerProperties$Model"
     },
     {
       "name": "ooder.aiserver.name",
       "type": "java.lang.String",
       "description": "AIServer 名称",
-      "sourceType": "net.ooder.config.AIServerProperties",
-      "defaultValue": "ooder-ai-server"
+      "sourceType": "net.ooder.config.AIServerProperties"
     },
     {
       "name": "ooder.aiserver.resource.cpu-cores",
       "type": "java.lang.Integer",
-      "sourceType": "net.ooder.config.AIServerProperties$Resource",
-      "defaultValue": 8
+      "sourceType": "net.ooder.config.AIServerProperties$Resource"
     },
     {
       "name": "ooder.aiserver.resource.gpu-ids",
       "type": "java.lang.String",
-      "sourceType": "net.ooder.config.AIServerProperties$Resource",
-      "defaultValue": "0"
+      "sourceType": "net.ooder.config.AIServerProperties$Resource"
     },
     {
       "name": "ooder.aiserver.resource.max-concurrent-requests",
       "type": "java.lang.Integer",
-      "sourceType": "net.ooder.config.AIServerProperties$Resource",
-      "defaultValue": 100
+      "sourceType": "net.ooder.config.AIServerProperties$Resource"
     },
     {
       "name": "ooder.aiserver.resource.memory-limit",
       "type": "java.lang.String",
-      "sourceType": "net.ooder.config.AIServerProperties$Resource",
-      "defaultValue": "8g"
+      "sourceType": "net.ooder.config.AIServerProperties$Resource"
     },
     {
       "name": "ooder.aiserver.server.connection-timeout",
       "type": "java.lang.Integer",
-      "sourceType": "net.ooder.config.AIServerProperties$Server",
-      "defaultValue": 10000
+      "sourceType": "net.ooder.config.AIServerProperties$Server"
     },
     {
       "name": "ooder.aiserver.server.host",
       "type": "java.lang.String",
-      "sourceType": "net.ooder.config.AIServerProperties$Server",
-      "defaultValue": "0.0.0.0"
+      "sourceType": "net.ooder.config.AIServerProperties$Server"
     },
     {
       "name": "ooder.aiserver.server.max-connections",
       "type": "java.lang.Integer",
-      "sourceType": "net.ooder.config.AIServerProperties$Server",
-      "defaultValue": 500
+      "sourceType": "net.ooder.config.AIServerProperties$Server"
     },
     {
       "name": "ooder.aiserver.server.port",
       "type": "java.lang.Integer",
-      "sourceType": "net.ooder.config.AIServerProperties$Server",
-      "defaultValue": 8080
+      "sourceType": "net.ooder.config.AIServerProperties$Server"
     },
     {
       "name": "ooder.aiserver.version",
       "type": "java.lang.String",
       "description": "AIServer 版本",
-      "sourceType": "net.ooder.config.AIServerProperties",
-      "defaultValue": "1.0.0"
+      "sourceType": "net.ooder.config.AIServerProperties"
     },
     {
       "name": "ooder.database.driver",
@@ -209,15 +187,13 @@
       "name": "ooder.database.encoding",
       "type": "java.lang.String",
       "description": "数据库编码",
-      "sourceType": "net.ooder.config.DatabaseProperties",
-      "defaultValue": "UTF-8"
+      "sourceType": "net.ooder.config.DatabaseProperties"
     },
     {
       "name": "ooder.database.mysql-use-unicode",
       "type": "java.lang.Boolean",
       "description": "MySQL是否使用Unicode编码",
-      "sourceType": "net.ooder.config.DatabaseProperties",
-      "defaultValue": false
+      "sourceType": "net.ooder.config.DatabaseProperties"
     },
     {
       "name": "ooder.database.password",
@@ -229,43 +205,37 @@
       "name": "ooder.database.pool.check-idle-period",
       "type": "java.lang.Integer",
       "description": "检查空闲连接的周期（毫秒）",
-      "sourceType": "net.ooder.config.DatabaseProperties$Pool",
-      "defaultValue": 30000
+      "sourceType": "net.ooder.config.DatabaseProperties$Pool"
     },
     {
       "name": "ooder.database.pool.checkout-timeout",
       "type": "java.lang.Integer",
       "description": "检出超时时间（毫秒）",
-      "sourceType": "net.ooder.config.DatabaseProperties$Pool",
-      "defaultValue": 30000
+      "sourceType": "net.ooder.config.DatabaseProperties$Pool"
     },
     {
       "name": "ooder.database.pool.connection-timeout",
       "type": "java.lang.Integer",
       "description": "连接超时时间（毫秒）",
-      "sourceType": "net.ooder.config.DatabaseProperties$Pool",
-      "defaultValue": 30000
+      "sourceType": "net.ooder.config.DatabaseProperties$Pool"
     },
     {
       "name": "ooder.database.pool.max-connections",
       "type": "java.lang.Integer",
       "description": "最大连接数",
-      "sourceType": "net.ooder.config.DatabaseProperties$Pool",
-      "defaultValue": 10
+      "sourceType": "net.ooder.config.DatabaseProperties$Pool"
     },
     {
       "name": "ooder.database.pool.max-idle-time",
       "type": "java.lang.Integer",
       "description": "最大空闲时间（毫秒）",
-      "sourceType": "net.ooder.config.DatabaseProperties$Pool",
-      "defaultValue": 60000
+      "sourceType": "net.ooder.config.DatabaseProperties$Pool"
     },
     {
       "name": "ooder.database.pool.min-connections",
       "type": "java.lang.Integer",
       "description": "最小连接数",
-      "sourceType": "net.ooder.config.DatabaseProperties$Pool",
-      "defaultValue": 1
+      "sourceType": "net.ooder.config.DatabaseProperties$Pool"
     },
     {
       "name": "ooder.database.url",
@@ -282,14 +252,12 @@
     {
       "name": "user.auto-login",
       "type": "java.lang.Boolean",
-      "sourceType": "net.ooder.config.UserProperties",
-      "defaultValue": false
+      "sourceType": "net.ooder.config.UserProperties"
     },
     {
       "name": "user.clitent-login-url",
       "type": "java.lang.String",
-      "sourceType": "net.ooder.config.UserProperties",
-      "defaultValue": "\/api\/sys\/clientLogin"
+      "sourceType": "net.ooder.config.UserProperties"
     },
     {
       "name": "user.config-name",
@@ -299,8 +267,7 @@
     {
       "name": "user.esd-server-port",
       "type": "java.lang.String",
-      "sourceType": "net.ooder.config.UserProperties",
-      "defaultValue": "8091"
+      "sourceType": "net.ooder.config.UserProperties"
     },
     {
       "name": "user.file-port",
@@ -315,20 +282,17 @@
     {
       "name": "user.login-url",
       "type": "java.lang.String",
-      "sourceType": "net.ooder.config.UserProperties",
-      "defaultValue": "\/api\/sys\/syslogin"
+      "sourceType": "net.ooder.config.UserProperties"
     },
     {
       "name": "user.msgport",
       "type": "java.lang.Integer",
-      "sourceType": "net.ooder.config.UserProperties",
-      "defaultValue": 8088
+      "sourceType": "net.ooder.config.UserProperties"
     },
     {
       "name": "user.off-line",
       "type": "java.lang.Boolean",
-      "sourceType": "net.ooder.config.UserProperties",
-      "defaultValue": true
+      "sourceType": "net.ooder.config.UserProperties"
     },
     {
       "name": "user.panel-display-name",
@@ -348,20 +312,17 @@
     {
       "name": "user.proxy-host",
       "type": "java.lang.String",
-      "sourceType": "net.ooder.config.UserProperties",
-      "defaultValue": "http:\/\/127.0.0.1"
+      "sourceType": "net.ooder.config.UserProperties"
     },
     {
       "name": "user.proxy-port",
       "type": "java.lang.Integer",
-      "sourceType": "net.ooder.config.UserProperties",
-      "defaultValue": 8081
+      "sourceType": "net.ooder.config.UserProperties"
     },
     {
       "name": "user.save-password",
       "type": "java.lang.Boolean",
-      "sourceType": "net.ooder.config.UserProperties",
-      "defaultValue": false
+      "sourceType": "net.ooder.config.UserProperties"
     },
     {
       "name": "user.server-url",
@@ -396,8 +357,7 @@
     {
       "name": "user.web-server-port",
       "type": "java.lang.String",
-      "sourceType": "net.ooder.config.UserProperties",
-      "defaultValue": "8081"
+      "sourceType": "net.ooder.config.UserProperties"
     }
   ],
   "hints": []

@@ -271,8 +271,8 @@ SOFTWARE.
 ### 7.1 官方渠道
 
 - **官方网站**: https://ooder.net
-- **GitHub仓库**: https://github.com/ooder-net/ooder-common
-- **问题反馈**: https://github.com/ooder-net/ooder-common/issues
+- **GitHub仓库**: https://github.com/oodercn/ocommon
+- **问题反馈**: https://github.com/oodercn/common/issues
 - **联系邮箱**: team@ooder.net
 
 ### 7.2 参与贡献

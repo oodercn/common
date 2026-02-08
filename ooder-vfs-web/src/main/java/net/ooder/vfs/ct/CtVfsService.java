@@ -13,7 +13,12 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * CtVfsService 接口定义了VFS服务的核心功能。
+ * VFS 服务核心接口
+ * 定义了虚拟文件系统的核心功能，包括文件夹管理、文件操作、缓存管理等
+ * 
+ * @author ooder team
+ * @version 2.0
+ * @since 2025-08-25
  */
 public interface CtVfsService extends JDSClientService {
 

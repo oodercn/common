@@ -1,7 +1,12 @@
 package net.ooder.vfs;
 
 /**
- * VFSConstants 定义了VFS系统的常量。
+ * VFS (Virtual File System) 虚拟文件系统常量定义类
+ * 定义了VFS系统中使用的所有常量，包括系统配置键、文件属性键等
+ * 
+ * @author ooder team
+ * @version 2.0
+ * @since 2025-08-25
  */
 public class VFSConstants {
     /** 系统代码 */

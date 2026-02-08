@@ -73,7 +73,7 @@ public class UPLoadTask<T extends TaskResult> implements Callable<T> {
                         fileInfo = CtVfsFactory.getCtVfsService().createFile(cpath);
                     }
                 } catch (JDSException e) {
-                    e.printStackTrace();
+                    logger.error("Failed to get or create file: " + cpath, e);
                 }
 
 //                FileInfo fileInfo = null;
@@ -96,16 +96,16 @@ public class UPLoadTask<T extends TaskResult> implements Callable<T> {
                     // if (vfsHash == null || !vfsHash.equals(md5)) {
                     SyncLocal.updatetasksSize = SyncLocal.updatetasksSize + 1;
                     CtVfsFactory.getCtVfsService().upload(vfsPath, file, null);
-                    System.out.println("文件：" + vfsPath + "成功更新 ：" + file.length() + " 耗时：" + (System.currentTimeMillis() - time) + "ms" + "共更更新 ：" + SyncLocal.updatetasksSize);
+                    logger.info("文件：" + vfsPath + "成功更新 ：" + file.length() + " 耗时：" + (System.currentTimeMillis() - time) + "ms" + "共更更新 ：" + SyncLocal.updatetasksSize);
                     //}
 //                } catch (IOException e) {
 //                    e.printStackTrace();
 //                }
                     SyncLocal.tasksSize = SyncLocal.tasksSize - 1;
-                    System.out.println("文件：" + vfsPath + "对比完成 完成！文件大小 ：" + file.length() + " 耗时：" + (System.currentTimeMillis() - time) + "ms" + "剩余：" + SyncLocal.tasksSize);
+                    logger.info("文件：" + vfsPath + "对比完成 完成！文件大小 ：" + file.length() + " 耗时：" + (System.currentTimeMillis() - time) + "ms" + "剩余：" + SyncLocal.tasksSize);
 
                 }else{
-                    System.out.println("文件：" + cpath + " 上传失败 耗时：" + (System.currentTimeMillis() - time) + "ms" + "剩余：" + SyncLocal.tasksSize);
+                    logger.error("文件：" + cpath + " 上传失败 耗时：" + (System.currentTimeMillis() - time) + "ms" + "剩余：" + SyncLocal.tasksSize);
                     resultModel.setResult(-1);
                 }
 

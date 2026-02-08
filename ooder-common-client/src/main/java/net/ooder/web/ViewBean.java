@@ -19,6 +19,14 @@ import net.ooder.annotation.CustomBean;
 import net.ooder.annotation.View;
 import net.ooder.web.util.AnnotationUtil;
 
+/**
+ * 视图Bean类
+ * 封装视图注解信息，用于前端视图渲染和数据绑定
+ * 
+ * @author ooder team
+ * @version 2.0
+ * @since 2025-08-25
+ */
 @AnnotationType(clazz = View.class)
 public class ViewBean implements CustomBean {
 

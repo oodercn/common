@@ -22,27 +22,14 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * 人员接口类。
- * <p>
- * Title: ooder组织机构中间件
- * </p>
- * <p>SpirngListenerManagerPlugs
- * Description:
- * </p>
- * <p>
- * </p>
- * <p>
- * Copyright: Copyright (c) 2003-2008
- * </p>
- * <p>
- * Company: raddev.cn
- * </p>
- *
- * @author  ooder
+ * 人员接口
+ * 定义了ooder组织机构中人员的基本信息和操作，包括人员属性、所属部门、角色等
+ * 
+ * @author ooder team
  * @version 2.0
+ * @since 2025-08-25
  */
 @ESDEntity
-//@Aggregation(type = AggregationType.ROOT, sourceClass = Person.class, rootClass = Person.class)
 public interface Person extends Comparable<Person> {
 
     /**

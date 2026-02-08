@@ -84,7 +84,7 @@ public class SyncLocal {
             try {
                 path = Files.createDirectories(path);
             } catch (IOException e) {
-                e.printStackTrace();
+                logger.error("Failed to create directory: " + path, e);
             }
         }
 
@@ -114,14 +114,13 @@ public class SyncLocal {
 //                    this.copyStreamToFile(input, localFile);
 
                 } catch (IOException e) {
-                    logger.error(" syncFolder  error cpath=" + cpath);
-                    e.printStackTrace();
+                    logger.error(" syncFolder  error cpath=" + cpath, e);
                 }
 
 
             }
         } catch (JDSException e) {
-            e.printStackTrace();
+            logger.error("Failed to sync folder: " + vfsPath, e);
         }
 
 
@@ -172,7 +171,7 @@ public class SyncLocal {
                 }
 
             } catch (Exception e) {
-                e.printStackTrace();
+                logger.error("Failed to execute download tasks", e);
             }
             return (T) resultList;
         }
@@ -224,7 +223,7 @@ public class SyncLocal {
                         Long currTime = System.currentTimeMillis();
                         if (!localFile.exists()) {
                             InputStream stream = getVfsService().downLoad(vfsfile.getPath());
-                            System.out.println("开始下载 文件地址地址：" + vfsfile.getPath() + " 文件大小：" + vfsfile.getCurrentVersion().getLength() + " 用时:" + (System.currentTimeMillis() - currTime));
+                            logger.info("开始下载 文件地址地址：" + vfsfile.getPath() + " 文件大小：" + vfsfile.getCurrentVersion().getLength() + " 用时:" + (System.currentTimeMillis() - currTime));
                             if (stream != null) {
                                 copyStreamToFile(stream, localFile);
                                 resultModel.setResult(1);
@@ -237,13 +236,13 @@ public class SyncLocal {
                             String md5 = MD5.getHashString(localFile);
                             if (!md5.equals(vfsfile.getCurrentVersonFileHash())) {
                                 copyStreamToFile(getVfsService().downLoad(vfsfile.getPath()), localFile);
-                                System.out.println("服务器文件更新 正在更新本地文件\"【" + vfsfile.getPath() + "】 文件大小：" + vfsfile.getCurrentVersion().getLength() + " 用时:" + (System.currentTimeMillis() - currTime));
+                                logger.info("服务器文件更新 正在更新本地文件\"【" + vfsfile.getPath() + "】 文件大小：" + vfsfile.getCurrentVersion().getLength() + " 用时:" + (System.currentTimeMillis() - currTime));
                                 resultModel.setResult(1);
                             }
                         }
 
                     } catch (ExecutionException | IOException e) {
-                        e.printStackTrace();
+                        logger.error("下载文件失败: " + vfsfile.getPath(), e);
                         resultModel.setDes("下载错误：" + vfsfile.getPath());
                         resultModel.setResult(-1);
                         logger.error("下载错误：" + vfsfile.getPath());
@@ -255,7 +254,7 @@ public class SyncLocal {
                 }
 
             } catch (Throwable e) {
-                e.printStackTrace();
+                logger.error("Download task error", e);
                 resultModel.setResult(-1);
             }
 
@@ -275,7 +274,7 @@ public class SyncLocal {
         List<String> errorPaths = new ArrayList<String>();
         List<String> updatePaths = new ArrayList<String>();
 
-        System.out.println("开始 同步文件 共：" + vfsfiles.size());
+        logger.info("开始 同步文件 共：" + vfsfiles.size());
 
 
         int page = 0;
@@ -314,22 +313,22 @@ public class SyncLocal {
         int ff = 0;
         while (ff < 5) {
             ff = ff + 1;
-            System.out.println("");
+            logger.info("");
         }
 
-        System.out.println("耗时：" + (System.currentTimeMillis() - time) + "ms");
+        logger.info("耗时：" + (System.currentTimeMillis() - time) + "ms");
 
-        System.out.println("下载完毕正在统计结果");
+        logger.info("下载完毕正在统计结果");
 
         int kk = 0;
         while (kk < 20) {
             Thread.sleep(500);
             kk = kk + 1;
-            System.out.print("..");
+            logger.info("..");
         }
 
 
-        System.out.println("下载结束：共计" + vfsfiles.size() + "个  成功更新：" + updatePaths.size() + "个 失败：" + errorPaths.size() + "个");
+        logger.info("下载结束：共计" + vfsfiles.size() + "个  成功更新：" + updatePaths.size() + "个 失败：" + errorPaths.size() + "个");
 
         for (String path : errorPaths) {
             logger.info("错误文件： " + path);
@@ -344,7 +343,7 @@ public class SyncLocal {
             syncFile();
 
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("Download failed", e);
         }
 
     }
@@ -371,7 +370,7 @@ public class SyncLocal {
         long time = System.currentTimeMillis();
         int k = 0;
 
-        System.out.println("开始运算文件.....  ");
+        logger.info("开始运算文件.....  ");
         if (!localDiskPath.toFile().getName().equals("root") && !localDiskPath.toFile().getName().equals("from")) {
             throw new IOException("path mast be root start");
         } else {
@@ -392,20 +391,20 @@ public class SyncLocal {
                     try {
                         Path result = resultFuture.get();
                     } catch (InterruptedException e) {
-                        e.printStackTrace();
+                        logger.error("Import task interrupted", e);
                     } catch (ExecutionException e) {
-                        e.printStackTrace();
+                        logger.error("Import task execution failed", e);
                     }
 
                 }
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                logger.error("Import all interrupted", e);
             }
             tasksSize = tasks.size();
-            System.out.println("文件运算完毕   ");
-            System.out.println("耗时：" + (System.currentTimeMillis() - time) + "ms");
-            System.out.println("共计" + tasksSize + "个  需要对比！");
-            System.out.println("准备开始更新...");
+            logger.info("文件运算完毕   ");
+            logger.info("耗时：" + (System.currentTimeMillis() - time) + "ms");
+            logger.info("共计" + tasksSize + "个  需要对比！");
+            logger.info("准备开始更新...");
 
             List<Future<TaskResult<String>>> results = null;
             try {
@@ -422,31 +421,31 @@ public class SyncLocal {
                 }
 
             } catch (Exception e) {
-                e.printStackTrace();
+                logger.error("Upload failed", e);
             }
 
             int ff = 0;
             while (ff < 5) {
                 ff = ff + 1;
-                System.out.println("");
+                logger.info("");
             }
 
 
-            System.out.println("耗时：" + (System.currentTimeMillis() - time) + "ms");
-            System.out.println("上传完毕正在统计结果");
+            logger.info("耗时：" + (System.currentTimeMillis() - time) + "ms");
+            logger.info("上传完毕正在统计结果");
             int kk = 0;
             while (kk < 10) {
                 try {
                     Thread.sleep(500);
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
+                    logger.error("Thread interrupted", e);
                 }
                 kk = kk + 1;
-                System.out.print("..");
+                logger.info("..");
             }
 
 
-            System.out.println("上传结束：共计" + tasks.size() + "个  成功更新：" + updatePaths.size() + "个 失败：" + errorPaths.size() + "个");
+            logger.info("上传结束：共计" + tasks.size() + "个  成功更新：" + updatePaths.size() + "个 失败：" + errorPaths.size() + "个");
 
             for (String path : errorPaths) {
                 logger.info(" 错误文件地址：" + path);
@@ -477,7 +476,7 @@ public class SyncLocal {
                 try {
                     vpath = Files.walkFileTree(localDiskPath, visitor);
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    logger.error("Failed to walk file tree: " + localDiskPath, e);
                 }
 
                 tasksSize = tasks.size();
@@ -499,21 +498,21 @@ public class SyncLocal {
                     int ff = 0;
                     while (ff < 5) {
                         ff = ff + 1;
-                        System.out.println("");
+                        logger.info("");
                     }
 
 
-                    System.out.println("耗时：" + (System.currentTimeMillis() - time) + "ms");
-                    System.out.println("上传完毕正在统计结果");
+                    logger.info("耗时：" + (System.currentTimeMillis() - time) + "ms");
+                    logger.info("上传完毕正在统计结果");
                     int kk = 0;
                     while (kk < 20) {
                         Thread.sleep(500);
                         kk = kk + 1;
-                        System.out.print("..");
+                        logger.info("..");
                     }
 
 
-                    System.out.println("上传结束：共计" + tasks.size() + "个  成功更新：" + updatePaths.size() + "个 失败：" + errorPaths.size() + "个");
+                    logger.info("上传结束：共计" + tasks.size() + "个  成功更新：" + updatePaths.size() + "个 失败：" + errorPaths.size() + "个");
 
                     for (String path : errorPaths) {
                         logger.info(" 错误文件地址：" + path);

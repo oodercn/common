@@ -23,6 +23,14 @@ import net.ooder.annotation.MethodChinaName;
 
 import java.util.List;
 
+/**
+ * 消息客户端接口
+ * 提供消息的发送、接收、查询和管理功能
+ * 
+ * @author ooder team
+ * @version 2.0
+ * @since 2025-08-25
+ */
 public interface MsgClient<V extends Msg> {
 
 

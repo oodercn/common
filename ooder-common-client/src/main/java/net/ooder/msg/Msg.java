@@ -20,23 +20,12 @@ import net.ooder.common.MsgStatus;
 import java.io.Serializable;
 
 /**
- * <p>
- * Title: ooder组织机构
- * </p>
- * <p>
- * Description:
- * </p>
- * <p>
- * </p>
- * <p>
- * Copyright: Copyright (c) 2025-2015
- * </p>
- * <p>
- * Company: raddev.cn
- * </p>
- *
- * @author  ooder
- * @version 1.0
+ * 消息接口
+ * 定义了ooder消息系统的核心消息结构，包括消息的基本属性和状态管理
+ * 
+ * @author ooder team
+ * @version 2.0
+ * @since 2025-08-25
  */
 public interface Msg extends Serializable {
 

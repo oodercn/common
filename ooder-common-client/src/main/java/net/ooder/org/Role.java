@@ -21,27 +21,14 @@ import net.ooder.annotation.ViewType;
 import java.util.List;
 
 /**
- * 人员角色接口。
- * <p>
- * Title: ooder组织机构中间件
- * </p>
- * <p>
- * Description:
- * </p>
- * <p>
- * </p>
- * <p>
- * Copyright: Copyright (c) 2003-2008
- * </p>
- * <p>
- * Company: raddev.cn
- * </p>
- *
- * @author  ooder
+ * 角色接口
+ * 定义了ooder组织机构中角色的基本信息和操作，包括角色类型、权限、所属人员等
+ * 
+ * @author ooder team
  * @version 2.0
+ * @since 2025-08-25
  */
 @ESDEntity
-//@Aggregation(type = AggregationType.ROOT, sourceClass = Role.class, rootClass = Role.class)
 public interface Role extends Comparable<Org> {
 
     /**

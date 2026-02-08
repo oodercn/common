@@ -3,6 +3,14 @@ package net.ooder.jmq;
 import java.io.Serializable;
 import java.util.List;
 
+/**
+ * JMQ (Java Message Queue) 配置类
+ * 配置MQTT消息队列连接参数，用于IoT设备通信和消息推送
+ * 
+ * @author ooder team
+ * @version 2.0
+ * @since 2025-08-25
+ */
 public class JMQConfig implements Serializable {
     public String dataBinder;
     public String dataField;

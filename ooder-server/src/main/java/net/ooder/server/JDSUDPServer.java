@@ -25,6 +25,14 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 
+/**
+ * UDP服务器核心类
+ * 提供基于UDP协议的消息推送、集群通信和心跳检测服务
+ * 
+ * @author ooder team
+ * @version 2.0
+ * @since 2025-08-25
+ */
 public class JDSUDPServer {
     public static final String SPLITOR = "|";
 
@@ -222,7 +230,7 @@ public class JDSUDPServer {
         try {
             udpServer = getInstance(port, code);
         } catch (JDSException e) {
-            e.printStackTrace();
+            logger.error("Failed to get UDP server instance", e);
         }
 
         return udpServer;
@@ -268,12 +276,12 @@ public class JDSUDPServer {
             startPushMsgSocket();
             started = true;
         } catch (SocketException e) {
-            e.printStackTrace();
+            logger.error("Failed to start UDP server on port " + port, e);
             try {
                 Thread.sleep(5000);
                 this.start();
             } catch (InterruptedException e1) {
-                e1.printStackTrace();
+                logger.error("Thread interrupted during UDP server restart", e1);
             }
 
         }
@@ -288,7 +296,7 @@ public class JDSUDPServer {
             socket.send(dp);
 
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("Failed to send heartbeat to " + ip + ":" + port, e);
             return false;
         }
 
@@ -305,7 +313,7 @@ public class JDSUDPServer {
         try {
             msgString = URLEncoder.encode(msgString, udpServer.getCode());
         } catch (UnsupportedEncodingException e2) {
-            e2.printStackTrace();
+            logger.error("Failed to encode message", e2);
         }
         DatagramPacket dp = null;
         try {
@@ -313,7 +321,7 @@ public class JDSUDPServer {
             socket.send(dp);
 
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("Failed to send message to " + ip + ":" + port, e);
             return false;
         }
 
@@ -327,7 +335,7 @@ public class JDSUDPServer {
         try {
             msgString = URLEncoder.encode(msgString, this.getCode());
         } catch (UnsupportedEncodingException e2) {
-            e2.printStackTrace();
+            logger.error("Failed to encode message", e2);
         }
         return msgString;
     }
@@ -337,7 +345,7 @@ public class JDSUDPServer {
         try {
             udpServer = getInstance();
         } catch (JDSException e1) {
-            e1.printStackTrace();
+            logger.error("Failed to get UDP server instance", e1);
         }
         byte[] buf = new byte[8192];
         DatagramPacket p = new DatagramPacket(buf, 8192);
@@ -443,7 +451,7 @@ public class JDSUDPServer {
                 }
 
             } catch (Exception e) {
-                e.printStackTrace();
+                logger.error("Error processing UDP message", e);
             }
 
         }

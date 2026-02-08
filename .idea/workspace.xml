@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e69180b-5473-41a6-867b-62fa08cd2255" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/ooder-common-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ooder-common-client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ooder-config/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ooder-config/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ooder-database/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ooder-database/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ooder-index-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ooder-index-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ooder-org-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ooder-org-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ooder-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ooder-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ooder-vfs-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ooder-vfs-web/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="7e69180b-5473-41a6-867b-62fa08cd2255" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/ooder-iot-webclient/target/" />
     <ignored path="$PROJECT_DIR$/ooder-vfs-web/target/" />
     <ignored path="$PROJECT_DIR$/ooder-index-web/target/" />
@@ -53,11 +45,8 @@
       <file leaf-file-name="CtCommandClientImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/home/ct/CtCommandClientImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
+            <state relative-caret-position="2508">
               <caret line="163" column="25" selection-start-line="163" selection-start-column="25" selection-end-line="163" selection-end-column="25" />
-              <folding>
-                <element signature="e#1819#1853#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -83,8 +72,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ooder-vfs-web/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="264">
+              <caret line="26" column="49" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -92,12 +81,10 @@
       <file leaf-file-name="ViewBean.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ooder-common-client/src/main/java/net/ooder/web/ViewBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
+            <state relative-caret-position="399">
               <caret line="37" selection-start-line="37" selection-end-line="37" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1554#1555#0" expanded="true" />
-                <element signature="e#1618#1619#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -115,7 +102,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ooder-database/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="380">
               <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
             </state>
           </provider>
@@ -289,8 +276,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1562" />
-    <option name="y" value="205" />
+    <option name="x" value="1060" />
+    <option name="y" value="105" />
     <option name="width" value="1835" />
     <option name="height" value="1085" />
   </component>
@@ -299,6 +286,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -321,8 +310,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -611,6 +598,8 @@
       <workItem from="1770476235893" duration="1739000" />
       <workItem from="1770504070390" duration="1302000" />
       <workItem from="1770513551256" duration="7797000" />
+      <workItem from="1770541157792" duration="123000" />
+      <workItem from="1770544146238" duration="1447000" />
     </task>
     <task id="LOCAL-00001" summary="ooder 基础依赖包，包含了ooder 相关组件的基础定义及通用方法。">
       <created>1756169854676</created>
@@ -759,11 +748,18 @@
       <option name="project" value="LOCAL" />
       <updated>1770387350863</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/agent/client/command/filter/command/LocalMsgFilterImpl.java&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/agent/client/home/event/DefaultZNodeListener.java&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/ScoketInfo.java&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/ScoketInfoJson.java&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/client/impl/AppAccountWebServiceImpl.java&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/enums/SensorEventEnums.java&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/json/ScoketInfoJson.java&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/udp/GHUDPMsgAdapter.java&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/iot/ScoketInfoJson.java&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/iot/json/ScoketInfoJson.java">
+      <created>1770550732633</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1770550732633</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="411703000" />
+    <option name="totallyTimeSpent" value="413273000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -775,8 +771,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1250" y="164" width="1468" height="868" extended-state="0" />
-    <editor active="true" />
+    <frame x="848" y="84" width="1468" height="868" extended-state="0" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4921466" weight="0.24311377" />
@@ -787,14 +782,13 @@
       <window_info anchor="right" id="Maven Projects" order="7" visible="true" weight="0.326685" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.4786795" weight="0.21315789" />
-      <window_info active="true" anchor="bottom" x="997" y="348" width="1184" height="323" id="Run" order="2" sideWeight="0.75859696" visible="true" weight="0.42894736" />
+      <window_info anchor="bottom" x="997" y="348" width="1184" height="323" id="Run" order="2" sideWeight="0.75859696" weight="0.42894736" />
       <window_info anchor="bottom" id="Spring" order="11" sideWeight="0.49638286" weight="0.3117409" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4919403" weight="0.2989214" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.67048347" visible="true" weight="0.2255846" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.67048347" visible="true" weight="0.2255846" />
       <window_info anchor="right" id="Database" order="6" weight="0.19538188" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49437538" weight="0.22697368" />
       <window_info id="Structure" order="0" sideWeight="0.30636832" side_tool="true" weight="0.14854614" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="3" />
@@ -802,12 +796,13 @@
       <window_info id="Favorites" order="4" sideWeight="0.32951653" side_tool="true" weight="0.1401241" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.89492536" weight="0.3312789" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.33405876" visible="true" weight="0.4979757" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.33405876" visible="true" weight="0.4979757" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.2497436" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49437538" weight="0.22697368" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1087,11 +1082,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/home/ct/CtCommandClientImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
+        <state relative-caret-position="2508">
           <caret line="163" column="25" selection-start-line="163" selection-start-column="25" selection-end-line="163" selection-end-column="25" />
-          <folding>
-            <element signature="e#1819#1853#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1104,12 +1096,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ooder-common-client/src/main/java/net/ooder/web/ViewBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
+        <state relative-caret-position="399">
           <caret line="37" selection-start-line="37" selection-end-line="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1554#1555#0" expanded="true" />
-            <element signature="e#1618#1619#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1123,7 +1113,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ooder-database/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="380">
           <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
         </state>
       </provider>
@@ -1151,8 +1141,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ooder-vfs-web/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="264">
+          <caret line="26" column="49" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
         </state>
       </provider>
     </entry>

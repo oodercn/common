@@ -2,6 +2,14 @@ package net.ooder.web.util;
 
 import java.util.Map;
 
+/**
+ * 内容类型常量类
+ * 定义了HTTP响应中常用的Content-Type映射关系
+ * 
+ * @author ooder team
+ * @version 2.0
+ * @since 2025-08-25
+ */
 public class Conts {
     static java.util.Hashtable<String, String> map = new java.util.Hashtable<String, String>();
 

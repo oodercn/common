@@ -11,7 +11,12 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Folder 接口定义了VFS文件夹的基本信息和操作。
+ * VFS 文件夹接口
+ * 定义了虚拟文件系统中文件夹的基本信息和操作，包括文件夹层级、状态、权限等
+ * 
+ * @author ooder team
+ * @version 2.0
+ * @since 2025-08-25
  */
 @ESDEntity
 public interface Folder extends Cacheable {

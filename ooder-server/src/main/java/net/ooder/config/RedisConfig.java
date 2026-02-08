@@ -2,6 +2,14 @@ package net.ooder.config;
 
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * Redis 配置类
+ * 配置Redis连接池参数，用于缓存管理和会话存储
+ * 
+ * @author ooder team
+ * @version 2.0
+ * @since 2025-08-25
+ */
 @Configuration()
 public class RedisConfig {
     String serverURL;

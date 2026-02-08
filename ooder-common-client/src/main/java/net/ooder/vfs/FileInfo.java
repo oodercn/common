@@ -3,7 +3,7 @@ package net.ooder.vfs;
 import net.ooder.annotation.*;
 import net.ooder.common.cache.Cacheable;
 import net.ooder.common.md5.MD5InputStream;
-import net.ooder.esd.annotation.ViewType;
+import net.ooder.annotation.ViewType;
 
 import java.util.List;
 import java.util.Set;

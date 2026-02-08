@@ -5,7 +5,7 @@ import net.ooder.annotation.*;
 import net.ooder.common.FolderState;
 import net.ooder.common.FolderType;
 import net.ooder.common.cache.Cacheable;
-import net.ooder.esd.annotation.ViewType;
+import net.ooder.annotation.ViewType;
 
 import java.util.List;
 import java.util.Set;

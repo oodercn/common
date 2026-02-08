@@ -16,7 +16,7 @@ package net.ooder.org;
 
 
 import net.ooder.annotation.*;
-import net.ooder.esd.annotation.ViewType;
+import net.ooder.annotation.ViewType;
 
 import java.util.List;
 import java.util.Set;

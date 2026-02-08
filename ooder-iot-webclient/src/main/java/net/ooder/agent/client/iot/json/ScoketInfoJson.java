@@ -1,6 +1,7 @@
 /**
  * 
  */
+
 package net.ooder.agent.client.iot.json;
 
 /**

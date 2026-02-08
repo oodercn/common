@@ -24,7 +24,7 @@ import net.ooder.common.util.java.DynamicClassLoader;
 import net.ooder.config.ListResultModel;
 import net.ooder.config.ResultModel;
 import net.ooder.config.TreeListResultModel;
-import net.ooder.esd.annotation.ViewType;
+import net.ooder.annotation.ViewType;
 import net.ooder.jds.core.User;
 import net.ooder.web.ConstructorBean;
 import net.ooder.web.RequestMethodBean;

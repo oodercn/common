@@ -1,0 +1,1236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7e69180b-5473-41a6-867b-62fa08cd2255" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/ooder-common-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ooder-common-client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ooder-common-client/src/main/java/net/ooder/org/Org.java" beforeDir="false" afterPath="$PROJECT_DIR$/ooder-common-client/src/main/java/net/ooder/org/Org.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ooder-common-client/src/main/java/net/ooder/org/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/ooder-common-client/src/main/java/net/ooder/org/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ooder-common-client/src/main/java/net/ooder/org/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/ooder-common-client/src/main/java/net/ooder/org/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ooder-common-client/src/main/java/net/ooder/vfs/FileInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/ooder-common-client/src/main/java/net/ooder/vfs/FileInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ooder-common-client/src/main/java/net/ooder/vfs/Folder.java" beforeDir="false" afterPath="$PROJECT_DIR$/ooder-common-client/src/main/java/net/ooder/vfs/Folder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ooder-common-client/src/main/java/net/ooder/web/AggregationBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/ooder-common-client/src/main/java/net/ooder/web/AggregationBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ooder-common-client/src/main/java/net/ooder/web/ViewBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/ooder-common-client/src/main/java/net/ooder/web/ViewBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ooder-common-client/src/main/java/net/ooder/web/util/MethodUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/ooder-common-client/src/main/java/net/ooder/web/util/MethodUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ooder-config/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ooder-config/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ooder-database/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ooder-database/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ooder-index-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ooder-index-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ooder-iot-webclient/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ooder-iot-webclient/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/json/ScoketInfoJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/json/ScoketInfoJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ooder-msg-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ooder-msg-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ooder-org-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ooder-org-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ooder-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ooder-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ooder-vfs-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ooder-vfs-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/ooder-iot-webclient/target/" />
+    <ignored path="$PROJECT_DIR$/ooder-vfs-web/target/" />
+    <ignored path="$PROJECT_DIR$/ooder-index-web/target/" />
+    <ignored path="$PROJECT_DIR$/ooder-msg-web/target/" />
+    <ignored path="$PROJECT_DIR$/ooder-common-client/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/ooder-database/target/" />
+    <ignored path="$PROJECT_DIR$/ooder-org-web/target/" />
+    <ignored path="$PROJECT_DIR$/ooder-server/target/" />
+    <ignored path="$PROJECT_DIR$/ooder-config/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="ooder-common" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="CtVfsAdminService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ooder-vfs-web/src/main/java/net/ooder/vfs/ct/admin/CtVfsAdminService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Listener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ooder-vfs-web/src/main/java/net/ooder/vfs/engine/event/annotation/Listener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CtCommandClientImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/home/ct/CtCommandClientImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="163" column="25" selection-start-line="163" selection-start-column="25" selection-end-line="163" selection-end-column="25" />
+              <folding>
+                <element signature="e#1819#1853#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ooder-common-client/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ooder-common-client/src/main/java/net/ooder/web/ViewBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1554#1555#0" expanded="true" />
+                <element signature="e#1618#1619#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ooder-config/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ooder-database/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="18" column="40" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>resotre</find>
+      <find>FileEventEnums</find>
+      <find>fileinfo</find>
+      <find>getDescription</find>
+      <find>descrition</find>
+      <find>�</find>
+      <find>bpm</find>
+      <find>package  net.ooder.阿皮</find>
+      <find>net.ooder.command</find>
+      <find>package  net.ooder.</find>
+      <find>package  net.ooder.agent.server.home.</find>
+      <find>package  net.ooder.agent.server</find>
+      <find>package net.ooder.agent.server.home.udp;</find>
+      <find>import  net.ooder.enums.CommandEnums;</find>
+      <find>package net.ooder.agent.server.</find>
+      <find>import net.ooder.agent.server.</find>
+      <find>import  net.ooder.agent.server.</find>
+      <find>net.ooder.iot.</find>
+      <find>(net.ooder.agent.server.home.event.</find>
+      <find>import  net.ooder.iot.HomeConstants;</find>
+      <find>package net.ooder.agent.client.vfs.</find>
+      <find>net.ooder.agent.client.vfs.ct.</find>
+      <find>status</find>
+      <find>MqttCallback</find>
+      <find>hsql</find>
+      <find>mqtt</find>
+      <find>databaseProperties</find>
+      <find>DatabaseProperties.</find>
+      <find>DatabaseProperties</find>
+      <find>import net.ooder.esd.annotation.</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>&quot;</replace>
+      <replace />
+      <replace>2025</replace>
+      <replace>ooder</replace>
+      <replace>1.0</replace>
+      <replace>ood</replace>
+      <replace>net.ooder.</replace>
+      <replace>package  net.ooder.agent.server.</replace>
+      <replace>import  net.ooder.agent.server.home.</replace>
+      <replace>package net.ooder.agent.server</replace>
+      <replace>package net.ooder.agent.server.home.udp;</replace>
+      <replace>import  net.ooder.agent.client.enums.CommandEnums;</replace>
+      <replace>package net.ooder.agent.client.</replace>
+      <replace>import net.ooder.agent.client.</replace>
+      <replace>import  net.ooder.agent.client.</replace>
+      <replace>net.ooder.agent.client.iot.</replace>
+      <replace>(</replace>
+      <replace>import  net.ooder.agent.client.iot.HomeConstants;</replace>
+      <replace>package net.ooder.vfs.</replace>
+      <replace>import net.ooder.annotation.</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="D:/bsigit/jnr-fuse" value="PREVIEW" />
+        <entry key="D:/bsigit4.1" value="PREVIEW" />
+        <entry key="E:/桌面资料/身份证读卡/i2cdemo-master/i2cdemo-master" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/command/task/AddSersorCommandTask.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/client/api/AppWebServiceAPI.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/udp/GHUDPHandle.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/command/filter/command/LocalCommandFilterImpl.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/json/SensorHistoryDataInfo.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/api/gateway/GWClientService.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/udp/DefaultMsgAdapter.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/command/filter/command/RemoteCommandFilterImpl.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/udp/GHUDPMsgAdapter.java" />
+        <option value="$PROJECT_DIR$/ooder-vfs-web/src/main/java/net/ooder/vfs/ct/CtVfsFactory.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/client/impl/GatewayWebServiceImpl.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/command/DelaySendCommand.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/command/CommandFactory.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/client/impl/AppWebServiceImpl.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/home/listener/DefalutPlacleListener.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/listener/SensorCommandListener.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/listener/OnLineDeviceListener.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/command/task/SyncTimeCommandTask.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/client/impl/DataWebServiceImpl.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/command/task/SersorReportCommandTask.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/GWClientService.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/command/task/TestTimesCommand.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/command/filter/CommandFilterImpl.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/command/task/OutletCommandTask.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/command/task/IdentifyCommandTask.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/client/impl/GWAccountWebServiceImpl.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/listener/DataReportListener.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/client/api/GWAccountWebServiceAPI.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/listener/SyncCommandListener.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/listener/SyncDataReportListener.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/client/api/CommandWebServiceAPI.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/command/filter/command/LocalMsgFilterImpl.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/command/task/InitGatewayCommandTask.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/client/api/AppAccountWebServiceAPI.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/home/listener/DefalutCommandListener.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/web/CommandTempAnnotationProxy.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/command/filter/MsgFilterImpl.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/home/ct/CtCommandClientImpl.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/home/engine/HomeEventControl.java" />
+        <option value="$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/ct/CtZNode.java" />
+        <option value="$PROJECT_DIR$/ooder-vfs-web/pom.xml" />
+        <option value="$PROJECT_DIR$/ooder-vfs-web/src/main/java/net/ooder/vfs/VFSConstants.java" />
+        <option value="$PROJECT_DIR$/ooder-index-web/pom.xml" />
+        <option value="$PROJECT_DIR$/ooder-common-client/src/main/java/net/ooder/web/RequestParamBean.java" />
+        <option value="$PROJECT_DIR$/ooder-config/src/main/java/net/ooder/config/DatabaseProperties.java" />
+        <option value="$PROJECT_DIR$/ooder-config/src/main/java/net/ooder/config/AIServerProperties.java" />
+        <option value="$PROJECT_DIR$/ooder-config/pom.xml" />
+        <option value="$PROJECT_DIR$/ooder-common-client/src/main/java/net/ooder/web/ViewBean.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/ooder-common-client/pom.xml" />
+        <option value="$PROJECT_DIR$/ooder-database/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\maven\.m2\repository" />
+        <option name="userSettingsFile" value="D:\maven\.m2\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="ooder-common-all" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="ooder-common-all" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="457" />
+    <option name="y" value="122" />
+    <option name="width" value="1835" />
+    <option name="height" value="1085" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ooder-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ooder-common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ooder-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ooder-common" type="462c0819:PsiDirectoryNode" />
+              <item name="ooder-common-client" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="D:/android-sdk-windows" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ooderbasepom" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.44367817" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="net.ooder.common.database" />
+      <recent name="net.ooder.web" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ooder\ooder-common\ooder-iot-webclient\src\main\java\net\ooder\enums" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7e69180b-5473-41a6-867b-62fa08cd2255" name="Default" comment="" />
+      <created>1756108245046</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1756108245046</updated>
+      <workItem from="1756108246261" duration="660000" />
+      <workItem from="1756119922997" duration="1058000" />
+      <workItem from="1756135003664" duration="2921000" />
+      <workItem from="1756168543902" duration="8179000" />
+      <workItem from="1756220058671" duration="302000" />
+      <workItem from="1756257146977" duration="5498000" />
+      <workItem from="1756340119729" duration="3152000" />
+      <workItem from="1756427655073" duration="4654000" />
+      <workItem from="1756510220838" duration="3921000" />
+      <workItem from="1756597617069" duration="2389000" />
+      <workItem from="1756685301475" duration="1192000" />
+      <workItem from="1756709127913" duration="5715000" />
+      <workItem from="1756772918261" duration="597000" />
+      <workItem from="1756805346836" duration="2221000" />
+      <workItem from="1756862105713" duration="596000" />
+      <workItem from="1757577118610" duration="1342000" />
+      <workItem from="1757631891561" duration="1192000" />
+      <workItem from="1757681561257" duration="587000" />
+      <workItem from="1757724948797" duration="1041000" />
+      <workItem from="1757805181254" duration="1369000" />
+      <workItem from="1757894278702" duration="593000" />
+      <workItem from="1757984379482" duration="1112000" />
+      <workItem from="1758068632471" duration="1988000" />
+      <workItem from="1759894959827" duration="8518000" />
+      <workItem from="1759967590771" duration="5452000" />
+      <workItem from="1760054197874" duration="4618000" />
+      <workItem from="1760142766042" duration="3024000" />
+      <workItem from="1760187910997" duration="586000" />
+      <workItem from="1760225782358" duration="1556000" />
+      <workItem from="1760234248543" duration="3122000" />
+      <workItem from="1760314110281" duration="2152000" />
+      <workItem from="1760398857474" duration="654000" />
+      <workItem from="1760416916222" duration="3603000" />
+      <workItem from="1760443446346" duration="594000" />
+      <workItem from="1760487330701" duration="1800000" />
+      <workItem from="1760576321039" duration="3029000" />
+      <workItem from="1760611074185" duration="1834000" />
+      <workItem from="1760621762549" duration="856000" />
+      <workItem from="1760660249691" duration="3237000" />
+      <workItem from="1760705741942" duration="593000" />
+      <workItem from="1760743409719" duration="11681000" />
+      <workItem from="1760832870974" duration="2774000" />
+      <workItem from="1760913927233" duration="4019000" />
+      <workItem from="1761006363147" duration="4542000" />
+      <workItem from="1761094384214" duration="12160000" />
+      <workItem from="1761176053607" duration="3594000" />
+      <workItem from="1761258924404" duration="6958000" />
+      <workItem from="1761313703180" duration="594000" />
+      <workItem from="1761387023361" duration="1183000" />
+      <workItem from="1761439738443" duration="7022000" />
+      <workItem from="1761521507765" duration="1867000" />
+      <workItem from="1761553694547" duration="1783000" />
+      <workItem from="1761605772478" duration="3740000" />
+      <workItem from="1761695310775" duration="9458000" />
+      <workItem from="1761778657936" duration="3014000" />
+      <workItem from="1761866388210" duration="2030000" />
+      <workItem from="1761949644124" duration="594000" />
+      <workItem from="1761977050632" duration="592000" />
+      <workItem from="1762002192628" duration="592000" />
+      <workItem from="1762037206679" duration="593000" />
+      <workItem from="1762087336244" duration="594000" />
+      <workItem from="1762128252058" duration="594000" />
+      <workItem from="1762129492863" duration="10853000" />
+      <workItem from="1762172243814" duration="3073000" />
+      <workItem from="1762210106464" duration="3568000" />
+      <workItem from="1762296681131" duration="6246000" />
+      <workItem from="1762336316920" duration="2589000" />
+      <workItem from="1762381668757" duration="3578000" />
+      <workItem from="1762470468442" duration="3081000" />
+      <workItem from="1762560294883" duration="3543000" />
+      <workItem from="1762641838729" duration="1785000" />
+      <workItem from="1762678322544" duration="2009000" />
+      <workItem from="1762765967054" duration="2573000" />
+      <workItem from="1762816427683" duration="765000" />
+      <workItem from="1762900837166" duration="836000" />
+      <workItem from="1762912850170" duration="593000" />
+      <workItem from="1762990470059" duration="595000" />
+      <workItem from="1763008021323" duration="593000" />
+      <workItem from="1763030402355" duration="594000" />
+      <workItem from="1763079047454" duration="594000" />
+      <workItem from="1763125026458" duration="593000" />
+      <workItem from="1763163875544" duration="247000" />
+      <workItem from="1763164643608" duration="593000" />
+      <workItem from="1763182779338" duration="594000" />
+      <workItem from="1763243512174" duration="647000" />
+      <workItem from="1763334083564" duration="1189000" />
+      <workItem from="1763355141248" duration="2714000" />
+      <workItem from="1763423586176" duration="4074000" />
+      <workItem from="1763507340467" duration="1187000" />
+      <workItem from="1763516274079" duration="736000" />
+      <workItem from="1763531846811" duration="792000" />
+      <workItem from="1763593628188" duration="3255000" />
+      <workItem from="1763679511672" duration="594000" />
+      <workItem from="1763716497450" duration="2684000" />
+      <workItem from="1763766074642" duration="1860000" />
+      <workItem from="1763783690307" duration="592000" />
+      <workItem from="1763786061416" duration="2609000" />
+      <workItem from="1763849488125" duration="1732000" />
+      <workItem from="1763893414708" duration="1192000" />
+      <workItem from="1763940505168" duration="2451000" />
+      <workItem from="1763987474842" duration="2631000" />
+      <workItem from="1764111060726" duration="1858000" />
+      <workItem from="1764158528063" duration="776000" />
+      <workItem from="1764194727992" duration="592000" />
+      <workItem from="1764286231216" duration="1184000" />
+      <workItem from="1764371922330" duration="985000" />
+      <workItem from="1764392441254" duration="1275000" />
+      <workItem from="1764419312874" duration="1716000" />
+      <workItem from="1764457834003" duration="594000" />
+      <workItem from="1764488098724" duration="5940000" />
+      <workItem from="1764546548899" duration="3686000" />
+      <workItem from="1764561772132" duration="1845000" />
+      <workItem from="1764632490789" duration="1237000" />
+      <workItem from="1764681889915" duration="596000" />
+      <workItem from="1764716998525" duration="2592000" />
+      <workItem from="1764766068528" duration="591000" />
+      <workItem from="1764803844873" duration="1819000" />
+      <workItem from="1764853025089" duration="595000" />
+      <workItem from="1764892058882" duration="1209000" />
+      <workItem from="1764976852190" duration="596000" />
+      <workItem from="1764997267608" duration="594000" />
+      <workItem from="1765007829207" duration="599000" />
+      <workItem from="1765062902744" duration="599000" />
+      <workItem from="1765150607813" duration="599000" />
+      <workItem from="1765176218192" duration="592000" />
+      <workItem from="1765192752454" duration="597000" />
+      <workItem from="1765195395882" duration="597000" />
+      <workItem from="1765236243627" duration="595000" />
+      <workItem from="1765279708823" duration="597000" />
+      <workItem from="1765323832221" duration="1194000" />
+      <workItem from="1765370529318" duration="597000" />
+      <workItem from="1765407548885" duration="596000" />
+      <workItem from="1765497510728" duration="2465000" />
+      <workItem from="1765530435072" duration="687000" />
+      <workItem from="1765534428100" duration="1801000" />
+      <workItem from="1765582148298" duration="593000" />
+      <workItem from="1765616781129" duration="590000" />
+      <workItem from="1765667595944" duration="593000" />
+      <workItem from="1765676577494" duration="593000" />
+      <workItem from="1765681384403" duration="1190000" />
+      <workItem from="1765715876464" duration="672000" />
+      <workItem from="1765855972685" duration="1198000" />
+      <workItem from="1765884566995" duration="1931000" />
+      <workItem from="1765889965375" duration="591000" />
+      <workItem from="1765890659231" duration="1500000" />
+      <workItem from="1765927384984" duration="598000" />
+      <workItem from="1765932318039" duration="649000" />
+      <workItem from="1765946826809" duration="1795000" />
+      <workItem from="1766370474416" duration="2258000" />
+      <workItem from="1766443271771" duration="1921000" />
+      <workItem from="1766530052730" duration="1790000" />
+      <workItem from="1766616093455" duration="596000" />
+      <workItem from="1766651073697" duration="11000" />
+      <workItem from="1766651336290" duration="594000" />
+      <workItem from="1766844459042" duration="589000" />
+      <workItem from="1766875087550" duration="1821000" />
+      <workItem from="1767840677441" duration="2516000" />
+      <workItem from="1767851032627" duration="619000" />
+      <workItem from="1767873460508" duration="546000" />
+      <workItem from="1767952317628" duration="1203000" />
+      <workItem from="1768002150178" duration="1846000" />
+      <workItem from="1768009121899" duration="4656000" />
+      <workItem from="1768101059497" duration="598000" />
+      <workItem from="1768141200426" duration="1566000" />
+      <workItem from="1768174052219" duration="633000" />
+      <workItem from="1768210788074" duration="7378000" />
+      <workItem from="1768258901094" duration="3186000" />
+      <workItem from="1768308012867" duration="1334000" />
+      <workItem from="1768347209808" duration="3486000" />
+      <workItem from="1768353833991" duration="599000" />
+      <workItem from="1768384863198" duration="1385000" />
+      <workItem from="1768434440446" duration="5438000" />
+      <workItem from="1768515148805" duration="566000" />
+      <workItem from="1768558355510" duration="576000" />
+      <workItem from="1768689585375" duration="593000" />
+      <workItem from="1768785209929" duration="1196000" />
+      <workItem from="1768872392509" duration="4087000" />
+      <workItem from="1768906785953" duration="589000" />
+      <workItem from="1768958590673" duration="3906000" />
+      <workItem from="1769032229479" duration="587000" />
+      <workItem from="1769070214904" duration="582000" />
+      <workItem from="1769131248454" duration="1197000" />
+      <workItem from="1769223698828" duration="2426000" />
+      <workItem from="1769389917298" duration="4636000" />
+      <workItem from="1769408228730" duration="1192000" />
+      <workItem from="1769433421511" duration="592000" />
+      <workItem from="1769479752278" duration="568000" />
+      <workItem from="1769504399499" duration="556000" />
+      <workItem from="1769555166612" duration="585000" />
+      <workItem from="1769589026952" duration="1522000" />
+      <workItem from="1769640626658" duration="912000" />
+      <workItem from="1769657631887" duration="1061000" />
+      <workItem from="1769683752667" duration="1300000" />
+      <workItem from="1769738462120" duration="589000" />
+      <workItem from="1769810667848" duration="2388000" />
+      <workItem from="1770370547939" duration="5665000" />
+      <workItem from="1770438575909" duration="3618000" />
+      <workItem from="1770476235893" duration="1739000" />
+      <workItem from="1770504070390" duration="1302000" />
+      <workItem from="1770513551256" duration="6389000" />
+    </task>
+    <task id="LOCAL-00001" summary="ooder 基础依赖包，包含了ooder 相关组件的基础定义及通用方法。">
+      <created>1756169854676</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1756169854676</updated>
+    </task>
+    <task id="LOCAL-00002" summary="为前端ood 升级，修改后端映射配置。">
+      <created>1756220153196</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1756220153196</updated>
+    </task>
+    <task id="LOCAL-00003" summary="为前端ood 升级，修改后端映射配置。">
+      <created>1756550476385</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1756550476385</updated>
+    </task>
+    <task id="LOCAL-00004" summary="修复，http参数默认数组问题">
+      <created>1756740111696</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1756740111696</updated>
+    </task>
+    <task id="LOCAL-00005" summary="修复，http参数默认数组问题">
+      <created>1757578164787</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1757578164788</updated>
+    </task>
+    <task id="LOCAL-00006" summary="修复，http参数默认数组问题">
+      <created>1759895039014</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1759895039014</updated>
+    </task>
+    <task id="LOCAL-00007" summary="修复，http参数默认数组问题">
+      <created>1760021896449</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1760021896449</updated>
+    </task>
+    <task id="LOCAL-00008" summary="修复，http参数默认数组问题">
+      <created>1761098706737</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1761098706737</updated>
+    </task>
+    <task id="LOCAL-00009" summary="修复，http参数默认数组问题">
+      <created>1761111751661</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1761111751661</updated>
+    </task>
+    <task id="LOCAL-00010" summary="修复，http参数默认数组问题">
+      <created>1761469255516</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1761469255516</updated>
+    </task>
+    <task id="LOCAL-00011" summary="修复，http参数默认数组问题">
+      <created>1761733003862</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1761733003862</updated>
+    </task>
+    <task id="LOCAL-00012" summary="修复，http参数默认数组问题">
+      <created>1762177440484</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1762177440484</updated>
+    </task>
+    <task id="LOCAL-00013" summary="修复，http参数默认数组问题">
+      <created>1763460303095</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1763460303095</updated>
+    </task>
+    <task id="LOCAL-00014" summary="修复，http参数默认数组问题">
+      <created>1763601352130</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1763601352130</updated>
+    </task>
+    <task id="LOCAL-00015" summary="修复，http参数默认数组问题">
+      <created>1764494145680</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1764494145680</updated>
+    </task>
+    <task id="LOCAL-00016" summary="修复，http参数默认数组问题">
+      <created>1764944888886</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1764944888886</updated>
+    </task>
+    <task id="LOCAL-00017" summary="修复，http参数默认数组问题">
+      <created>1766414197809</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1766414197809</updated>
+    </task>
+    <task id="LOCAL-00018" summary="修复，http参数默认数组问题">
+      <created>1766550838789</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1766550838789</updated>
+    </task>
+    <task id="LOCAL-00019" summary="修复，http参数默认数组问题">
+      <created>1768005021596</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1768005021596</updated>
+    </task>
+    <task id="LOCAL-00020" summary="修复，http参数默认数组问题">
+      <created>1768310000645</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1768310000645</updated>
+    </task>
+    <task id="LOCAL-00021" summary="修复，http参数默认数组问题">
+      <created>1770387350863</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1770387350863</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="410295000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="366" y="98" width="1468" height="868" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4921466" weight="0.24311377" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info id="Image Layers" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.24140303" side_tool="true" visible="true" weight="0.52894735" />
+      <window_info anchor="right" id="Maven Projects" order="7" visible="true" weight="0.326685" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.4786795" weight="0.21315789" />
+      <window_info anchor="bottom" x="997" y="348" width="1184" height="323" id="Run" order="2" sideWeight="0.75859696" visible="true" weight="0.52894735" />
+      <window_info anchor="bottom" id="Spring" order="11" sideWeight="0.49638286" weight="0.3117409" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4919403" weight="0.2989214" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="1" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.67048347" visible="true" weight="0.2255846" />
+      <window_info anchor="right" id="Database" order="6" weight="0.19538188" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49437538" weight="0.22697368" />
+      <window_info id="Structure" order="0" sideWeight="0.30636832" side_tool="true" weight="0.14854614" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info id="Favorites" order="4" sideWeight="0.32951653" side_tool="true" weight="0.1401241" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.89492536" weight="0.3312789" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.33405876" visible="true" weight="0.4979757" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="TypeScript" order="10" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.2497436" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ooder 基础依赖包，包含了ooder 相关组件的基础定义及通用方法。" />
+    <MESSAGE value="为前端ood 升级，修改后端映射配置。" />
+    <MESSAGE value="修复，http参数默认数组问题" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/agent/client/command/filter/command/LocalMsgFilterImpl.java&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/agent/client/home/event/DefaultZNodeListener.java&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/ScoketInfo.java&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/ScoketInfoJson.java&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/client/impl/AppAccountWebServiceImpl.java&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/enums/SensorEventEnums.java&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/json/ScoketInfoJson.java&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/udp/GHUDPMsgAdapter.java&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/iot/ScoketInfoJson.java&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/iot/json/ScoketInfoJson.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/agent/client/command/filter/command/LocalMsgFilterImpl.java&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/agent/client/home/event/DefaultZNodeListener.java&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/ScoketInfo.java&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/ScoketInfoJson.java&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/client/impl/AppAccountWebServiceImpl.java&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/enums/SensorEventEnums.java&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/json/ScoketInfoJson.java&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/agent/client/iot/udp/GHUDPMsgAdapter.java&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/iot/ScoketInfoJson.java&#10;#&#9;ooder-iot-webclient/src/main/java/net/ooder/iot/json/ScoketInfoJson.java" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ooder-vfs-web/src/main/java/net/ooder/vfs/bigfile/BigFileDownLoadTask.java</url>
+          <line>32</line>
+          <properties />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="3" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/ooder-vfs-web/src/main/java/net/ooder/vfs/VFSConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="37" column="53" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-vfs-web/src/main/java/net/ooder/vfs/sync/restor/RestorObjectTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-server/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/command/AddNode2RouteCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/command/AddPasswordCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/command/BindDeviceCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/command/ClearDataCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/command/DeleteModeCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/command/DeletePasswordCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/乱码统计.txt" />
+    <entry file="file://$PROJECT_DIR$/SPAC_GUIDE.md" />
+    <entry file="file://$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/web/CommandTempAnnotationProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="28" column="57" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/filelist.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2775">
+          <caret line="2208" column="81" lean-forward="true" selection-start-line="2208" selection-start-column="81" selection-end-line="2208" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="64" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AISERVER_CONFIG_INTEGRATION.md" />
+    <entry file="file://$PROJECT_DIR$/DATABASE_CONFIG_MIGRATION.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="285">
+            <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-org-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-iot-webclient/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-index-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-msg-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="893">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.15/httpcore-4.4.15.jar!/org/apache/http/concurrent/FutureCallback.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-common-client/src/main/java/net/ooder/web/json/JsonData.java" />
+    <entry file="file://$PROJECT_DIR$/ooder-common-client/src/main/java/net/ooder/web/RequestParamBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="108" column="50" selection-start-line="108" selection-start-column="50" selection-end-line="108" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-config/src/main/java/net/ooder/config/DatabaseConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-config/src/test/java/net/ooder/config/AIServerPropertiesTest.java" />
+    <entry file="file://$PROJECT_DIR$/ooder-config/src/test/java/net/ooder/config/ConfigReaderTest.java" />
+    <entry file="file://$PROJECT_DIR$/ooder-config/src/test/java/net/ooder/config/DatabasePropertiesTest.java" />
+    <entry file="file://$PROJECT_DIR$/ooder-config/src/test/java/net/ooder/config/UserPropertiesTest.java" />
+    <entry file="file://$PROJECT_DIR$/ooder-config/src/main/java/net/ooder/config/UserProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1919">
+          <caret line="168" column="44" selection-start-line="168" selection-start-column="44" selection-end-line="168" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-config/src/main/java/net/ooder/config/DatabaseProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="12" column="51" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-config/src/main/java/net/ooder/config/AIServerProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-config/src/main/java/net/ooder/config/ConfigReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="38" column="7" selection-start-line="37" selection-start-column="41" selection-end-line="38" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-config/src/main/java/net/ooder/config/AIServerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-database/src/main/java/net/ooder/common/database/dao/DAOCondition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-database/src/main/java/net/ooder/common/database/dao/DAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-database/src/main/java/net/ooder/common/database/dao/DBDAOUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-database/src/main/java/net/ooder/common/database/enums/DataBaseType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/javax/naming/Context.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4879">
+          <caret line="280" column="17" selection-start-line="280" selection-start-column="17" selection-end-line="280" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-database/src/main/java/net/ooder/common/database/JNDIDataSourceProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="81" column="40" selection-start-line="81" selection-start-column="40" selection-end-line="81" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-database/src/main/java/net/ooder/common/database/MiniConnectionProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="75" column="36" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/command/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-vfs-web/src/main/java/net/ooder/vfs/ct/admin/CtVfsAdminService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-vfs-web/src/main/java/net/ooder/vfs/engine/event/annotation/Listener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-iot-webclient/src/main/java/net/ooder/agent/client/home/ct/CtCommandClientImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="163" column="25" selection-start-line="163" selection-start-column="25" selection-end-line="163" selection-end-column="25" />
+          <folding>
+            <element signature="e#1819#1853#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-config/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-common-client/src/main/java/net/ooder/web/ViewBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1554#1555#0" expanded="true" />
+            <element signature="e#1618#1619#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-database/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="18" column="40" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$MAVEN_REPOSITORY$/net/ooder/ooder-annotation/2.0/ooder-annotation-2.0.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$MAVEN_REPOSITORY$/net/ooder/ooder-common/1.0.1/ooder-common-1.0.1.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ooder-common-client/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.44367817" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.44367817" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring|ooder-server</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.44367817" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: cglib:cglib:3.2.5</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.44367817" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -15,7 +15,7 @@
 package net.ooder.web;
 
 import net.ooder.annotation.*;
-import net.ooder.esd.annotation.CustomAction;
+import net.ooder.annotation.CustomAction;
 import net.ooder.web.util.AnnotationUtil;
 
 import java.util.Arrays;

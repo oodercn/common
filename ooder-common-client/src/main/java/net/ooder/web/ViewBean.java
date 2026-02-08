@@ -16,7 +16,7 @@ package net.ooder.web;
 
 import net.ooder.annotation.AnnotationType;
 import net.ooder.annotation.CustomBean;
-import net.ooder.esd.annotation.View;
+import net.ooder.annotation.View;
 import net.ooder.web.util.AnnotationUtil;
 
 @AnnotationType(clazz = View.class)

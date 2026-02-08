@@ -3,39 +3,48 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    
+
     <groupId>net.ooder</groupId>
     <artifactId>ooder-common-all</artifactId>
     <version>2.0</version>
     <packaging>pom</packaging>
-    
+
     <name>ooder-common-all</name>
     <description>ooder V1.0 MIT Open Source Version - Common utilities and base components</description>
-    <url>https://ooder.net</url>
-    
+    <url>https://github.com/oodercn/common</url>
+
+    <organization>
+        <name>ooder</name>
+        <url>http://net.ooder</url>
+    </organization>
+
     <licenses>
         <license>
             <name>MIT License</name>
-            <url>https://opensource.org/licenses/MIT</url>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
             <distribution>repo</distribution>
+            <comments>MIT License</comments>
         </license>
     </licenses>
-    
+
     <developers>
         <developer>
-            <id>ooder-team</id>
-            <name>ooder Team</name>
-            <email>team@ooder.net</email>
-            <organization>ooder.net</organization>
-            <organizationUrl>https://ooder.net</organizationUrl>
+            <name>IhyTdX</name>
+            <email>18683731@qq.com</email>
+            <organization>ooder</organization>
+            <organizationUrl>http://net.ooder</organizationUrl>
+            <roles>
+                <role>Developer</role>
+            </roles>
+            <timezone>+8</timezone>
         </developer>
     </developers>
-    
+
     <scm>
-        <connection>scm:git:git://github.com/ooder-net/ooder-common.git</connection>
-        <developerConnection>scm:git:ssh://github.com/ooder-net/ooder-common.git</developerConnection>
-        <url>https://github.com/ooder-net/ooder-common</url>
-        <tag>HEAD</tag>
+        <url>https://github.com/oodercn/common</url>
+        <connection>scm:git:https://github.com/oodercn/common.git</connection>
+        <developerConnection>scm:git:https://github.com/oodercn/common.git</developerConnection>
+        <tag>v2.0</tag>
     </scm>
 
     <properties>
@@ -43,7 +52,10 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
-        
+        <maven.javadoc.skip>true</maven.javadoc.skip>
+        <maven.source.skip>false</maven.source.skip>
+        <gpg.skip>true</gpg.skip>
+
         <!-- 依赖版本管理 -->
         <freemarker.version>2.3.32</freemarker.version>
         <ognl.version>3.1.29</ognl.version>
@@ -146,37 +158,89 @@
         <module>ooder-iot-webclient</module>
     </modules>
 
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Maven Central Repository</name>
+            <url>https://repo.maven.apache.org/maven2/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>central</id>
+            <name>Maven Central Repository</name>
+            <url>https://repo.maven.apache.org/maven2/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <distributionManagement>
+        <repository>
+            <id>ossrh</id>
+            <name>OSSRH Repository</name>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <name>OSSRH Snapshot Repository</name>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
+                <version>3.8.1</version>
                 <configuration>
+                    <compilerArgs>
+                        <arg>-parameters</arg>
+                    </compilerArgs>
                     <source>8</source>
                     <target>8</target>
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
-            
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>3.3.0</version>
+                <version>3.2.1</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
                         <goals>
-                            <goal>jar</goal>
+                            <goal>jar-no-fork</goal>
                         </goals>
                     </execution>
                 </executions>
             </plugin>
-            
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.6.0</version>
+                <version>3.3.2</version>
+                <configuration>
+                    <source>8</source>
+                    <additionalJOption>-Xdoclint:none</additionalJOption>
+                    <failOnError>false</failOnError>
+                    <charset>UTF-8</charset>
+                    <encoding>UTF-8</encoding>
+                    <docencoding>UTF-8</docencoding>
+                </configuration>
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
@@ -185,20 +249,12 @@
                         </goals>
                     </execution>
                 </executions>
-                <configuration>
-                    <encoding>UTF-8</encoding>
-                    <charset>UTF-8</charset>
-                    <docencoding>UTF-8</docencoding>
-                    <failOnError>false</failOnError>
-                    <doclint>none</doclint>
-                </configuration>
             </plugin>
-            
-            <!-- GPG签名插件 - 发布到Maven Central必需 -->
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>1.6</version>
                 <executions>
                     <execution>
                         <id>sign-artifacts</id>
@@ -208,38 +264,16 @@
                         </goals>
                     </execution>
                 </executions>
-                <configuration>
-                    <gpgArguments>
-                        <arg>--pinentry-mode</arg>
-                        <arg>loopback</arg>
-                    </gpgArguments>
-                </configuration>
             </plugin>
-            
-            <!-- Maven Central Publishing Plugin -->
+
             <plugin>
-                <groupId>org.sonatype.central</groupId>
-                <artifactId>central-publishing-maven-plugin</artifactId>
-                <version>0.4.0</version>
-                <extensions>true</extensions>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.2</version>
                 <configuration>
-                    <publishingServerId>central</publishingServerId>
-                    <tokenAuth>true</tokenAuth>
+                    <skip>false</skip>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
-    <!-- 部署配置 - 使用新的 Maven Central Portal -->
-    <distributionManagement>
-        <repository>
-            <id>central</id>
-            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-        <snapshotRepository>
-            <id>central</id>
-            <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
-
 </project>

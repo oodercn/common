@@ -188,12 +188,12 @@
 
     <distributionManagement>
         <repository>
-            <id>ossrh</id>
+            <id>maven-public</id>
             <name>OSSRH Repository</name>
             <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
         <snapshotRepository>
-            <id>ossrh</id>
+            <id>maven-public</id>
             <name>OSSRH Snapshot Repository</name>
             <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
         </snapshotRepository>

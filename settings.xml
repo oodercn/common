@@ -6,9 +6,9 @@
     <servers>
         <!-- Maven Central 发布认证 - 使用 User Token -->
         <server>
-            <id>ossrh</id>
-            <username>fKZ2K5</username>
-            <password>5rFiMap0aSaPQOiX3eUbfiUPyWs5Z4Nm8</password>
+            <id>maven-public</id>
+            <username>8DQFTo</username>
+            <password>6W8pF4qGpGv1iJ9V9jJ1tZ9e5dG</password>
         </server>
     </servers>
 

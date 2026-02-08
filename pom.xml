@@ -52,9 +52,9 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
-        <maven.javadoc.skip>true</maven.javadoc.skip>
+        <maven.javadoc.skip>false</maven.javadoc.skip>
         <maven.source.skip>false</maven.source.skip>
-        <gpg.skip>true</gpg.skip>
+        <gpg.skip>false</gpg.skip>
 
         <!-- 依赖版本管理 -->
         <freemarker.version>2.3.32</freemarker.version>

@@ -1,0 +1,99 @@
+@options
+@packages
+-classpath
+'E:/ooder/ooder-common/ooder-common-client/target/ooder-common-client-2.0.jar;D:/maven/.m2/repository/cglib/cglib/3.2.5/cglib-3.2.5.jar;D:/maven/.m2/repository/org/ow2/asm/asm/5.2/asm-5.2.jar;D:/maven/.m2/repository/org/apache/ant/ant/1.9.6/ant-1.9.6.jar;D:/maven/.m2/repository/org/apache/ant/ant-launcher/1.9.6/ant-launcher-1.9.6.jar;D:/maven/.m2/repository/org/freemarker/freemarker/2.3.32/freemarker-2.3.32.jar;D:/maven/.m2/repository/ognl/ognl/3.1.29/ognl-3.1.29.jar;D:/maven/.m2/repository/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.jar;D:/maven/.m2/repository/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar;D:/maven/.m2/repository/redis/clients/jedis/3.9.0/jedis-3.9.0.jar;D:/maven/.m2/repository/org/apache/commons/commons-pool2/2.11.1/commons-pool2-2.11.1.jar;D:/maven/.m2/repository/org/springframework/spring-web/5.3.30/spring-web-5.3.30.jar;D:/maven/.m2/repository/org/springframework/spring-beans/5.3.30/spring-beans-5.3.30.jar;D:/maven/.m2/repository/org/springframework/spring-core/5.3.30/spring-core-5.3.30.jar;D:/maven/.m2/repository/org/springframework/spring-jcl/5.3.30/spring-jcl-5.3.30.jar;D:/maven/.m2/repository/org/mvel/mvel2/2.4.4.Final/mvel2-2.4.4.Final.jar;D:/maven/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar;D:/maven/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar;D:/maven/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar;D:/maven/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar;D:/maven/.m2/repository/org/apache/httpcomponents/fluent-hc/4.5.13/fluent-hc-4.5.13.jar;D:/maven/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar;D:/maven/.m2/repository/com/belerweb/pinyin4j/2.5.1/pinyin4j-2.5.1.jar;D:/maven/.m2/repository/org/hsqldb/hsqldb/2.5.0/hsqldb-2.5.0.jar;D:/maven/.m2/repository/org/webjars/font-awesome/4.7.0/font-awesome-4.7.0.jar;E:/ooder/ooder-common/ooder-config/target/ooder-config-2.0.jar;D:/maven/.m2/repository/org/springframework/boot/spring-boot-starter/2.7.0/spring-boot-starter-2.7.0.jar;D:/maven/.m2/repository/org/springframework/boot/spring-boot/2.7.0/spring-boot-2.7.0.jar;D:/maven/.m2/repository/org/springframework/spring-context/5.3.30/spring-context-5.3.30.jar;D:/maven/.m2/repository/org/springframework/spring-aop/5.3.30/spring-aop-5.3.30.jar;D:/maven/.m2/repository/org/springframework/spring-expression/5.3.30/spring-expression-5.3.30.jar;D:/maven/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.7.0/spring-boot-autoconfigure-2.7.0.jar;D:/maven/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.7.0/spring-boot-starter-logging-2.7.0.jar;D:/maven/.m2/repository/ch/qos/logback/logback-classic/1.2.11/logback-classic-1.2.11.jar;D:/maven/.m2/repository/ch/qos/logback/logback-core/1.2.11/logback-core-1.2.11.jar;D:/maven/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.17.2/log4j-to-slf4j-2.17.2.jar;D:/maven/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.2/log4j-api-2.17.2.jar;D:/maven/.m2/repository/org/slf4j/jul-to-slf4j/1.7.36/jul-to-slf4j-1.7.36.jar;D:/maven/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar;D:/maven/.m2/repository/org/yaml/snakeyaml/1.30/snakeyaml-1.30.jar;D:/maven/.m2/repository/net/ooder/ooder-annotation/2.0/ooder-annotation-2.0.jar;D:/maven/.m2/repository/com/alibaba/fastjson/1.2.62/fastjson-1.2.62.jar;D:/maven/.m2/repository/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2.jar;D:/maven/.m2/repository/com/github/jsqlparser/jsqlparser/4.0/jsqlparser-4.0.jar;D:/maven/.m2/repository/com/zaxxer/HikariCP/4.0.3/HikariCP-4.0.3.jar;D:/maven/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'1.8'
+-sourcepath
+'E:/ooder/ooder-common/ooder-database/src/main/java;E:/ooder/ooder-common/ooder-database/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2026. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'E:/ooder/ooder-common/ooder-database/target/apidocs'
+-docencoding
+'UTF-8'
+-Xdoclint:none
+-doctitle
+'ooder-database 2.0 API'
+-linkoffline
+'https://docs.oracle.com/javase/8/docs/api' 'E:/ooder/ooder-common/ooder-database/target/javadoc-bundle-options'
+-linkoffline
+'https://ooder.net/ooder-common-client/apidocs' 'E:/ooder/ooder-common/ooder-common-client/target/apidocs'
+-use
+-version
+-windowtitle
+'ooder-database 2.0 API'
+net.ooder.common.database
+net.ooder.common.database.dao
+net.ooder.common.database.enums
+net.ooder.common.database.metadata
+net.ooder.common.database.util
+net.ooder.common.database.workflow
+E:\ooder\ooder-common\ooder-common-client\target\ooder-common-client-2.0.jar = 1770522922424
+D:\maven\.m2\repository\cglib\cglib\3.2.5\cglib-3.2.5.jar = 1590847956973
+D:\maven\.m2\repository\org\ow2\asm\asm\5.2\asm-5.2.jar = 1590847973605
+D:\maven\.m2\repository\org\apache\ant\ant\1.9.6\ant-1.9.6.jar = 1590917225199
+D:\maven\.m2\repository\org\apache\ant\ant-launcher\1.9.6\ant-launcher-1.9.6.jar = 1590917223168
+D:\maven\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar = 1769765586333
+D:\maven\.m2\repository\ognl\ognl\3.1.29\ognl-3.1.29.jar = 1770520935863
+D:\maven\.m2\repository\org\javassist\javassist\3.20.0-GA\javassist-3.20.0-GA.jar = 1542859506291
+D:\maven\.m2\repository\org\jdom\jdom2\2.0.6.1\jdom2-2.0.6.1.jar = 1750666691109
+D:\maven\.m2\repository\redis\clients\jedis\3.9.0\jedis-3.9.0.jar = 1770520703558
+D:\maven\.m2\repository\org\apache\commons\commons-pool2\2.11.1\commons-pool2-2.11.1.jar = 1751726132782
+D:\maven\.m2\repository\org\springframework\spring-web\5.3.30\spring-web-5.3.30.jar = 1770519141195
+D:\maven\.m2\repository\org\springframework\spring-beans\5.3.30\spring-beans-5.3.30.jar = 1750672707100
+D:\maven\.m2\repository\org\springframework\spring-core\5.3.30\spring-core-5.3.30.jar = 1750672708682
+D:\maven\.m2\repository\org\springframework\spring-jcl\5.3.30\spring-jcl-5.3.30.jar = 1750672708262
+D:\maven\.m2\repository\org\mvel\mvel2\2.4.4.Final\mvel2-2.4.4.Final.jar = 1575276284910
+D:\maven\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar = 1751726133101
+D:\maven\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar = 1653291669878
+D:\maven\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar = 1585967722048
+D:\maven\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar = 1543328588755
+D:\maven\.m2\repository\org\apache\httpcomponents\fluent-hc\4.5.13\fluent-hc-4.5.13.jar = 1751726133193
+D:\maven\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar = 1543328433689
+D:\maven\.m2\repository\com\belerweb\pinyin4j\2.5.1\pinyin4j-2.5.1.jar = 1575276285225
+D:\maven\.m2\repository\org\hsqldb\hsqldb\2.5.0\hsqldb-2.5.0.jar = 1770520535137
+D:\maven\.m2\repository\org\webjars\font-awesome\4.7.0\font-awesome-4.7.0.jar = 1756550364062
+E:\ooder\ooder-common\ooder-config\target\ooder-config-2.0.jar = 1770522900659
+D:\maven\.m2\repository\org\springframework\boot\spring-boot-starter\2.7.0\spring-boot-starter-2.7.0.jar = 1751726131108
+D:\maven\.m2\repository\org\springframework\boot\spring-boot\2.7.0\spring-boot-2.7.0.jar = 1751726130750
+D:\maven\.m2\repository\org\springframework\spring-context\5.3.30\spring-context-5.3.30.jar = 1750672707661
+D:\maven\.m2\repository\org\springframework\spring-aop\5.3.30\spring-aop-5.3.30.jar = 1750672707343
+D:\maven\.m2\repository\org\springframework\spring-expression\5.3.30\spring-expression-5.3.30.jar = 1750672707397
+D:\maven\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.7.0\spring-boot-autoconfigure-2.7.0.jar = 1751726130923
+D:\maven\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.7.0\spring-boot-starter-logging-2.7.0.jar = 1751726130856
+D:\maven\.m2\repository\ch\qos\logback\logback-classic\1.2.11\logback-classic-1.2.11.jar = 1751726130945
+D:\maven\.m2\repository\ch\qos\logback\logback-core\1.2.11\logback-core-1.2.11.jar = 1751726131028
+D:\maven\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.17.2\log4j-to-slf4j-2.17.2.jar = 1750672707964
+D:\maven\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.2\log4j-api-2.17.2.jar = 1750672707858
+D:\maven\.m2\repository\org\slf4j\jul-to-slf4j\1.7.36\jul-to-slf4j-1.7.36.jar = 1750672707838
+D:\maven\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar = 1750672708198
+D:\maven\.m2\repository\org\yaml\snakeyaml\1.30\snakeyaml-1.30.jar = 1750672708133
+D:\maven\.m2\repository\net\ooder\ooder-annotation\2.0\ooder-annotation-2.0.jar = 1770520281753
+D:\maven\.m2\repository\com\alibaba\fastjson\1.2.62\fastjson-1.2.62.jar = 1572690745979
+D:\maven\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar = 1572691705286
+D:\maven\.m2\repository\com\github\jsqlparser\jsqlparser\4.0\jsqlparser-4.0.jar = 1682045255210
+D:\maven\.m2\repository\com\zaxxer\HikariCP\4.0.3\HikariCP-4.0.3.jar = 1768266530741
+D:\maven\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar = 1590805732851
+E:\ooder\ooder-common\ooder-database\src\main\java = 1756113746382
+E:\ooder\ooder-common\ooder-database\target\generated-sources\annotations = 1770522974775
+E:\ooder\ooder-common\ooder-database\target\apidocs\allclasses-frame.html = 1770522985604
+E:\ooder\ooder-common\ooder-database\target\apidocs\allclasses-noframe.html = 1770522985605
+E:\ooder\ooder-common\ooder-database\target\apidocs\constant-values.html = 1770522984403
+E:\ooder\ooder-common\ooder-database\target\apidocs\deprecated-list.html = 1770522985600
+E:\ooder\ooder-common\ooder-database\target\apidocs\help-doc.html = 1770522985615
+E:\ooder\ooder-common\ooder-database\target\apidocs\index-all.html = 1770522985473
+E:\ooder\ooder-common\ooder-database\target\apidocs\index.html = 1770522985608
+E:\ooder\ooder-common\ooder-database\target\apidocs\overview-frame.html = 1770522984173
+E:\ooder\ooder-common\ooder-database\target\apidocs\overview-summary.html = 1770522985611
+E:\ooder\ooder-common\ooder-database\target\apidocs\overview-tree.html = 1770522985304
+E:\ooder\ooder-common\ooder-database\target\apidocs\package-list = 1770522984169
+E:\ooder\ooder-common\ooder-database\target\apidocs\script.js = 1770522985621
+E:\ooder\ooder-common\ooder-database\target\apidocs\serialized-form.html = 1770522984494
+E:\ooder\ooder-common\ooder-database\target\apidocs\stylesheet.css = 1770522985619

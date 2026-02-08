@@ -27,6 +27,7 @@ net\ooder\common\org\api\OrgAdminManagerAPI.class
 net\ooder\common\org\service\UserInnerService.class
 net\ooder\org\query\MsgConditionKey.class
 net\ooder\common\org\event\PersonEvent.class
+net\ooder\org\query\OrgCondition$1.class
 net\ooder\common\org\api\OrgWebManagerAPI.class
 net\ooder\common\org\event\OrgEventControl.class
 net\ooder\common\org\CtOrg.class

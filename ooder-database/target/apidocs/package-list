@@ -1,0 +1,6 @@
+net.ooder.common.database
+net.ooder.common.database.dao
+net.ooder.common.database.enums
+net.ooder.common.database.metadata
+net.ooder.common.database.util
+net.ooder.common.database.workflow

@@ -12,7 +12,6 @@ net\ooder\agent\client\home\ct\CtGWClientImpl$1.class
 net\ooder\agent\client\command\DebugCommand.class
 net\ooder\agent\client\command\ZBFileInfo.class
 net\ooder\agent\client\home\event\GatewayListener.class
-net\ooder\agent\client\enums\iot\category\SmartHomeAppFunction.class
 net\ooder\agent\client\iot\json\device\EndPoint.class
 net\ooder\agent\client\command\SycnCommand.class
 net\ooder\agent\client\iot\SMSMsg.class
@@ -47,7 +46,6 @@ net\ooder\agent\client\command\filter\SendMsgChain.class
 net\ooder\agent\client\iot\json\NetworkInfo.class
 net\ooder\agent\client\command\MoveToLevelCommand.class
 net\ooder\agent\client\iot\enums\SensorEventEnums.class
-net\ooder\agent\client\enums\iot\IOTDeviceType.class
 net\ooder\agent\client\iot\api\lock\IotLockService.class
 net\ooder\agent\client\iot\json\PMSSensorInfo.class
 net\ooder\agent\client\command\ChannelNegotiateReportCommand.class
@@ -73,10 +71,8 @@ net\ooder\agent\client\home\event\DeviceEvent.class
 net\ooder\agent\client\command\DelaySendCommand$1.class
 net\ooder\agent\client\command\LinkReportCommand.class
 net\ooder\agent\client\home\event\GatewayEvent.class
-net\ooder\agent\client\enums\iot\IOTCategoryDeviceType.class
 net\ooder\agent\client\command\ZigbeeScanCommand.class
 net\ooder\agent\client\command\CmdRule.class
-net\ooder\agent\client\enums\iot\SmartAgricultureEnum.class
 net\ooder\agent\client\iot\MsgBean.class
 net\ooder\agent\client\iot\udp\GHUDPMsgAdapter.class
 net\ooder\agent\client\home\event\HomeEvent.class
@@ -96,14 +92,11 @@ net\ooder\agent\client\command\task\LightCommandTask.class
 net\ooder\agent\client\command\filter\command\RemoteMsgFilterImpl.class
 net\ooder\agent\client\command\filter\appmsg\ErrorReportDataFilterImpl.class
 net\ooder\agent\client\home\engine\RepeatHomeEvent.class
-net\ooder\agent\client\enums\iot\category\AgricultureDeviceEnum.class
 net\ooder\agent\client\iot\json\AlarmMessageInfo.class
 net\ooder\enums\iot\SmartHomeEnum.class
 net\ooder\agent\client\iot\ZNode.class
 net\ooder\agent\client\iot\client\impl\CommandWebServiceImpl.class
 net\ooder\agent\client\iot\enums\PlaceEventEnums.class
-net\ooder\agent\client\enums\iot\category\SecurityDeviceEnum.class
-net\ooder\agent\client\enums\iot\SmartHomeAppModule.class
 net\ooder\agent\client\home\ct\CtGWClientImpl$2.class
 net\ooder\agent\client\iot\api\inner\HomeService.class
 net\ooder\agent\client\listener\SensorCommandListener.class
@@ -144,7 +137,6 @@ net\ooder\agent\client\command\SyncTimeCommand.class
 net\ooder\agent\client\command\SetSystemModeCommand.class
 net\ooder\agent\client\home\client\AppClient.class
 net\ooder\agent\client\command\OpenAlarmCommand.class
-net\ooder\agent\client\enums\iot\SmartHomeEnum.class
 net\ooder\agent\client\command\ClearDataCommand.class
 net\ooder\agent\client\iot\ct\CtIotServiceImpl.class
 net\ooder\agent\client\home\listener\DefalutCommandListener.class
@@ -162,7 +154,6 @@ net\ooder\agent\client\iot\ct\CtAlarm.class
 net\ooder\agent\client\iot\DeviceModule.class
 net\ooder\agent\client\iot\json\device\SenceMode$Mode.class
 net\ooder\agent\client\iot\client\api\GWAccountWebServiceAPI.class
-net\ooder\agent\client\enums\iot\category\ApplianceDeviceEnum.class
 net\ooder\agent\client\command\ClearPasswordCommand.class
 net\ooder\agent\client\command\DelaySendCommand.class
 net\ooder\agent\client\command\DeletePasswordCommand.class
@@ -210,7 +201,6 @@ net\ooder\agent\client\iot\json\SensorDataInfo.class
 net\ooder\agent\client\command\GetBindListCommand.class
 net\ooder\agent\client\iot\json\PlaceInfo.class
 net\ooder\enums\iot\category\EnvironmentDeviceEnum.class
-net\ooder\agent\client\enums\iot\category\EnergyDeviceEnum.class
 net\ooder\agent\client\home\udp\UDPData.class
 net\ooder\agent\client\home\event\SensorEvent.class
 net\ooder\agent\client\iot\api\lock\IotLockServiceAPI.class
@@ -225,7 +215,6 @@ net\ooder\agent\client\command\StartCommand.class
 net\ooder\agent\client\command\BindDeviceCommand.class
 net\ooder\agent\client\command\CommandReportStatus.class
 net\ooder\agent\client\command\task\SyncTimeCommandTask.class
-net\ooder\agent\client\enums\iot\category\SmartHomeAppCategory.class
 net\ooder\agent\client\iot\ct\CtIotCacheManager$1.class
 net\ooder\agent\client\command\task\DelPassrordCheckCallBackTask.class
 net\ooder\agent\client\iot\enums\DataEventEnums.class
@@ -268,13 +257,11 @@ net\ooder\agent\client\command\ClusterCMDCommand.class
 net\ooder\agent\client\listener\SyncDeviceEndpointListener.class
 net\ooder\enums\iot\category\SecurityDeviceEnum.class
 net\ooder\agent\client\command\filter\appmsg\AlarmDataFilterImpl.class
-net\ooder\agent\client\enums\iot\category\HealthDeviceEnum.class
 net\ooder\agent\client\command\CreateGroupCommand.class
 net\ooder\agent\client\iot\ct\CtSensortype.class
 net\ooder\agent\client\iot\ScoketInfo.class
 net\ooder\agent\client\home\event\CommandListener.class
 net\ooder\enums\iot\category\EnergyDeviceEnum.class
-net\ooder\agent\client\enums\iot\category\EnvironmentDeviceEnum.class
 net\ooder\agent\client\home\event\DataEvent.class
 net\ooder\agent\client\iot\HomeConstants.class
 net\ooder\agent\client\command\filter\command\RemoteCommandFilterImpl.class
@@ -285,9 +272,7 @@ net\ooder\agent\client\command\HAConfigReport.class
 net\ooder\agent\client\command\NetCommand.class
 net\ooder\enums\iot\category\ApplianceDeviceEnum$1.class
 net\ooder\agent\client\command\SetTemperatureCommand.class
-net\ooder\agent\client\enums\iot\SmartCityEnum.class
 net\ooder\agent\client\iot\json\device\Commands.class
-net\ooder\agent\client\enums\iot\category\LightingDeviceEnum.class
 net\ooder\agent\client\home\client\AdminClient.class
 net\ooder\agent\client\home\engine\HomeServer.class
 net\ooder\agent\client\home\event\PlaceListener.class
@@ -305,7 +290,6 @@ net\ooder\agent\client\iot\client\GatewayWebService.class
 net\ooder\agent\client\iot\client\impl\AppWebServiceImpl.class
 net\ooder\agent\client\iot\udp\GHUDPHandle.class
 net\ooder\agent\client\command\filter\command\LocalCommandFilterImpl.class
-net\ooder\agent\client\enums\iot\category\CityDeviceEnum.class
 net\ooder\agent\client\command\RemoveSensorCommand.class
 net\ooder\agent\client\iot\udp\GHRemoteMsgAdapter.class
 net\ooder\agent\client\command\AddNode2RouteCommand.class

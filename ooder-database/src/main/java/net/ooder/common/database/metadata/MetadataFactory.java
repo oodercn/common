@@ -123,7 +123,7 @@ public class MetadataFactory {
                         connectionProvider.setStatus(SystemStatus.ONLINE);
                     }
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                    log.error("SQL error during reConnect", e);
                     connectionProvider.setStatus(SystemStatus.FAULT);
                 } finally {
                     if (dbManager != null) {

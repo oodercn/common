@@ -518,7 +518,7 @@ public class SyncLocal {
                         logger.info(" 错误文件地址：" + path);
                     }
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    logger.error("Upload task error", e);
                 }
 
 

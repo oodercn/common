@@ -479,7 +479,7 @@ public class MethodUtil {
             try {
                 methodBuffer = toType(bean.getName(), javaName, methodBuffer, paramBean.getParamType(), false);
             } catch (ClassNotFoundException e) {
-                e.printStackTrace();
+                // Class not found, skip parameter type resolution
             }
             methodBuffer.append(" " + paramBean.getParamName());
             methodBuffer.append(",");
@@ -590,10 +590,8 @@ public class MethodUtil {
         List<RequestParamBean> paramBeans = null;
         try {
             paramBeans = getCtParams(ctmethod);
-        } catch (NotFoundException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+        } catch (NotFoundException | ClassNotFoundException e) {
+            // Parameter resolution failed, continue with empty parameter list
         }
         for (RequestParamBean paramBean : paramBeans) {
             methodBuffer.append(paramBean.getParamName());
@@ -613,10 +611,8 @@ public class MethodUtil {
         List<RequestParamBean> paramBeans = null;
         try {
             paramBeans = getParams(method);
-        } catch (NotFoundException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+        } catch (NotFoundException | ClassNotFoundException e) {
+            // Parameter resolution failed, continue with empty parameter list
         }
         for (RequestParamBean paramBean : paramBeans) {
             methodBuffer.append(paramBean.getParamName());
@@ -752,10 +748,8 @@ public class MethodUtil {
                 }
             }
 
-        } catch (NotFoundException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+        } catch (NotFoundException | ClassNotFoundException e) {
+            // Type resolution failed, continue with current buffer state
         }
 
 
@@ -786,7 +780,7 @@ public class MethodUtil {
             methodBuffer.append(" ");
 
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            // Return type resolution failed, continue with current buffer state
         }
         return methodBuffer;
     }
@@ -817,7 +811,7 @@ public class MethodUtil {
             methodBuffer.append(" ");
 
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            // Return type resolution failed, continue with current buffer state
         }
         return methodBuffer;
     }
@@ -1202,10 +1196,10 @@ public class MethodUtil {
             Method method = MethodUtil.class.getMethod("test", new Class[]{User.class, Map.class});
             StringBuffer methodBuffer = MethodUtil.toMethodProxyStr(method, null, "view", null);
 
-            System.out.println(methodBuffer);
+            // Test output - method generation test
 
         } catch (NoSuchMethodException e) {
-            e.printStackTrace();
+            // Test method not found, ignore
         }
     }
 

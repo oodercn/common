@@ -93,7 +93,7 @@ public class DBBeanBase {
                 con.setAutoCommit(true);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error("SQL error during DBBeanBase construction", e);
         }
 
     }
@@ -113,7 +113,7 @@ public class DBBeanBase {
                 con.setAutoCommit(true);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error("SQL error during DBBeanBase construction with Connection", e);
         }
 
     }
@@ -138,10 +138,10 @@ public class DBBeanBase {
 
             // get DataSource factory object from naming system
             DataSource dataSource = (DataSource) context.lookup(dataSourceName);
-            System.out.println(dataSourceName);
+            log.debug("DataSource lookup: " + dataSourceName);
             conn = dataSource.getConnection();
         } catch (Exception t) {
-            t.printStackTrace();
+            log.error("Error getting direct connection", t);
         } finally {
             try {
                 if (context != null) {
@@ -174,7 +174,7 @@ public class DBBeanBase {
                     " in Thread: " + strThread);
 
         } catch (Exception t) {
-            t.printStackTrace();
+            log.error("Error getting connection", t);
             return null;
         }
         return conn;

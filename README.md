@@ -1,14 +1,38 @@
-# ooderAgent 企业版开发套包
+# ooderAgent 企业版 2.0 开发套包
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-2.0-green.svg)](#)
 [![Java](https://img.shields.io/badge/java-8+-orange.svg)](#)
+[![Maven Central](https://img.shields.io/badge/maven%20central-v2.0-brightgreen.svg)](https://central.sonatype.com/artifact/net.ooder)
 
 ## 介绍
 
-**ooderAgent** 是 ooder 企业级基础应用框架，为企业数字化转型提供完整的技术底座。本套包采用模块化设计，涵盖数据存储、缓存管理、文件存储、组织架构、消息通信、向量检索、物联网等核心能力，助力企业快速构建稳定、高效的业务系统。
+**ooderAgent 企业版 2.0** 是 ooder 企业级基础应用框架，为企业数字化转型提供完整的技术底座。本套包采用模块化设计，涵盖数据存储、缓存管理、文件存储、组织架构、消息通信、向量检索、物联网等核心能力，助力企业快速构建稳定、高效的业务系统。
 
 本项目采用 **MIT 开源协议**，旨在为企业开发者提供开箱即用的企业级开发工具集。
+
+> 📢 **发布声明**: 详见 [RELEASE_STATEMENT.md](RELEASE_STATEMENT.md)
+
+---
+
+## 🎯 版本说明
+
+### 为什么从 2.0 开始
+
+自本版本起，**ooderAgent 企业版与内部版本号完全统一为 2.0**，不再区分内外部版本。这一决策标志着 ooderAgent 正式进入全开源阶段，内部与外部版本完全一致，实现真正的透明治理和生态共建。
+
+### 企业版 vs 个人版
+
+| 特性 | 企业版 2.0 | 个人版 |
+|------|-----------|--------|
+| **JDK版本** | Java 8+ | Java 17+ |
+| **依赖策略** | 适度依赖成熟开源组件 | 尽可能减少外部依赖 |
+| **发布节奏** | 稳定迭代，严格测试 | 快速发版，敏捷迭代 |
+| **开源规范** | 100%符合Maven Central规范 | - |
+| **发展方向** | 以实用企业开发插件为主线横向扩展 | 开箱即用、精简核心 |
+
+- **企业级应用 / 大型项目**: 推荐使用 **企业版 2.0**，注重稳定性和兼容性
+- **个人学习 / 小型项目**: 推荐使用 **个人版**，享受最新技术特性
 
 ---
 
@@ -141,6 +165,8 @@ ooderAgent 采用分层模块化设计，是一个独立的 Maven 多模块工�
     <version>2.0</version>
 </dependency>
 ```
+
+**Maven Central**: https://search.maven.org/search?q=g:net.ooder
 
 #### 源码编译
 
@@ -480,15 +506,18 @@ iotClient.onCommand((cmd) -> {
 
 本项目采用 [MIT License](LICENSE) 开源协议。
 
+完整发布声明详见 [RELEASE_STATEMENT.md](RELEASE_STATEMENT.md)
+
 ---
 
 ## 版本历史
 
 - **v2.0** (2026-02-08) - 企业版开发套包发布
-  - 版本统一升级到 2.0
+  - 版本统一升级到 2.0，与 ooderAgent 内部版本号一致
   - 完善依赖管理配置
   - 修复编译问题
   - 优化模块结构
+  - 发布到 Maven Central 中央仓库
   - MIT 开源协议
 
 - **v1.0** (2025-08-25) - 首个 MIT 开源版本发布
@@ -500,9 +529,10 @@ iotClient.onCommand((cmd) -> {
 
 ## 联系我们
 
-- 官网：[https://ooder.net](https://ooder.net)
-- 问题反馈：[GitHub Issues](https://github.com/ooder-net/ooder-common/issues)
-- 邮箱：team@ooder.net
+- **官网**: [https://ooder.net](https://ooder.net)
+- **GitHub**: [https://github.com/ooder-net/ooder-common](https://github.com/ooder-net/ooder-common)
+- **问题反馈**: [GitHub Issues](https://github.com/ooder-net/ooder-common/issues)
+- **邮箱**: team@ooder.net
 
 ---
 
@@ -512,4 +542,4 @@ iotClient.onCommand((cmd) -> {
 
 ---
 
-**ooderAgent** - 企业级开发套包，让数字化转型更简单 🚀
+**ooderAgent 企业版 2.0** - 让企业级开发更简单、更可控 🚀

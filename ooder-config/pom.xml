@@ -13,7 +13,7 @@
 
     <groupId>net.ooder</groupId>
     <artifactId>ooder-config</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
     <name>ooder-config</name>
     <description>Ooder configuration module</description>
 

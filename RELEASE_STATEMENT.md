@@ -10,7 +10,9 @@
 
 ## 一、发布概述
 
-ooderAgent 企业版 2.0 开发套包（以下简称"本开发包"）正式以 **MIT 开源协议** 面向全球企业开发者发布。本开发包是 ooder 技术团队历经多年企业级项目实践沉淀的核心基础框架，旨在为企业数字化转型提供稳定、高效、可扩展的技术底座。
+ooderAgent 企业版 2.1 开发套包（以下简称"本开发包"）正式以 **MIT 开源协议** 面向全球企业开发者发布。本开发包是 ooder 技术团队历经多年企业级项目实践沉淀的核心基础框架，旨在为企业数字化转型提供稳定、高效、可扩展的技术底座。
+
+本版本 2.1 是在 2.0 基础上的稳定维护版本，主要修复了模块配置问题并优化了依赖管理。
 
 ---
 
@@ -54,11 +56,11 @@ ooderAgent 企业版 2.0 提供完整的北向协议实现，构建企业级 AI 
 
 ### 3.2 三端开发依赖包
 
-企业版 2.0 开发套包涵盖 **客户端 Agent SDK**、**企业端服务套件**、**ooderAI 大脑端** 三端的完整开发依赖：
+企业版 2.1 开发套包涵盖 **客户端 Agent SDK**、**企业端服务套件**、**ooderAI 大脑端** 三端的完整开发依赖：
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    ooderAgent 企业版 2.0                     │
+│                    ooderAgent 企业版 2.1                     │
 ├─────────────────┬─────────────────┬─────────────────────────┤
 │   客户端 Agent   │   企业端服务     │      ooderAI 大脑端      │
 │     SDK         │     套件         │                         │
@@ -91,12 +93,14 @@ ooderAgent 企业版 2.0 提供完整的北向协议实现，构建企业级 AI 
 
 ### 4.1 为什么从 2.0 开始
 
-自本版本起，**ooderAgent 企业版与内部版本号完全统一为 2.0**，不再区分内外部版本。这一决策基于以下考量：
+自本版本起，**ooderAgent 企业版与内部版本号完全统一**，不再区分内外部版本。这一决策基于以下考量：
 
 1. **版本一致性**: 消除内外部版本差异带来的混淆，统一版本认知
 2. **全开源战略**: 标志着 ooderAgent 正式进入全开源阶段，内部与外部版本完全一致
 3. **生态共建**: 便于企业开发者与核心团队基于同一版本进行协作和贡献
 4. **透明治理**: 版本演进过程完全公开，接受社区监督
+
+当前版本 **2.1** 是在 2.0 基础上的稳定维护版本。
 
 ### 4.2 与 ooderAgent 的关系
 
@@ -130,63 +134,63 @@ ooderAgent 企业版 2.0 提供完整的北向协议实现，构建企业级 AI 
 <dependency>
     <groupId>net.ooder</groupId>
     <artifactId>ooder-config</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
 </dependency>
 
 <!-- 核心客户端包 -->
 <dependency>
     <groupId>net.ooder</groupId>
     <artifactId>ooder-common-client</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
 </dependency>
 
 <!-- 数据库管理包 -->
 <dependency>
     <groupId>net.ooder</groupId>
     <artifactId>ooder-database</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
 </dependency>
 
 <!-- VFS存储管理包 -->
 <dependency>
     <groupId>net.ooder</groupId>
     <artifactId>ooder-vfs-web</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
 </dependency>
 
 <!-- 组织机构管理包 -->
 <dependency>
     <groupId>net.ooder</groupId>
     <artifactId>ooder-org-web</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
 </dependency>
 
 <!-- 消息通信管理包 -->
 <dependency>
     <groupId>net.ooder</groupId>
     <artifactId>ooder-msg-web</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
 </dependency>
 
 <!-- 向量检索包 -->
 <dependency>
     <groupId>net.ooder</groupId>
     <artifactId>ooder-index-web</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
 </dependency>
 
 <!-- 微服务支撑包 -->
 <dependency>
     <groupId>net.ooder</groupId>
     <artifactId>ooder-server</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
 </dependency>
 
 <!-- IoT北向协议转换包 -->
 <dependency>
     <groupId>net.ooder</groupId>
     <artifactId>ooder-iot-webclient</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
 </dependency>
 ```
 
@@ -200,7 +204,7 @@ ooderAgent 企业版 2.0 提供完整的北向协议实现，构建企业级 AI 
 
 **核心目标**: 兼容性和完全自主可控
 
-| 特性 | 企业版 2.0 | 说明 |
+| 特性 | 企业版 2.1 | 说明 |
 |------|-----------|------|
 | **JDK版本** | Java 8+ | 保持向后兼容，支持传统企业环境 |
 | **依赖策略** | 适度依赖成熟开源组件 | 优先选用经过验证的稳定依赖 |
@@ -222,9 +226,9 @@ ooderAgent 企业版 2.0 提供完整的北向协议实现，构建企业级 AI 
 
 ### 5.3 版本选择建议
 
-- **企业级应用 / 大型项目**: 推荐使用 **企业版 2.0**，注重稳定性和兼容性
+- **企业级应用 / 大型项目**: 推荐使用 **企业版 2.1**，注重稳定性和兼容性
 - **个人学习 / 小型项目**: 推荐使用 **个人版**，享受最新技术特性
-- **长期维护项目**: 推荐使用 **企业版 2.0**，版本稳定，文档完善
+- **长期维护项目**: 推荐使用 **企业版 2.1**，版本稳定，文档完善
 
 ---
 

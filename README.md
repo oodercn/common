@@ -1,9 +1,9 @@
-# ooderAgent 企业版 2.0 开发套包
+# ooderAgent 企业版 2.1 开发套包
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-2.0-green.svg)](#)
+[![Version](https://img.shields.io/badge/version-2.1-green.svg)](#)
 [![Java](https://img.shields.io/badge/java-8+-orange.svg)](#)
-[![Maven Central](https://img.shields.io/badge/maven%20central-v2.0-brightgreen.svg)](https://central.sonatype.com/artifact/net.ooder)
+[![Maven Central](https://img.shields.io/badge/maven%20central-v2.1-brightgreen.svg)](https://central.sonatype.com/artifact/net.ooder)
 
 ## 介绍
 
@@ -19,11 +19,13 @@
 
 ### 为什么从 2.0 开始
 
-自本版本起，**ooderAgent 企业版与内部版本号完全统一为 2.0**，不再区分内外部版本。这一决策标志着 ooderAgent 正式进入全开源阶段，内部与外部版本完全一致，实现真正的透明治理和生态共建。
+自本版本起，**ooderAgent 企业版与内部版本号完全统一**，不再区分内外部版本。这一决策标志着 ooderAgent 正式进入全开源阶段，内部与外部版本完全一致，实现真正的透明治理和生态共建。
+
+当前版本 **2.1** 是在 2.0 基础上的稳定维护版本。
 
 ### 企业版 vs 个人版
 
-| 特性 | 企业版 2.0 | 个人版 |
+| 特性 | 企业版 2.1 | 个人版 |
 |------|-----------|--------|
 | **JDK版本** | Java 8+ | Java 17+ |
 | **依赖策略** | 适度依赖成熟开源组件 | 尽可能减少外部依赖 |
@@ -106,63 +108,63 @@ ooderAgent 采用分层模块化设计，是一个独立的 Maven 多模块工�
 <dependency>
     <groupId>net.ooder</groupId>
     <artifactId>ooder-config</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
 </dependency>
 
 <!-- 核心客户端包（包含 REDIS 管理） -->
 <dependency>
     <groupId>net.ooder</groupId>
     <artifactId>ooder-common-client</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
 </dependency>
 
 <!-- 数据库配置包 -->
 <dependency>
     <groupId>net.ooder</groupId>
     <artifactId>ooder-database</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
 </dependency>
 
 <!-- VFS 存储管理包 -->
 <dependency>
     <groupId>net.ooder</groupId>
     <artifactId>ooder-vfs-web</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
 </dependency>
 
 <!-- 组织机构管理包 -->
 <dependency>
     <groupId>net.ooder</groupId>
     <artifactId>ooder-org-web</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
 </dependency>
 
 <!-- 通用消息管理包 -->
 <dependency>
     <groupId>net.ooder</groupId>
     <artifactId>ooder-msg-web</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
 </dependency>
 
 <!-- 向量数据库配置包 -->
 <dependency>
     <groupId>net.ooder</groupId>
     <artifactId>ooder-index-web</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
 </dependency>
 
 <!-- 微服务支撑包 -->
 <dependency>
     <groupId>net.ooder</groupId>
     <artifactId>ooder-server</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
 </dependency>
 
 <!-- IoT 北向协议转换包 -->
 <dependency>
     <groupId>net.ooder</groupId>
     <artifactId>ooder-iot-webclient</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
 </dependency>
 ```
 
@@ -511,6 +513,12 @@ iotClient.onCommand((cmd) -> {
 ---
 
 ## 版本历史
+
+- **v2.1** (2026-02-15) - 企业版开发套包维护版本
+  - 修复ooder-config模块parent配置问题
+  - 修复ooder-annotation依赖版本问题
+  - 优化模块依赖管理
+  - 发布到 Maven Central 中央仓库
 
 - **v2.0** (2026-02-08) - 企业版开发套包发布
   - 版本统一升级到 2.0，与 ooderAgent 内部版本号一致

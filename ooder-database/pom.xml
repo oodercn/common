@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <artifactId>ooder-database</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
     <groupId>net.ooder</groupId>
     <name>ooder-database</name>
     <description>Ooder database module</description>
@@ -12,7 +12,7 @@
     <parent>
         <groupId>net.ooder</groupId>
         <artifactId>ooder-common-all</artifactId>
-        <version>2.0</version>
+        <version>2.1</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -20,7 +20,7 @@
         <dependency>
             <groupId>net.ooder</groupId>
             <artifactId>ooder-common-client</artifactId>
-            <version>2.0</version>
+            <version>2.1</version>
         </dependency>
         <dependency>
             <groupId>net.ooder</groupId>
@@ -48,7 +48,6 @@
 
     <build>
         <plugins>
-            <!-- Javadoc插件 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>

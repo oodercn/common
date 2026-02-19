@@ -82,63 +82,63 @@ Add the required module dependencies to your `pom.xml` file:
 <dependency>
     <groupId>net.ooder</groupId>
     <artifactId>ooder-config</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
 </dependency>
 
 <!-- Core Client Package (includes REDIS management) -->
 <dependency>
     <groupId>net.ooder</groupId>
     <artifactId>ooder-common-client</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
 </dependency>
 
 <!-- Database Configuration Package -->
 <dependency>
     <groupId>net.ooder</groupId>
     <artifactId>ooder-database</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
 </dependency>
 
 <!-- VFS Storage Management Package -->
 <dependency>
     <groupId>net.ooder</groupId>
     <artifactId>ooder-vfs-web</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
 </dependency>
 
 <!-- Organization Management Package -->
 <dependency>
     <groupId>net.ooder</groupId>
     <artifactId>ooder-org-web</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
 </dependency>
 
 <!-- General Message Management Package -->
 <dependency>
     <groupId>net.ooder</groupId>
     <artifactId>ooder-msg-web</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
 </dependency>
 
 <!-- Vector Database Configuration Package -->
 <dependency>
     <groupId>net.ooder</groupId>
     <artifactId>ooder-index-web</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
 </dependency>
 
 <!-- Microservice Support Package -->
 <dependency>
     <groupId>net.ooder</groupId>
     <artifactId>ooder-server</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
 </dependency>
 
 <!-- IoT Northbound Protocol Conversion Package -->
 <dependency>
     <groupId>net.ooder</groupId>
     <artifactId>ooder-iot-webclient</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
 </dependency>
 ```
 
@@ -483,6 +483,12 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 ## Version History
+
+- **v2.1** (2026-02-15) - Enterprise Development Kit Maintenance Release
+  - Fixed ooder-config module parent configuration issue
+  - Fixed ooder-annotation dependency version issue
+  - Optimized module dependency management
+  - Published to Maven Central Repository
 
 - **v2.0** (2026-02-08) - Enterprise Development Kit Release
   - Version unified upgrade to 2.0

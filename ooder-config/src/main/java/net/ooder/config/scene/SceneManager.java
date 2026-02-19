@@ -106,7 +106,16 @@ public class SceneManager {
     }
     
     // ========== 扩展接口：配置变更通知 ==========
+    // 注意：以下方法已弃用，建议使用 SDK 7.3 中的 ConfigObserver 替代
     
+    /**
+     * 添加配置变更监听器
+     * @param listener 监听器实例
+     * @deprecated 自 SDK 7.3 起，请使用 {@code net.ooder.sdk.infra.observer.ConfigObserver} 替代。
+     *             该方法将在未来版本中移除。
+     * @see net.ooder.sdk.infra.observer.ConfigObserver
+     */
+    @Deprecated
     public void addConfigChangeListener(ConfigChangeListener listener) {
         if (listener != null && !configChangeListeners.contains(listener)) {
             configChangeListeners.add(listener);
@@ -119,19 +128,53 @@ public class SceneManager {
         }
     }
     
+    /**
+     * 移除配置变更监听器
+     * @param listener 监听器实例
+     * @deprecated 自 SDK 7.3 起，请使用 {@code net.ooder.sdk.infra.observer.ConfigObserver} 替代。
+     *             该方法将在未来版本中移除。
+     * @see net.ooder.sdk.infra.observer.ConfigObserver
+     */
+    @Deprecated
     public void removeConfigChangeListener(ConfigChangeListener listener) {
         configChangeListeners.remove(listener);
     }
     
+    /**
+     * 清除所有配置变更监听器
+     * @deprecated 自 SDK 7.3 起，请使用 {@code net.ooder.sdk.infra.observer.ConfigObserver} 替代。
+     *             该方法将在未来版本中移除。
+     * @see net.ooder.sdk.infra.observer.ConfigObserver
+     */
+    @Deprecated
     public void clearConfigChangeListeners() {
         configChangeListeners.clear();
     }
     
+    /**
+     * 通知配置变更
+     * @param sceneId 场景ID
+     * @param configPath 配置路径
+     * @param oldValue 旧值
+     * @param newValue 新值
+     * @deprecated 自 SDK 7.3 起，请使用 {@code net.ooder.sdk.infra.observer.ConfigObserver} 替代。
+     *             该方法将在未来版本中移除。
+     * @see net.ooder.sdk.infra.observer.ConfigObserver
+     */
+    @Deprecated
     public void notifyConfigChange(String sceneId, String configPath, Object oldValue, Object newValue) {
         ConfigChangeEvent event = new ConfigChangeEvent(sceneId, configPath, oldValue, newValue);
         notifyConfigChange(event);
     }
     
+    /**
+     * 通知配置变更
+     * @param event 配置变更事件
+     * @deprecated 自 SDK 7.3 起，请使用 {@code net.ooder.sdk.infra.observer.ConfigObserver} 替代。
+     *             该方法将在未来版本中移除。
+     * @see net.ooder.sdk.infra.observer.ConfigObserver
+     */
+    @Deprecated
     public void notifyConfigChange(ConfigChangeEvent event) {
         if (event == null) {
             return;
